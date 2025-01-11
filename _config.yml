@@ -19,15 +19,15 @@ author: David P.
 # --- List of links in the navigation bar --- #
 ###############################################
 
-# navbar-links:
-#  Acerca de mi: "aboutme"
-#  Páginas:
-#    - Distribuciones Linux: "https://www.enfaseterminal.com/p/distribuciones-linux.html"
-#    - Repositorios Linux: "https://www.enfaseterminal.com/p/repositorios-linux.html"
-#  Comandos:
-#    - Comandos Windows: "https://www.enfaseterminal.com/p/co.html"
-#   - Comandos Linux: "https://www.enfaseterminal.com/p/comandos-linux-c-chmod-los-permisos-de.html"
-#  RSS del Blog: "feed.xml"
+navbar-links:
+  Acerca de mi: "aboutme"
+  Páginas:
+    - Distribuciones Linux: "https://www.enfaseterminal.com/p/distribuciones-linux.html"
+    - Repositorios Linux: "https://www.enfaseterminal.com/p/repositorios-linux.html"
+  Comandos:
+    - Comandos Windows: "https://www.enfaseterminal.com/p/co.html"
+    - Comandos Linux: "https://www.enfaseterminal.com/p/comandos-linux-c-chmod-los-permisos-de.html"
+  RSS del Blog: "feed.xml"
 
 ################
 # --- Logo --- #
@@ -53,7 +53,6 @@ round-avatar: true
 # You can change the order that they show up on the page by changing the order here.
 # Uncomment the links you want to show and add your information to each one.
 social-network-links:
-# email: "someone@example.com"
   rss: true
   facebook: enfaseterminal
 # github: daattali
@@ -61,10 +60,9 @@ social-network-links:
 # patreon: DeanAttali
 # youtube: "@daattali"
   whatsapp: 0029Va7gxAG0G0XnnRgBCD0I
-#  medium: yourname
-   reddit: r/BlogEnFaseTerminal/
-#  linkedin: daattali
-#  xing: yourname
+  reddit: r/BlogEnFaseTerminal/
+# linkedin: daattali
+# xing: yourname
 #  stackoverflow: "3943160/daattali"
 #  snapchat: deanat78
 #  instagram: deanat78
