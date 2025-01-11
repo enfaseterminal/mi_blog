@@ -10,4 +10,4 @@ Y este es mi blog. Donde publicaré consejos y resúmenes sobre los últimos tem
 
 ### Mi historia
 
-(https://www.enfaseterminal.com/)
+https://www.enfaseterminal.com/
