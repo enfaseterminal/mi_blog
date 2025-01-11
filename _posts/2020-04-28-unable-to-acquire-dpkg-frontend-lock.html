@@ -1,0 +1,17 @@
+---
+layout: post
+title: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), is
+  another process using it?
+date: '2020-04-28T02:18:00.002+02:00'
+author: David P.
+tags:
+- apt-get
+- lsof
+- kill
+- "/var/lib/dpkg/lock-frontend"
+modified_time: '2020-04-28T15:16:05.273+02:00'
+blogger_id: tag:blogger.com,1999:blog-3624480011084378437.post-5034657215030291088
+blogger_orig_url: https://www.enfaseterminal.com/2020/04/unable-to-acquire-dpkg-frontend-lock.html
+---
+
+<blockquote style="border: none; margin: 0px 0px 0px 40px; padding: 0px; text-align: left;"><div>E: No se pudo bloquear <b>/var/lib/dpkg/lock-frontend</b> - open (11: Recurso no disponible temporalmente)</div><div>E: Unable to acquire the dpkg frontend lock (<b>/var/lib/dpkg/lock-frontend</b>), is another process using it?</div></blockquote><div><br /></div><div>Alguna vez nos podemos encontrar con este mensaje al intentar instalar un paquete en nuestra distribución Linux. Esto es debido a que hemos realizado una instalación fallida, se ha apropiado de alguno de los archivos necesarios para ejecutar apt-get.</div><div>Vamos a averiguar que proceso ha secuestrado nuestros archivos utilizando el comando:&nbsp;<b>lsof</b></div><div><b><br /></b></div><blockquote style="border: none; margin: 0 0 0 40px; padding: 0px;"><div style="text-align: left;"><div><b>lsof </b>[PARÁMETROS] [ARCHIVO..]</div><div>En la invocación del comando lsof, se permite identificar que procesos están utilizando el o los archivos indicados.</div></div></blockquote><div><br /></div><div>Ejecutando este comando para averiguar quien nos tiene bloqueado el archivo que necesitamos para comenzar nuestro nuevo proceso de instalación.</div><div><br /></div><blockquote style="border: none; line-height: 1.5; margin: 0px 0px 0px 40px; padding: 0px; text-align: left;"><div style="line-height: 1.5;"><div style="line-height: 1.5;"><div style="line-height: 1.5;">sudo lsof <b>/var/lib/dpkg/lock-frontend</b></div></div></div></blockquote><div><br /></div><div>Obtenemos dos informaciones un WARNING y el culpable:</div><div><br /></div><blockquote style="border: none; margin: 0px 0px 0px 40px; padding: 0px; text-align: left;"><div><div>lsof: WARNING: can't stat() fuse.gvfsd-fuse file system /run/user/1000/gvfs</div></div><div><div>&nbsp; &nbsp; &nbsp; Output information may be incomplete.</div></div><div><div>COMMAND&nbsp; &nbsp;PID USER&nbsp; &nbsp;FD&nbsp; &nbsp;TYPE DEVICE SIZE/OFF&nbsp; &nbsp; NODE NAME</div></div><div><div>apt-get&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <b>&nbsp;15206</b> root&nbsp; &nbsp; 4uW&nbsp; REG&nbsp; &nbsp; 8,2&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0 9962051<b> /var/lib/dpkg/lock-frontend</b></div></div></blockquote><div><br /></div><div><br /></div><div>El usuario root intentó lanzar el comando apt-get y por alguna razón no termino con exito y bloqueo el archivo. De la información anterior nos quedamos con el PID, que es el identificador para matarlo</div><div><br /></div><blockquote style="border: none; margin: 0 0 0 40px; padding: 0px;"><div style="text-align: left;">sudo kill -9&nbsp;<b>15206</b></div></blockquote><div><br /></div><div>Y con esto liberamos del secuestro los archivos necesarios que nos impedía continuar con nuestra tarea. En este caso la instalación de un nuevo paquete.&nbsp;</div><div>&nbsp;</div><div><br /></div><div><br /></div><div><br /></div><div>&nbsp;</div>

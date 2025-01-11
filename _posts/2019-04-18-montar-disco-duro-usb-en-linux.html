@@ -1,0 +1,53 @@
+---
+layout: post
+title: Montar disco duro usb en linux
+date: '2019-04-18T20:55:00.001+02:00'
+author: David P.
+tags:
+- dlna
+- ext4
+- mkdir
+- disco duro
+- GNU/Linux
+- windows
+- linux
+- blkid
+- nano
+- fat32
+- ntfs
+- raspberry
+- reboot
+- usb
+modified_time: '2021-09-12T21:33:05.048+02:00'
+blogger_id: tag:blogger.com,1999:blog-3624480011084378437.post-7427124393349104119
+blogger_orig_url: https://www.enfaseterminal.com/2019/04/montar-disco-duro-usb-en-linux.html
+---
+
+<div style="text-align: justify;">
+En está ocasión quería montar un servidor <span style="color: yellow;"><a href="https://www.enfaseterminal.com/search/label/dlna">dlna</a></span> en una Raspberry. Para ello tenía que montar un disco duro externo en un sistema basado en Linux.</div>
+<div style="text-align: justify;">
+Antes de nada hay actualizar nuestro sistema para que reconozca el sistema de archivos utilizado por Windows NTFS, por que es el sistema en el que esta formateado mi disco duro y no quiero formatearlo para no perder datos.<br />
+<br /></div><b><span style="color: #ffa400;">
+sudo apt-get install ntfs-3g</span></b><div><br />
+Luego deberemos averiguar si nuestro sistema ha reconocido nuestro disco duro y donde se encuentra localizado para poder montarlo<br />
+<br /><blockquote>sudo blkid<br /><br />/dev/sda2: LABEL="Seagate Expansion Drive" UUID="9026****626679C4A" TYPE="ntfs" PARTLABEL="Basic data partition" PARTUUID="74fd**27-****-483e-bc23-******0"<br /><br />/dev/mmcblk0: PTUUID="b78***38" PTTYPE="dos"<br /><br />/dev/sda1: PARTLABEL="Microsoft reserved partition" PARTUUID="fca0fbe2-***-49b4-8e51-***ec23"</blockquote></div><div><br />
+En mi caso el disco duro se encuentra en el directorio:<br />
+<br /><blockquote><b><span style="color: #ffa400;">
+ /dev/sda2</span></b></blockquote><div>
+<br />Crearemos un directorio donde montaremos nuestra unidad usb y donde accederemos a su contenido.<br />
+<div>
+<br /></div><blockquote><b><span style="color: #ffa400;">
+sudo mkdir /media/discousb</span></b></blockquote></div>
+<div>
+<br />Le indicaremos a nuestro sistema operativo que monte de forma automática nuestro disco duro en la carpeta que hemos creado. Para ello deberemos editar el archivo fstab que se encuentra en el directorio etc<br />
+<br /></div></div><blockquote style="border: none; margin: 0 0 0 40px; padding: 0px;"><div><div style="text-align: left;"><b><span style="color: #ffa400;">sudo nano /etc/fstab</span></b></div></div></blockquote><span><a name='more'></a></span><blockquote style="border: none; margin: 0px 0px 0px 40px; padding: 0px; text-align: left;"><p>proc            /proc           proc    defaults          0       0</p><div><div><br /></div></div><div><div>/dev/mmcblk0p6  /boot           vfat    defaults          0       2</div></div></blockquote><div><div><br /></div></div><blockquote style="border: none; margin: 0 0 0 40px; padding: 0px;"><div><div style="text-align: left;">/dev/mmcblk0p7  /               ext4    defaults,noatime  0       1</div></div></blockquote><div><div><br /></div></div><blockquote style="border: none; margin: 0 0 0 40px; padding: 0px;"><div><div style="text-align: left;"><b><span style="color: #ffa400;">/dev/sda2      /media/discousb      ntfs      defaults      0      0</span></b></div></div></blockquote><div><div><br /></div></div><blockquote style="border: none; margin: 0 0 0 40px; padding: 0px;"><div><div style="text-align: left;"># a swapfile is not a swap partition, no line here</div></div></blockquote><div><div><br /></div></div><blockquote style="border: none; margin: 0 0 0 40px; padding: 0px;"><div><div style="text-align: left;">#   use  dphys-swapfile swap[on|off]  for that</div></div></blockquote><p>&nbsp;</p><span><!--more--></span><p>&nbsp;</p><div><div><ul>
+<li>&nbsp;/dev/sda2 Donde se encuentra nuestro dispositivo usb en el sistema</li>
+<li>/media/discousb&nbsp; Carpeta donde montaremos nuestra unidad externa</li>
+<li>Tipo de sistema para ntfs: vfat, ext4 o fat32</li>
+</ul>
+<div>
+Reiniciar el sistema y ya podremos acceder a nuestro duro externo</div>
+<div>
+<br /></div>
+sudo reboot</div><div><br /></div><h3 style="text-align: left;"><u>Actualización</u></h3><div>Si no reinicia con normalidad y no es posible acceder o se detiene el arranque con el siguiente mensaje, acceder a la entrada para solucionarlo</div><div><div><br /></div><div><a href="https://www.enfaseterminal.com/2021/09/cannot-open-access-to-console-root.html" target="_blank">Cannot open access to console, the root account is locked.</a></div></div><div><br /></div>
+</div>

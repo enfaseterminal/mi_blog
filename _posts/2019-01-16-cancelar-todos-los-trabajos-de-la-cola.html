@@ -1,0 +1,59 @@
+---
+layout: post
+title: Cancelar todos los trabajos de la cola de impresión
+date: '2019-01-16T13:00:00.000+01:00'
+author: David P.
+tags:
+- cancel
+- linux
+- linux mint
+- cola de impresion
+- impresora
+modified_time: '2019-01-19T21:23:32.416+01:00'
+blogger_id: tag:blogger.com,1999:blog-3624480011084378437.post-6747723667936956240
+blogger_orig_url: https://www.enfaseterminal.com/2019/01/cancelar-todos-los-trabajos-de-la-cola.html
+---
+
+Lance por error un trabajo a una de las impresoras que tengo. Cada vez que encendía el ordenador me notificaba que el trabajo no había sido realizado pero no encontraba la aplicación gráfica para acceder a la cola de impresión para cancelar el trabajo en Linux Mint.<br />
+Buscando, descubrí el comando<br />
+<blockquote class="tr_bq">
+<span style="color: yellow;">cancel</span></blockquote>
+<blockquote class="tr_bq">
+NAME</blockquote>
+<blockquote class="tr_bq">
+&nbsp; &nbsp; &nbsp; &nbsp;cancel - cancel jobs</blockquote>
+<blockquote class="tr_bq">
+<br /></blockquote>
+<blockquote class="tr_bq">
+SYNOPSIS</blockquote>
+<blockquote class="tr_bq">
+&nbsp; &nbsp; &nbsp; &nbsp;cancel&nbsp; [ -E ] [ -U username ] [ -a ] [ -h hostname[:port] ] [ -u user‐</blockquote>
+<blockquote class="tr_bq">
+&nbsp; &nbsp; &nbsp; &nbsp;name ] [ -x ] [ id ] [ destination ] [ destination-id ]</blockquote>
+<blockquote class="tr_bq">
+<br /></blockquote>
+<blockquote class="tr_bq">
+DESCRIPTION</blockquote>
+<blockquote class="tr_bq">
+&nbsp; &nbsp; &nbsp; &nbsp;The cancel command cancels print jobs.&nbsp; If&nbsp; no&nbsp; destination&nbsp; or&nbsp; id&nbsp; is</blockquote>
+<blockquote class="tr_bq">
+&nbsp; &nbsp; &nbsp; &nbsp;specified,&nbsp; the&nbsp; currently&nbsp; printing&nbsp; job on the default destination is</blockquote>
+<blockquote class="tr_bq">
+&nbsp; &nbsp; &nbsp; &nbsp;canceled.</blockquote>
+<blockquote class="tr_bq">
+<br /></blockquote>
+<blockquote class="tr_bq">
+OPTIONS</blockquote>
+<blockquote class="tr_bq">
+&nbsp; &nbsp; &nbsp; &nbsp;The following options are recognized by cancel:</blockquote>
+<blockquote class="tr_bq">
+<br /></blockquote>
+<blockquote class="tr_bq">
+&nbsp; &nbsp; &nbsp; &nbsp;-a&nbsp; &nbsp;Cancel all jobs on the named destination, or all jobs on all&nbsp; des‐</blockquote>
+<blockquote class="tr_bq">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tinations if none is provided.</blockquote>
+<blockquote class="tr_bq">
+</blockquote>
+Y con la opción <span style="color: yellow;">-a</span> cancelo todos los trabajos pendientes<br />
+<blockquote class="tr_bq">
+<span style="color: yellow;">cancel -a&nbsp;</span></blockquote>

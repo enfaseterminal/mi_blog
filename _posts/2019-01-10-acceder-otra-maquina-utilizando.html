@@ -1,0 +1,16 @@
+---
+layout: post
+title: Acceder a otra maquina utilizando protocolo ssh
+date: '2019-01-10T19:41:00.002+01:00'
+author: David P.
+tags:
+- ssh
+- linux
+- sudo
+- raspberry
+modified_time: '2020-03-24T01:08:46.636+01:00'
+blogger_id: tag:blogger.com,1999:blog-3624480011084378437.post-696708031024855289
+blogger_orig_url: https://www.enfaseterminal.com/2019/01/acceder-otra-maquina-utilizando.html
+---
+
+Podemos acceder al terminal de otra maquina utilizando el protocolo ssh<br /><br />sudo ssh &lt;ip maquina a la que queremos conectarnos&gt; -l &lt;nombre del usuario con el cual nos queremos conectar&gt;<br /><br />Utilizando sudo nos permitirá aceptar la certificación de la maquina a la que queremos conectarnos aunque esta sea desconocida.<br />Al agregar la opción -l indicamos con que usuario nos queremos conectar. Si omitimos esta opción se nos preguntará con que usuario nos queremos hacer login

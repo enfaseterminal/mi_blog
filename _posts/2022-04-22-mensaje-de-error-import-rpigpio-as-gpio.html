@@ -1,0 +1,17 @@
+---
+layout: post
+title: 'Mensaje de error import RPi.GPIO as GPIO ModuleNotFoundError: No module named
+  ''RPi'''
+date: '2022-04-22T20:47:00.003+02:00'
+author: David P.
+tags:
+- 'import RPi.GPIO as GPIO ModuleNotFoundError: No module named ''RPi'''
+- error
+- python
+- raspberry
+modified_time: '2022-04-22T20:47:25.448+02:00'
+blogger_id: tag:blogger.com,1999:blog-3624480011084378437.post-5950289364476228791
+blogger_orig_url: https://www.enfaseterminal.com/2022/04/mensaje-de-error-import-rpigpio-as-gpio.html
+---
+
+<p>Continuando con la configuración para que funcione un botón de apagado para la Raspberry Pi2 conectado al al GPIO.</p><p>Al lanzar el ejecutable escrito en Python 3 se detiene en la linea en la que importa la RPi de la GPIO, el módulo no ha sido instalado.</p><p></p><blockquote style="border: none; margin: 0 0 0 40px; padding: 0px;"><p style="text-align: left;"><span style="color: #ffa400;"><b>import RPi.GPIO as GPIO ModuleNotFoundError: No module named 'RPi'</b></span></p></blockquote><p>Para solucionarlo hay que instalar, o reinstalar el módulo&nbsp;<b style="color: #ffa400;">python3-rpi.gpio</b></p><p></p><blockquote style="border: none; margin: 0 0 0 40px; padding: 0px;"><p></p><p style="text-align: left;"><span style="color: #ffa400;"><b>&nbsp;sudo apt-get -y install python3-rpi.gpio</b></span></p><p></p></blockquote>

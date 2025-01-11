@@ -1,0 +1,22 @@
+---
+layout: post
+title: Ejecutar aplicaciones modo gráfico a través de una conexión ssh
+date: '2019-02-26T20:58:00.001+01:00'
+author: David P.
+tags:
+- ssh
+- firefox
+- X
+modified_time: '2019-02-26T20:58:21.061+01:00'
+blogger_id: tag:blogger.com,1999:blog-3624480011084378437.post-3026150601617175128
+blogger_orig_url: https://www.enfaseterminal.com/2019/02/ejecutar-aplicaciones-modo-grafico.html
+---
+
+Es posible que en la administración de otro equipo tengamos que iniciar una aplicación en modo gráfico.<br />
+Cuando nos conectemos de forma remota a otro equipo utilizando ssh, añadiremos la opción -X<br />
+<blockquote class="tr_bq">
+<span style="color: yellow;">ssh &lt;dirección ip host&gt; -X -l &lt;nombre usuario al que nos vamos a conectar&gt;</span></blockquote>
+&nbsp;En este caso podríamos iniciar Firefox y se mostraria en nuestra pantalla pero toda la ejecución se realizaría en el equipo esclavo.<br />
+Si no incluimos la opción -X y queremos iniciar una aplicación en modo gráfico nos notificarian un error.<br />
+<blockquote class="tr_bq">
+<span style="color: yellow;">firefox<br />Error: no DISPLAY environment variable specified</span></blockquote>

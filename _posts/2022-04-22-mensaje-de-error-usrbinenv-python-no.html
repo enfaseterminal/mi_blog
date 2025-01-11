@@ -1,0 +1,16 @@
+---
+layout: post
+title: 'Mensaje de error /usr/bin/env: ‘python’: No such file or directory'
+date: '2022-04-22T19:54:00.001+02:00'
+author: David P.
+tags:
+- error
+- "/usr/bin/env: ‘python’: No such file or directory"
+- python
+- raspberry
+modified_time: '2022-04-22T19:54:25.382+02:00'
+blogger_id: tag:blogger.com,1999:blog-3624480011084378437.post-2146314328148306652
+blogger_orig_url: https://www.enfaseterminal.com/2022/04/mensaje-de-error-usrbinenv-python-no.html
+---
+
+<p>Al intentar implementar un botón de apagado para la Raspberry Pi2 en el que tengo instalado Ubuntu Server, al lanzar el servicio de un ejecutable escrito para Python 3, me encontré con el siguiente error.</p><p></p><blockquote style="border: none; margin: 0 0 0 40px; padding: 0px;"><p style="text-align: left;"><span style="color: #ffa400;"><b>/usr/bin/env: ‘python’: No such file or directory</b></span></p></blockquote><p>La solución encontrada ha sido realizando la instalación del paquete&nbsp;&nbsp;<b><span style="color: #ffa400;">python-is-python3</span></b></p><p></p><blockquote style="border: none; margin: 0 0 0 40px; padding: 0px;"><p></p><p style="text-align: left;"><b><span style="color: #ffa400;">sudo apt-get install python-is-python3</span></b></p><p></p></blockquote><p>&nbsp;</p>

@@ -1,0 +1,21 @@
+---
+layout: post
+title: 'E: Sub-process /usr/bin/dpkg returned an error code (1)'
+date: '2021-07-04T19:53:00.002+02:00'
+author: David P.
+tags:
+- dpkg
+- apt-get
+- error
+- sudo
+- var
+- cd
+- info
+- lib
+- rm
+modified_time: '2021-07-04T19:53:40.181+02:00'
+blogger_id: tag:blogger.com,1999:blog-3624480011084378437.post-1713708137003542065
+blogger_orig_url: https://www.enfaseterminal.com/2021/07/e-sub-process-usrbindpkg-returned-error.html
+---
+
+<p style="text-align: justify;">A la hora de hacer uso de <a href="https://www.enfaseterminal.com/search/label/apt-get" target="_blank">apt-get</a> bien para instalar, borrar, o actualizar el sistema. Al principio parece que toda va bien pero al final del proceso me indica que ha habido un error y me muestra:</p><p></p><blockquote>E: Sub-process /usr/bin/dpkg returned an error code (1)</blockquote><p>Al parecer al realizar las tareas cotidianas de actualización del sistema, algún paquete a quedado retenido y no permite continuar.</p><p>Uno de las formas que encontrado para poder liberar el proceso, que ha quedado atrapado. Es accediendo a la carpeta:</p><p></p><blockquote>/var/lib/dpkg/info</blockquote><p>En esta carpeta se recoge información sobre los paquetes instalados, o en proceso de instalación.</p><p>La solución es descubrir que paquete ha quedado retenido y borrar la información sobre el. Por ejemplo utilizando el comando</p><blockquote><p>sudo apt-get update</p></blockquote><p>Nos saldrá el paquete que está creando esta situación, seguido de E: Sub-process /usr/bin/dpkg returned an error code (1)</p><p>Accedemos al directorio:</p><blockquote><p>cd /var/lib/dpkg/info</p></blockquote><p>Y borramos los archivos relacionados con el paquete que ha quedado retenido. En mi caso eran varios y último era man-db</p><blockquote><p>sudo rm man-db.*</p></blockquote><p>Volvemos a actualizar las lista de paquetes:</p><blockquote><p>sudo apt-get update</p></blockquote><p>Y ya podemos actualizar nuestro sistema e instalar nuevos paquetes.&nbsp;</p><p></p><p></p>

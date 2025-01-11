@@ -1,0 +1,36 @@
+---
+layout: post
+title: Montar carpeta remota FTP carpeta local en linux
+date: '2018-12-27T22:26:00.000+01:00'
+author: David P.
+tags:
+- montar
+- linux
+- carpeta
+- curlftpfs
+- ftp
+- raspberry
+- remoto
+modified_time: '2020-03-24T01:07:17.170+01:00'
+blogger_id: tag:blogger.com,1999:blog-3624480011084378437.post-4961021028866732703
+blogger_orig_url: https://www.enfaseterminal.com/2018/12/montar-carpeta-remota-ftp-carpeta-local.html
+---
+
+En Linux hay varios programas para acceder de forma remota a nuestro servidor FTP.<br />
+Pero en esta ocasión me resultaba interesante montar una carpeta en local con acceso directo al disco duro compartido colocado en el router de la ISP y compartido mediante el protocolo FTP.<br />
+Buscando la manera más fácil y eficaz me encontré con este tutorial <a href="https://gigastur.es/montar-carpeta-remota-ftp-en-linux">Montar carpeta remota FTP en Linux</a> que utiliza el comando curlftpfs<br />
+<br />
+curlftpfs(1) CurlFtpFS Manual curlftpfs(1)<br />NAME<br />curlftpfs - mount a ftp host as a local directory<br />SYNOPSIS<br />curlftpfs [options] host path<br />DESCRIPTION<br />The program curlftpfs is a tool to mount remote ftp hosts as local<br />directories. It connects to the host FTP server and maps its directory<br />structure to the path directory.<br />curlftpfs is powered by libcurl for all transfer-related features. See<br />libcurl(3) for details. The filesystem part is implemented on top of<br />FUSE. See http://fuse.sourceforge.net/ for details.<br />
+De forma predeterminada no estará nuestro sistema. Realizamos la instalación con el script:<br />
+sudo apt-get install curlftpfs<br />
+<div>
+Crearemos la carpeta donde montaremos nuestra localización remota:<br />
+<br />
+mkdir /home/usuario/ftp</div>
+<div>
+<br />Ejecutaremos el siguiente script que montara nuestra carpeta remota en local<br />
+<br />
+sudo curlftpfs -o allow_other usuarioftp:contraseña@servidor.com /home/usuario/ftp -v<br />
+<br />
+Con&nbsp;-v&nbsp;nos mostrará en pantalla la respuesta del servidor. Nos servirá para corregir posibles errores<br />
+Cuando comprobemos que funciona correctamente <a href="https://www.enfaseterminal.com/2019/01/inicializar-nuestro-script-al-inicio.html">cargaremos nuestro script en el inicio de nuestro equipo</a></div>

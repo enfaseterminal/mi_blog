@@ -1,0 +1,18 @@
+---
+layout: post
+title: No tiene suficiente espacio libre en /var/cache/apt/archives/
+date: '2020-08-30T20:47:00.002+02:00'
+author: David P.
+tags:
+- "/var/cache/apt/archives/"
+- apt clean
+- du
+- disco duro
+- raspberry
+modified_time: '2020-08-30T21:11:26.783+02:00'
+thumbnail: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh6TFc6lCHZAgchbt9vKK1MqjtAcC1RS8meyy8otnT0Kom_dyJpZAE8Ygv6AaZ716GIy4rbkUGdDxF1xF_L8XbGjsf0fbtQVRbZ-9ZW9OxaVK_QcMILXRot-IouvJRfGL9Pp9fEg1nmyB4/s72-w640-c-h241/Captura+de+pantalla+de+2020-08-29+12-15-27.png
+blogger_id: tag:blogger.com,1999:blog-3624480011084378437.post-1345058614837315451
+blogger_orig_url: https://www.enfaseterminal.com/2020/08/no-tiene-suficiente-espacio-libre-en.html
+---
+
+<p>&nbsp;No tiene suficiente espacio libre en /var/cache/apt/archives/</p><p><br /></p><div class="separator" style="clear: both; text-align: center;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh6TFc6lCHZAgchbt9vKK1MqjtAcC1RS8meyy8otnT0Kom_dyJpZAE8Ygv6AaZ716GIy4rbkUGdDxF1xF_L8XbGjsf0fbtQVRbZ-9ZW9OxaVK_QcMILXRot-IouvJRfGL9Pp9fEg1nmyB4/s648/Captura+de+pantalla+de+2020-08-29+12-15-27.png" style="margin-left: 1em; margin-right: 1em;"><img alt="sudo du -sh /var/cache/apt/archives" border="0" data-original-height="244" data-original-width="648" height="241" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh6TFc6lCHZAgchbt9vKK1MqjtAcC1RS8meyy8otnT0Kom_dyJpZAE8Ygv6AaZ716GIy4rbkUGdDxF1xF_L8XbGjsf0fbtQVRbZ-9ZW9OxaVK_QcMILXRot-IouvJRfGL9Pp9fEg1nmyB4/w640-h241/Captura+de+pantalla+de+2020-08-29+12-15-27.png" title="sudo du -sh /var/cache/apt/archives" width="640" /></a></div><br /><p></p><p>Quedarse sin espacio no es lo más habitual si utilizas grandes computadoras. Pero es problema muy común en ordenadores antiguos, o como es el caso en una Raspberry a la hora de actualizar el sistema operativo.</p><p>Primero vamos a averiguar que cantidad de memoria está ocupando los archivos en la caché. Utilizaremos el comando <b><i><a href="https://www.enfaseterminal.com/search/label/du" target="_blank">du</a></i></b>&nbsp;(<b>U</b>so de <b>D</b>isco) con el argumento -sh</p><p></p><ul style="text-align: left;"><li>-s, pantalla Resumir sólo un total para cada argumento.</li><li>-h, tamaños de impresión. Formato legible por el hombre (por ejemplo, 1K 234M 2G)</li></ul><p></p><div><blockquote>sudo du -sh /var/cache/apt/archives</blockquote></div><div></div><p></p><div><br /></div><div class="separator" style="clear: both; text-align: center;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhQOtTKLWlVX1L4fe4uoCGYI4ycYilhIfYMaRrnuc3eB-xD4nxea7VaeO-RZfeZaKu8-CmWObfAH1HIReJmgptbBS7xS6Cl2PnBGHdqP-mfmXV_i7-seam8PjP3YunSLzhB7xMxsEjoO1Q/s631/Captura+de+pantalla+de+2020-08-29+12-17-45.png" style="margin-left: 1em; margin-right: 1em;"><img alt="sudo apt clean" border="0" data-original-height="85" data-original-width="631" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhQOtTKLWlVX1L4fe4uoCGYI4ycYilhIfYMaRrnuc3eB-xD4nxea7VaeO-RZfeZaKu8-CmWObfAH1HIReJmgptbBS7xS6Cl2PnBGHdqP-mfmXV_i7-seam8PjP3YunSLzhB7xMxsEjoO1Q/s16000/Captura+de+pantalla+de+2020-08-29+12-17-45.png" title="sudo apt clean" /></a></div><br /><div>En mi caso el espacio ocupado por la caché de los repositorios es de 85Mb. Y después de utilizar el comando <b><i>apt&nbsp;clean </i></b>reducimos al tamaño de una carpeta vacía.</div><div><blockquote>sudo apt clean</blockquote><blockquote><p>sudo apt-get clean</p></blockquote><p>&nbsp;</p><blockquote><p>&nbsp;</p></blockquote></div><p></p><div><br /></div><p></p><div><br /></div><p></p><div></div><p><br /></p>

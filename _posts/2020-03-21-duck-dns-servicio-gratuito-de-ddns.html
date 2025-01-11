@@ -1,0 +1,117 @@
+---
+layout: post
+title: Duck DNS servicio gratuito de DDNS
+date: '2020-03-21T18:53:00.000+01:00'
+author: David P.
+tags:
+- cat
+- ipv4
+- ddns
+- router
+- ip
+- duckdns
+- vpn
+- cron
+- ipv6
+- ssh
+- GNU/Linux
+- DNS
+- gratis
+- windows
+- nano
+- raspberry
+modified_time: '2020-03-24T00:22:08.475+01:00'
+thumbnail: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjZQpSOuzC5xbDzV2gVR03DhbX8NKjp2uWNbYJqlkmdaR_lof1LSu3Lpd6TmoemYeYxbu3p22Yh6hSmJX5l2yNCTDaUHIiaxGgFeA-k6XfenqQ5OYWfiY_7FtTI2fMme6cjhUfdRRbjtM4/s72-c/Captura+de+pantalla+de+2020-03-18+20-47-24.png
+blogger_id: tag:blogger.com,1999:blog-3624480011084378437.post-4580716475890796253
+blogger_orig_url: https://www.enfaseterminal.com/2020/03/duck-dns-servicio-gratuito-de-ddns.html
+---
+
+<div style="text-align: justify;">
+Aunque desde hace tiempo se implementó la ipv6 las operadoras de acceso a Internet no lo implementan en los hogares, aun continuamos con la ipv4 y por tanto nuestros router's aún tienen direcciones públicas dinámicas.</div>
+<div>
+<div style="text-align: justify;">
+Para el "internet de las cosas", servidores VPN, servidores web, Nubes personales, nuestra propia red de vigilancia de cámaras..... Es complicado no tener una ip estática a la que acceder.</div>
+</div>
+<div>
+<div style="text-align: justify;">
+<br /></div>
+</div>
+<div>
+<div style="text-align: justify;">
+Entre las <a href="https://es.wikipedia.org/wiki/DNS_din%C3%A1mico" target="_blank">DDNS</a> que nos ofrecen, de forma gratuita, acceso estable a nuestra ip dinámica, es <a href="https://www.duckdns.org/" target="_blank">DuckDNS</a>.</div>
+</div>
+<div>
+<div style="text-align: justify;">
+Su página minimalista y muy simple.&nbsp;</div>
+</div>
+<div>
+<div style="text-align: justify;">
+<br /></div>
+</div>
+<div>
+<br /></div>
+<div class="separator" style="clear: both; text-align: center;">
+<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjZQpSOuzC5xbDzV2gVR03DhbX8NKjp2uWNbYJqlkmdaR_lof1LSu3Lpd6TmoemYeYxbu3p22Yh6hSmJX5l2yNCTDaUHIiaxGgFeA-k6XfenqQ5OYWfiY_7FtTI2fMme6cjhUfdRRbjtM4/s1600/Captura+de+pantalla+de+2020-03-18+20-47-24.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" data-original-height="924" data-original-width="1321" height="223" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjZQpSOuzC5xbDzV2gVR03DhbX8NKjp2uWNbYJqlkmdaR_lof1LSu3Lpd6TmoemYeYxbu3p22Yh6hSmJX5l2yNCTDaUHIiaxGgFeA-k6XfenqQ5OYWfiY_7FtTI2fMme6cjhUfdRRbjtM4/s320/Captura+de+pantalla+de+2020-03-18+20-47-24.png" width="320" /></a></div>
+<div>
+<br /></div>
+<div>
+<br /></div>
+<div>
+Una vez que nos hemos dado de alta nos mostrará el token que nos han asignado y podremos crear un subdominio que utilizaremos para acceder a nuestra ip dinámica.<br />
+<br />
+<div class="separator" style="clear: both; text-align: center;">
+<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhY_Q37Htjzb2seIKShsuQLGsBYMGUtY3ySa83qNAIh8G4TcJaMRumOtrYfiJnSaWmR-yVFJ1WlWpIJg-5pdNbTs_yxDvltbmYMxPH_ziEkfI0zkDOISPyG6lwhmh-dVqWiAwvb6HsvvAM/s1600/Captura+de+pantalla+de+2020-03-18+20-52-50.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" data-original-height="631" data-original-width="1261" height="160" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhY_Q37Htjzb2seIKShsuQLGsBYMGUtY3ySa83qNAIh8G4TcJaMRumOtrYfiJnSaWmR-yVFJ1WlWpIJg-5pdNbTs_yxDvltbmYMxPH_ziEkfI0zkDOISPyG6lwhmh-dVqWiAwvb6HsvvAM/s320/Captura+de+pantalla+de+2020-03-18+20-52-50.png" width="320" /></a></div>
+<br />
+Asignamos un nombre. Puesto que vamos a utilizar este para acceder desde internet a un servicio, o servidor que tengamos instalado en nuestra casa o empresa, no debería ser fácilmente reconocible, e incluso deberia ser ofuscado y complejo. Y por puesto no compartirlo de forma pública.<br />
+<br />
+<div class="separator" style="clear: both; text-align: center;">
+<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhR8ZsTZ6FDGOkrWaYvacpuiLhFch7SNo2t2pS_YPWsVORAeiGK6TgYMQV77AAk58GE7LKH4KIJ2HE2NvuequlswZB-g4_awM2vQ09KF8lsPkkJUFfF9YNwhHBScv-x88wuc7WPOIavILo/s1600/Captura+de+pantalla+de+2020-03-20+19-35-28.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" data-original-height="840" data-original-width="1259" height="213" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhR8ZsTZ6FDGOkrWaYvacpuiLhFch7SNo2t2pS_YPWsVORAeiGK6TgYMQV77AAk58GE7LKH4KIJ2HE2NvuequlswZB-g4_awM2vQ09KF8lsPkkJUFfF9YNwhHBScv-x88wuc7WPOIavILo/s320/Captura+de+pantalla+de+2020-03-20+19-35-28.png" width="320" /></a></div>
+<div style="text-align: justify;">
+Al crear nuestro subdominio, automáticamente reconoce nuestra dirección ip. Accediendo al dirección creada el servidor DNS redirigirá a nuestro navegador a la ip registrada. Podemos crear hasta cinco subdominios con distintos nombre y podremos asignarles cinco direcciones diferentes.</div>
+<div style="text-align: justify;">
+<br /></div>
+<div style="text-align: justify;">
+DuckDNS dispone de herramientas para poder actualizar la dirección ip dinámica de nuestro servidor.</div>
+<br />
+<div class="separator" style="clear: both; text-align: center;">
+<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiNoVDtImKMqFTqlRgJCVcLwGRtAesHVKnzKwkvzERXifI1IVv1MXtBtWwxT10_2gKbC-pWcKJCuiGI2zMsaTgMqNELHoRwbncVnqugennKu7XNnioBT_iNnFe1V5UpxjWe56GD-R-egfA/s1600/screenshot-www.duckdns.org-2020.03.20-20_21_46.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" data-original-height="1600" data-original-width="1418" height="320" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiNoVDtImKMqFTqlRgJCVcLwGRtAesHVKnzKwkvzERXifI1IVv1MXtBtWwxT10_2gKbC-pWcKJCuiGI2zMsaTgMqNELHoRwbncVnqugennKu7XNnioBT_iNnFe1V5UpxjWe56GD-R-egfA/s320/screenshot-www.duckdns.org-2020.03.20-20_21_46.png" width="283" /></a></div>
+<br />
+<div style="text-align: justify;">
+Tenemos distintos scripts,&nbsp; programas para instalar, dependiendo de nuestro sistema operativo. También podemos implementarlo en nuestro router.</div>
+<div style="text-align: justify;">
+<br /></div>
+<div style="text-align: justify;">
+Si por ejemplo disponemos una Raspberry y la utilizamos como servidor, tambien la podemos utilizar para comunicar a DuckDNS nuestra nueva dirección pública.</div>
+<div style="text-align: justify;">
+<br /></div>
+<div style="text-align: justify;">
+Accederemos a nuestra Raspberry a través de la pasarela ssh<br />
+<br />
+ssh pi@raspberrypi</div>
+<br />
+<div style="text-align: justify;">
+Creamos un directorio, accedemos a él y creamos un nuevo archivo llamado <i>duck.sh.</i></div>
+<br />
+mkdir duckdns<br />
+cd duckdns<br />
+nano duck.sh<br />
+<br />
+Copiamos el script que le informará a nuestro DDNS de nuestra dirección actual. Si hemos registrado un subdominio nos personaliza el script con dicho subdominio, nuestro TOKEN y solo tendremos que copiar y pegar.<br />
+<br />
+echo url="https://www.duckdns.org/update?domains=exampledomain&amp;token=a7c4d0ad-114e-40ef-ba1d-d217904a50f2&amp;ip=" | curl -k -o ~/duckdns/duck.log -K -<br />
+<br />
+Guardamos <i>crtl+o</i>&nbsp;y salimos del editor <i>crtl+x . </i>Y le otorgamos privilegios de ejecución.<br />
+<br />
+chmod 700 duck.sh</div>
+<div>
+<br />
+Añadimos una línea en el <i>cron</i>&nbsp;que ejecutará nuestro script cada cinco minutos, manteniendo la relación de nuestro subdominio con la ip de nuestro servidor actualizada<br />
+<br />
+crontab -e<br />
+<br />
+*/5 * * * * ~/duckdns/duck.sh &gt;/dev/null 2&gt;&amp;1</div>
+<div>
+<br />
+Probamos que que todo está correcto, ejecutando nuestro archivo y comprobando que nuestro archivo de eventos ha recogido el ok.<br />
+<br />
+cat duck.log</div>

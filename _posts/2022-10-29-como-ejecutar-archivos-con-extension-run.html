@@ -1,0 +1,21 @@
+---
+layout: post
+title: Cómo ejecutar archivos con extensión .run
+date: '2022-10-29T14:56:00.002+02:00'
+author: David P.
+tags:
+- instalar
+- run
+- virtualbox
+- GNU/Linux
+- chmod +x
+- sudo
+- ejecutable
+- actualizar
+- chmod
+modified_time: '2022-10-29T14:58:01.371+02:00'
+blogger_id: tag:blogger.com,1999:blog-3624480011084378437.post-136483421847321889
+blogger_orig_url: https://www.enfaseterminal.com/2022/10/como-ejecutar-archivos-con-extension-run.html
+---
+
+<p style="text-align: justify;">Un archivo <b>.run</b> es normalmente un programa personalizado que debe ejecutarse para <b>instalar y/o actualizar un software.</b>&nbsp;No&nbsp; es mejor método para la instalación de un nuevo programa, ya que no se rastrean dónde van los archivos y normalmente no proporcionan un método de desinstalación. no hay forma de estar seguro de lo que el script le hará a su sistema, por lo que se <b>consideran inseguros</b>. Con lo cual solo que habrá que ejecutar archivos de <b>instalación de aplicaciones y descargarlo&nbsp;de páginas web confiables</b>. Por ejemplo VirtualBox, utiliza este tipo de archivos para realizar la instalación y la actualización de este virtualizador.</p><p style="text-align: justify;">Lo primero que tendremos que hacer darle permiso de ejecución al archivo que hemos descargado, como es el caso para actualizar la aplicación a la última versión</p><blockquote><p style="text-align: justify;"><span style="color: #ffa400;">sudo <b>chmod +x</b> <i>nombre_del_archivo.run</i></span></p></blockquote><blockquote><p><span style="color: #ffa400;"><span style="text-align: justify;">sudo <b>chmod +x</b>&nbsp;</span><span style="text-align: justify;">VirtualBox-6.1.40-154048-Linux_amd64.run</span></span></p></blockquote><p style="text-align: justify;">Seguidamente ejecutaremos el archivo con la extensión run añadiendo los caracteres <b><span style="color: #ffa400;">./</span></b> antes del ejecutable&nbsp;</p><blockquote><p><span style="color: #ffa400;">sudo <b>./</b><i>nombre_del_archivo.run</i></span></p></blockquote><blockquote><p><span style="color: #ffa400;">sudo <b>./</b><span style="text-align: justify;">VirtualBox-6.1.40-154048-Linux_amd64.run</span></span></p></blockquote>

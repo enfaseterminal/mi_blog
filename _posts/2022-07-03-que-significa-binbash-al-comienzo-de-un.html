@@ -1,0 +1,18 @@
+---
+layout: post
+title: 'Qué significa #!/bin/bash al comienzo de un archivo Bash Shell'
+date: '2022-07-03T14:20:00.002+02:00'
+author: David P.
+tags:
+- "#!/bin/bash"
+- shebang
+- pi-hole
+- script
+- Bash Shell
+modified_time: '2022-07-03T14:20:42.508+02:00'
+thumbnail: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgSlGkix7v1g5ai-59robJpk4dpiIefnun6u4fJVTEiCXktV6Hf4UZg0S7bBPnaFjECKD5ENrzoqqszdcqN34DSPelK3k2CQunRHafdevaE6gIDKZaQ9kAtnGOPQEmDsnmzcy42h-789MPmLZJvfkGSmTZ2BO_DP3_ivThPCMkgWvyDotqaZRm1l6IG/s72-w400-c-h330/2022-07-03%2014.11.48%20raw.githubusercontent.com%20c2fe8a6e41ab.png
+blogger_id: tag:blogger.com,1999:blog-3624480011084378437.post-7802477718896501668
+blogger_orig_url: https://www.enfaseterminal.com/2022/07/que-significa-binbash-al-comienzo-de-un.html
+---
+
+<div style="text-align: justify;">Es posible que hayamos descargado un&nbsp;script de Bash, para por ejemplo, descargar e instalar alguna aplicación o realizar ciertas tareas en nuestra distribución Linux.</div><div style="text-align: justify;">En algunos caso nos podemos encontrar que si editamos el ejecutable con nuestro procesador de texto, nos encontremos que en la primera línea aparezca algo parecido a:</div><div style="text-align: justify;"><br /></div><blockquote><div style="text-align: justify;"><span style="color: #ffa400;"><b>#!/bin/bash</b></span></div></blockquote><blockquote><div style="text-align: justify;"><b><span style="color: #ffa400;">#!/usr/bin/env python3</span></b></div></blockquote><blockquote><p style="text-align: justify;"><b><span style="color: #ffa400;">#!/bin/sh</span></b></p></blockquote><p style="text-align: justify;">Es un&nbsp;&nbsp;<b style="color: #ffa400;">Shebang. </b>En esta línea indicaremos la ruta completa del intérprete de órdenes, para que este sea localizado independientemente de donde sea ejecutado nuestro script.&nbsp;</p><p style="text-align: justify;">Con este comando el programador se asegura que al interpretar los comandos siguientes sean ejecutados correctamente y no se detenga, por que no sabe donde se encuentran.&nbsp;</p><p style="text-align: justify;">Ejemplo de script Bash para la instalación y configuración de <a href="https://www.enfaseterminal.com/2019/04/pi-hole-aumentando-nuestra-seguridad-y.html" target="_blank">Pi-Hole</a></p><div class="separator" style="clear: both; text-align: center;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgSlGkix7v1g5ai-59robJpk4dpiIefnun6u4fJVTEiCXktV6Hf4UZg0S7bBPnaFjECKD5ENrzoqqszdcqN34DSPelK3k2CQunRHafdevaE6gIDKZaQ9kAtnGOPQEmDsnmzcy42h-789MPmLZJvfkGSmTZ2BO_DP3_ivThPCMkgWvyDotqaZRm1l6IG/s854/2022-07-03%2014.11.48%20raw.githubusercontent.com%20c2fe8a6e41ab.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img alt="Script instalación y configuración de la aplicación Pi-Hole" border="0" data-original-height="705" data-original-width="854" height="330" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgSlGkix7v1g5ai-59robJpk4dpiIefnun6u4fJVTEiCXktV6Hf4UZg0S7bBPnaFjECKD5ENrzoqqszdcqN34DSPelK3k2CQunRHafdevaE6gIDKZaQ9kAtnGOPQEmDsnmzcy42h-789MPmLZJvfkGSmTZ2BO_DP3_ivThPCMkgWvyDotqaZRm1l6IG/w400-h330/2022-07-03%2014.11.48%20raw.githubusercontent.com%20c2fe8a6e41ab.png" title="Script instalación y configuración de la aplicación Pi-Hole" width="400" /></a></div><br /><p><br /></p><p>&nbsp;</p>

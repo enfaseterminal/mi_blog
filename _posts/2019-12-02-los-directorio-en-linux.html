@@ -1,0 +1,111 @@
+---
+layout: post
+title: Los directorio en Linux
+date: '2019-12-02T20:14:00.002+01:00'
+author: David P.
+tags:
+- cat
+- gzip
+- dev
+- media
+- cp
+- sbin
+- var
+- boot
+- proc
+- usr
+- home
+- etc
+- grep
+- opt
+- echo
+- srv
+- tmp
+- kill
+- bin
+- lib
+modified_time: '2022-03-27T21:43:04.210+02:00'
+blogger_id: tag:blogger.com,1999:blog-3624480011084378437.post-1102945479902826755
+blogger_orig_url: https://www.enfaseterminal.com/2019/12/los-directorio-en-linux.html
+---
+
+<div style="text-align: justify;">
+<span font-family:="" inherit="">Un anuncio decía que pasabamos mas de media vida buscando. En sistemas basado en Linux hay un sitio en cada carpeta y cada carpeta contiene:</span></div>
+<div style="text-align: justify;">
+<span font-family:="" inherit=""><br /></span></div>
+<div style="text-align: justify;">
+</div>
+<ul>
+<li><span font-family:="" inherit=""><b>/</b>&nbsp;La raíz&nbsp; del árbol de directorios. No determina ninguna unidad como podría ser en MS-DOS o Windows c: ó d: . Por que las distintas unidades se encuentran en otra carpeta y se acceden desde ella, pero siempre colgará de la raíz.</span></li>
+</ul>
+<ul>
+<li style="list-style-position: outside;"><span font-family:="" inherit=""><span style="font-family: inherit;"><b>/bin</b>&nbsp;contiene ficheros de comandos ejecutables utilizables por todos los usuarios. Aquí tenemos los programas que pueden lanzar todos los usuarios del sistema.&nbsp;</span>Incluye también los binarios que permiten la ejecución de varias utilidades estándar de la terminal de Linux, concretamente cat, <a href="https://www.enfaseterminal.com/search?q=cd">cd</a>, cp, echo, grep, gzip, <a href="https://www.enfaseterminal.com/search?q=kill">kill</a>, ls, mv, rm, ping, su, ps, tar y vi.</span></li>
+</ul>
+<ul>
+<li style="list-style-position: outside;"><span font-family:="" inherit=""><span style="font-family: inherit;"><b>/boot&nbsp;</b></span>Este directorio incluye todos los ejecutables y archivos que son necesarios en el proceso de arranque del sistema, y que deberán ser utilizados antes que que el kernel empiece a dar las órdenes de ejecución de los diferentes módulos del sistema. Es también donde se encuentra el gestor de arranque GRUB.</span></li>
+</ul>
+<ul>
+<li style="list-style-position: outside;"><span font-family:="" inherit=""><span style="font-family: inherit;"><b>/dev</b>&nbsp;</span>Este directorio incluye todos los dispositivos de almacenamiento, en forma de archivos, conectados al sistema, es decir, cualquier disco duro conectado, partición, memoria USB, o CDROM conectado al sistema y que el sistema pueda entender como un volumen lógico de almacenamiento.</span></li>
+</ul>
+<div>
+<ul>
+<li style="list-style-position: outside;"><span font-family:="" inherit=""><b>/etc</b><span style="font-family: inherit;">&nbsp;contiene los ficheros de configuración y utilidades para la administración. Tanto del sistema operativo con de las diversas aplicaciones que&nbsp;</span>fuéramos<span style="font-family: inherit;">&nbsp;instalando.</span></span></li>
+</ul>
+<div>
+<ul>
+<li style="list-style-position: outside;"><span font-family:="" inherit=""><b>/home</b>&nbsp;es un directorio donde se encuentran los directorios personales y los archivos particulares de configuración de los usuarios del sistema.</span></li>
+</ul>
+<blockquote class="tr_bq">
+<span font-family:="" inherit=""><i><span face="&quot;libre franklin&quot; , &quot;helvetica neue&quot; , &quot;helvetica&quot; , &quot;arial&quot; , sans-serif" style="color: #1f4735;">/home/user1</span></i><i><span face="&quot;libre franklin&quot; , &quot;helvetica neue&quot; , &quot;helvetica&quot; , &quot;arial&quot; , sans-serif" style="color: #1f4735;">/home/user2</span></i></span></blockquote>
+</div>
+</div>
+<ul>
+<li style="list-style-position: outside;"><span font-family:="" inherit=""><span style="font-family: inherit;"><b>/lib</b>&nbsp;contiene librerías y compiladores del sistema. Contiene las bibliotecas necesarias para que se ejecuten los programas que tenemos en <b>/bin</b> y <b>/sbin </b>únicamente.&nbsp;</span>En los sistemas operativos de 64 bits, además de /lib existe otro directorio denominado <b>/lib64</b>, referida a las bibliotecas para aplicaciones de 64 bits.</span></li>
+</ul>
+<ul>
+<li style="list-style-position: outside;"><span font-family:="" inherit=""><b>/media</b>&nbsp;contiene todas las unidades físicas que tenemos montadas: discos duros, unidades de DVD, pen drives, etc.</span></li>
+</ul>
+<ul>
+<li style="list-style-position: outside;"><span font-family:="" inherit=""><b>/opt</b>&nbsp;sirve para admitir ficheros nuevos creados tras la modificación del sistema. Es un punto de montaje desde el que se instalan los paquetes de aplicación adicionales. Podemos usarla para instalar aplicaciones que no vienen en los repositorios, por ejemplo, aquellas que compilamos a mano.</span></li>
+</ul>
+<ul>
+<li><span font-family:="" inherit=""><b>/proc&nbsp;</b>Este directorio contiene información de los procesos y aplicaciones que se están ejecutando en un momento determinado en el sistema, pero realmente no guarda nada como tal, ya que lo que almacena son archivos virtuales, por lo que el contenido de este directorio es nulo. Básicamente son listas de eventos del sistema operativo que se generan en el momento de acceder a ellos, y que no existen dentro del directorio como tales. No deberíamos modificar el contenido de este directorio.</span></li>
+</ul>
+<ul>
+<li style="list-style-position: outside;"><span font-family:="" inherit=""><b>/sbin</b><span style="font-family: inherit;">&nbsp;es para ejecutables de uso exclusivo por el root&nbsp;</span>tales como el arranque, tareas de restauración, reparación, etc.<span style="font-family: inherit;">. Son los necesarios para arrancar y montar el directorio&nbsp;</span><b>/usr</b><span style="font-family: inherit;">.</span></span></li>
+</ul>
+<ul>
+<li><span font-family:="" inherit=""><b>srv</b>&nbsp;Sirve para almacenar archivos y directorios relativos a servidores que puedas tener instalados dentro de tu sistema, ya sea un servidor web www, un servidor FTP, CVS, etc.</span></li>
+</ul>
+<blockquote class="tr_bq">
+<span font-family:="" inherit="">Así, por ejemplo, en el caso de tener instalado un servidor web, sería buena idea tener el directorio web público dentro de /srv, tal como así:</span></blockquote>
+<blockquote class="tr_bq">
+<span font-family:="" inherit="">/srv/www</span></blockquote>
+<ul>
+<li style="list-style-position: outside;"><span font-family:="" inherit=""><b>/tmp</b>&nbsp;es donde se almacenan los archivos temporales.</span></li>
+</ul>
+<div>
+<ul>
+<li style="list-style-position: outside;"><span font-family:="" inherit=""><b>/usr</b>&nbsp;contiene utilidades y programas generales de usuario:</span></li>
+<ul>
+<li style="list-style-position: outside;"><span font-family:="" inherit=""><b>/usr/bin</b>&nbsp;contiene programas de uso general.</span></li>
+<li style="list-style-position: outside;"><span font-family:="" inherit=""><b>/usr/share</b>&nbsp;contiene archivos compartibles, independientes de la arquitectura.</span><ul>
+<li style="list-style-position: outside;"><span black="" color:="" font-family:="" inherit=""><b>/usr/share/doc</b>&nbsp;contiene cierta documentación del sistema.</span></li>
+</ul>
+<ul>
+<li style="list-style-position: outside;"><span black="" color:="" font-family:="" inherit=""><b>/usr/share/man</b>&nbsp;contiene los manuales.</span></li>
+</ul>
+</li>
+<li style="list-style-position: outside;"><span font-family:="" inherit=""><b>/usr/etc</b>&nbsp;contiene archivos de configuración de uso global.</span></li>
+<li style="list-style-position: outside;"><span font-family:="" inherit=""><b>/usr/include</b>&nbsp;contiene las cabeceras de C y C++.</span></li>
+<li style="list-style-position: outside;"><span font-family:="" inherit=""><b>/usr/lib</b>&nbsp;contiene las bibliotecas de nuestros programas.</span></li>
+<li style="list-style-position: outside;"><span font-family:="" inherit=""><b>/usr/sbin</b>&nbsp;contiene los programas de administración del sistema.</span></li>
+<li style="list-style-position: outside;"><span font-family:="" inherit=""><b>/usr/src</b>&nbsp;contiene los códigos fuente de nuestros programas.</span></li>
+</ul>
+</ul>
+</div>
+<div>
+<ul>
+<li style="list-style-position: outside;"><span font-family:="" inherit=""><b>/var</b>&nbsp;contiene ficheros para el administrador. Este directorio contiene información variable, como registros, datos de los servidores, etc.</span></li>
+</ul><div>Más artículos relacionados&nbsp;<a href="https://www.enfaseterminal.com/2022/03/los-directorios-de-linux-ii.html">Los directorios de Linux II</a></div>
+</div>

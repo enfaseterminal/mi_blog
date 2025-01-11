@@ -1,0 +1,20 @@
+---
+layout: post
+title: Como ver dependencias rotas desde terminal
+date: '2023-02-09T21:56:00.003+01:00'
+author: David P.
+tags:
+- terminal
+- paquetes
+- linux
+- linux terminal
+- paquetes huérfanos
+- debian
+- dependencias
+- apt-get check
+modified_time: '2023-02-09T21:56:59.452+01:00'
+blogger_id: tag:blogger.com,1999:blog-3624480011084378437.post-1999589037015731234
+blogger_orig_url: https://www.enfaseterminal.com/2023/02/como-ver-dependencias-rotas-desde.html
+---
+
+<p style="text-align: justify;">Al realizar una instalación en Linux es posible que durante el proceso no se instalen todas las dependencias, o también que durante un mantenimiento se hayan borrado paquetes necesarios para otras aplicaciones. Para saber si tenemos paquetes huérfanos y/o dependencias rotas en el sistema, podremos utilizar el comando:</p><p style="text-align: justify;"><br /></p><blockquote><p><b><span style="color: #ffa400;">sudo apt-get check</span></b></p></blockquote><p><br /></p><p>Si todo está correcto, obtendremos un resultado similar a este:</p><p><br /></p><blockquote><p><b><span style="color: #ffa400;">Leyendo lista de paquetes... Hecho</span></b></p><p><b><span style="color: #ffa400;">Creando árbol de dependencias&nbsp; &nbsp; &nbsp; &nbsp;</span></b></p><p><b><span style="color: #ffa400;">Leyendo la información de estado... Hecho</span></b></p></blockquote><p><br /></p><p>Si no es así, deberíamos resolver las dependencias que nos muestran o purgar la aplicación que&nbsp; no se ha instalado de forma completa&nbsp;</p><p>Artículos realizados con esta publicación:</p><p></p><ul style="text-align: left;"><li><a href="https://www.enfaseterminal.com/2021/08/como-resolver-dependencias-rotas.html">Como resolver dependencias rotas</a></li><li><a href="https://www.enfaseterminal.com/2019/01/resolver-dependencias-al-instalar-un.html">Resolver dependencias al instalar un paquete</a></li><li><a href="https://www.enfaseterminal.com/2023/01/bleachbit-limpiador-de-sistema-para.html">BleachBit limpiador de sistema para Linux y Windows</a></li></ul><p></p>

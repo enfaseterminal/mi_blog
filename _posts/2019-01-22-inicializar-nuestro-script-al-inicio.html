@@ -1,0 +1,25 @@
+---
+layout: post
+title: Inicializar nuestro script al inicio del sistema
+date: '2019-01-22T19:36:00.000+01:00'
+author: David P.
+tags:
+- update-rc.d
+- linux
+- cp
+- chmod
+modified_time: '2019-02-11T19:37:46.907+01:00'
+blogger_id: tag:blogger.com,1999:blog-3624480011084378437.post-8545676074947152052
+blogger_orig_url: https://www.enfaseterminal.com/2019/01/inicializar-nuestro-script-al-inicio.html
+---
+
+Resulta interesante arrancar nuestro script cada vez que se inicie nuestro sistema operativo basado en Linux.<br />
+Daremos privilegios de ejecución<br />
+<blockquote class="tr_bq">
+<span style="color: yellow;">sudo chmod +x script.sh</span></blockquote>
+Copiaremos nuestro&nbsp; script, con el comando <span style="color: yellow;">cp</span>,&nbsp; a la carpeta /etc/init.d/<br />
+<blockquote class="tr_bq">
+<span style="color: yellow;">sudo cp script.sh /etc/init.d/</span></blockquote>
+Con el comando <span style="color: yellow;">update-rc.d</span> añadiremos el archivo en el arranque de Linux.<br />
+<blockquote class="tr_bq">
+<span style="color: yellow;">sudo update-rc.d script.sh defaults</span></blockquote>
