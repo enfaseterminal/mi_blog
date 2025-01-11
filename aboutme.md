@@ -10,4 +10,4 @@ Y este es mi blog. Donde publicaré consejos y resúmenes sobre los últimos tem
 
 ### Mi historia
 
-[Blog EnFaseTerminal]([https://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29)](https://www.enfaseterminal.com/)
+[Blog EnFaseTerminal (https://www.enfaseterminal.com/)]
