@@ -19,22 +19,16 @@ author: David P.
 # --- List of links in the navigation bar --- #
 ###############################################
 
-# navbar-links:
-#  Acerca de mi: "aboutme"
-#  Páginas:
-#    - Distribuciones Linux: "https://www.enfaseterminal.com/p/distribuciones-linux.html"
-#    - Repositorios Linux: "https://www.enfaseterminal.com/p/repositorios-linux.html"
-#  Comandos:
-#    - Comandos Windows: "https://www.enfaseterminal.com/p/co.html"
-#    - Comandos Linux: "https://www.enfaseterminal.com/p/comandos-linux-c-chmod-los-permisos-de.html"
-#  RSS del Blog: "feed.xml"
-
 navbar-links:
-  About Me: "aboutme"
-  Resources:
-    - Beautiful Jekyll: "https://beautifuljekyll.com"
-    - Learn markdown: "https://www.markdowntutorial.com/"
-  Author's home: "https://deanattali.com"
+  Acerca de mi: "aboutme"
+  Páginas:
+    - Distribuciones Linux: "https://www.enfaseterminal.com/p/distribuciones-linux.html"
+    - Repositorios Linux: "https://www.enfaseterminal.com/p/repositorios-linux.html"
+  Comandos:
+    - Comandos Windows: "https://www.enfaseterminal.com/p/co.html"
+    - Comandos Linux: "https://www.enfaseterminal.com/p/comandos-linux-c-chmod-los-permisos-de.html"
+  RSS del Blog: "feed.xml"
+
 
 ################
 # --- Logo --- #
