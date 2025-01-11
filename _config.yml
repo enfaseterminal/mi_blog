@@ -258,11 +258,12 @@ date_format: "%B %-d, %Y"
 #################################################################################
 
 # Output options (more information on Jekyll's site)
-timezone: "America/Toronto"
+timezone: "Europe/Madrid"
 markdown: kramdown
 highlighter: rouge
-permalink: /:year-:month-:day-:title/
-paginate: 5
+# permalink: /:year-:month-:day-:title/
+permalink: /:year/:month/:title.html
+paginate: 10
 
 kramdown:
   input: GFM
