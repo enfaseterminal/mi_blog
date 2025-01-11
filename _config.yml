@@ -44,7 +44,6 @@ round-avatar: true
 # then specify the following parameter
 #title-img: /path/to/image
 
-
 #####################################
 # --- Footer social media links --- #
 #####################################
@@ -55,38 +54,17 @@ round-avatar: true
 social-network-links:
   rss: true
   facebook: enfaseterminal
-# github: daattali
   twitter: blog_terminal
-# patreon: DeanAttali
-# youtube: "@daattali"
   whatsapp: 0029Va7gxAG0G0XnnRgBCD0I
   reddit: r/BlogEnFaseTerminal/
-# linkedin: daattali
-# xing: yourname
-#  stackoverflow: "3943160/daattali"
-#  snapchat: deanat78
-#  instagram: deanat78
-#  spotify: yourname
-#  telephone: +14159998888
-#  steam: deanat78
-#  twitch: yourname
-#  yelp: yourname
-   telegram: enfaseterminal
-#  calendly: yourname
-   mastodon: mastodon.social/@enfaseterminal
-   bluesky: blogenfaseterminal
-#  ORCID: your ORCID ID
-#  google-scholar: your google scholar
-#  discord: "invite_code" or "users/userid" or "invite/invite_code"
-#  kaggle: yourname
-#  hackerrank: yourname
-#  gitlab: yourname
-#  itchio: yourname
-#  untappd: yourname
+  telegram: enfaseterminal
+  mastodon: mastodon.social/@enfaseterminal
+  bluesky: blogenfaseterminal
 
 # If you want your website to generate an RSS feed, provide a description
 # The URL for the feed will be https://<your_website>/feed.xml
 rss-description: Subscribirse al canal
+
 
 ###########################
 # --- General options --- #
