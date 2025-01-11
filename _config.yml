@@ -24,6 +24,7 @@ navbar-links:
   Páginas:
     - Distribuciones Linux: "https://www.enfaseterminal.com/p/distribuciones-linux.html"
     - Repositorios Linux: "https://www.enfaseterminal.com/p/repositorios-linux.html"
+  Comandos:
     - Comandos Windows: "https://www.enfaseterminal.com/p/co.html"
     - Comandos Linux: "https://www.enfaseterminal.com/p/comandos-linux-c-chmod-los-permisos-de.html"
   RSS del Blog: "feed.xml"
@@ -53,7 +54,7 @@ round-avatar: true
 # Uncomment the links you want to show and add your information to each one.
 social-network-links:
 # email: "someone@example.com"
-#  rss: true
+  rss: true
   facebook: enfaseterminal
 # github: daattali
   twitter: blog_terminal
