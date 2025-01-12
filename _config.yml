@@ -55,11 +55,11 @@ social-network-links:
   rss: true
   facebook: enfaseterminal
   twitter: blog_terminal
-  whatsapp: 0029Va7gxAG0G0XnnRgBCD0I
+  whatsapp: https://www.whatsapp.com/channel/0029Va7gxAG0G0XnnRgBCD0I
   reddit: r/BlogEnFaseTerminal/
   telegram: enfaseterminal
   mastodon: mastodon.social/@enfaseterminal
-  bluesky: blogenfaseterminal
+  bluesky: blogenfaseterminal.bsky.social
 
 # If you want your website to generate an RSS feed, provide a description
 # The URL for the feed will be https://<your_website>/feed.xml
