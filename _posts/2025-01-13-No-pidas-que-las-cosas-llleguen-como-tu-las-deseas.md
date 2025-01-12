@@ -2,10 +2,7 @@
 layout: post
 title: No pidas que las cosas lleguen como tú las deseas
 subtitle: Como dijo Epícteto
-cover-img: /_posts/img/epiteto.jpeg
-thumbnail-img: /_posts/img/epiteto.jpeg
-share-img: /_posts/img/epiteto.jpeg
-tags: [Epícteto, deseos, siempre, posperar]
+tags: [Epícteto, deseos, siempre, prosperar]
 author: David P.
 ---
 
