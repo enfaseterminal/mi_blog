@@ -20,14 +20,13 @@ author: David P.
 ###############################################
 
 navbar-links:
-  Acerca de mi: "aboutme"
   Páginas:
     - Distribuciones Linux: "https://www.enfaseterminal.com/p/distribuciones-linux.html"
     - Repositorios Linux: "https://www.enfaseterminal.com/p/repositorios-linux.html"
     - Comandos Windows: "https://www.enfaseterminal.com/p/co.html"
     - Comandos Linux: "https://www.enfaseterminal.com/p/comandos-linux-c-chmod-los-permisos-de.html"
-  Etiquetas: "tags.html"
-
+    - Etiquetas: "tags.html"
+    - Acerca de mi: "aboutme"
 
 ################
 # --- Logo --- #
@@ -94,7 +93,7 @@ feed_show_excerpt: true
 feed_show_tags: true
 
 # Add a search button to the navbar
-post_search: true
+post_search: false
 
 # Add a button in the footer to edit the current page. Only works if your website is hosted on GitHub
 edit_page_button: false
@@ -102,10 +101,10 @@ edit_page_button: false
 # Allow sub-menu items (second-level navigation menu items) to be longer than the top-level menu
 # If this setting is off, then long sub-menu words might get cut off
 # See https://github.com/daattali/beautiful-jekyll/issues/765 to understand the issue this setting can solve
-navbar-var-length: false
+navbar-var-length: true
 
 # The keywords to associate with your website, for SEO purposes
-#keywords: "my,list,of,keywords"
+keywords: "linux,terminal,shell,citas,frases,citaxdia,windows,peliculas,herramientas,aplicaciones,enfaseterminal,blog,distribuciones,comandos,solucionado"
 
 ######################################
 # --- Colours / background image --- #
@@ -137,24 +136,24 @@ mobile-theme-col: "#0085A1"
 
 # For any extra visual customization, you can include additional CSS files in every page on your site. List any custom CSS files here
 #site-css:
-#  - "/assets/css/custom-styles.css"
+  - "/assets/css/custom-styles.css"
 
 # If you have common JavaScript files that should be included in every page, list them here
 #site-js:
-#  - "/assets/js/custom-script.js"
+  - "/assets/js/custom-script.js"
 
 #################################
 # --- Web Analytics Section --- #
 #################################
 
 # Fill in your Google Analytics tag ID (or "Measurement ID") to track your website usage
-#gtag: "G-XXXXXXXXXX"
+gtag: "G-TQBY2D6CS4"
 
 # Fill in your Cloudflare Analytics beacon token to track your website using Cloudflare Analytics
 #cloudflare_analytics: ""
 
 # Google Tag Manager ID
-#gtm: ""
+gtm: "G-TQBY2D6CS4, GT-NFJX5GL"
 
 # Matomo (aka Piwik) Web statistics
 # Uncomment the following section to enable Matomo. The opt-out parameter controls
@@ -285,7 +284,7 @@ i18n:
   es:
     date:
       month_names: [nil, "enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"]
-Empuja tus cambios a GitHub:
+# Empuja tus cambios a GitHub:
   
 # Beautiful Jekyll / Dean Attali
 # 2fc73a3a967e97599c9763d05e564189
