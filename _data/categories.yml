@@ -1,0 +1,6 @@
+- name: Citas y frases más o menos celebres
+  slug: citas
+- name: Comandos Linux
+  slug: comandos_linux
+- name: Comandos Wndows
+  slug: comandos windows
