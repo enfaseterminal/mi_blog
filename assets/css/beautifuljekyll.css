@@ -1123,3 +1123,12 @@ pre {
     display: inline-block;
   }
 }
+#consent-banner {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #f8f9fa;
+  padding: 10px;
+  text-align: center;
+  z-index: 1000;
+}
