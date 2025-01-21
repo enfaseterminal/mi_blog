@@ -1,7 +1,7 @@
 ---
 layout: post
-title: No pidas que las cosas lleguen como tú las deseas
-subtitle: Como dijo Epícteto
+title: Tienes que desconfiar de los clérigos
+subtitle: Como dijo Miguel de Cervantes
 tags: [Miguel de Cervantes Saavedra, Cervantes, desconfiar, caballos, clerigos, iglesia, curas]
 categories: [citas]
 author: David P.
