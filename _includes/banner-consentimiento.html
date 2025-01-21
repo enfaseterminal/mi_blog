@@ -1,4 +1,3 @@
-<!-- BANNER PARA CONSENTIMIENTO COOKIES EXTERNAS -->
 <div id="consent-banner">
   <p>Este sitio utiliza cookies para mejorar tu experiencia. Acepta nuestras cookies o personaliza tu configuración.</p>
   <button onclick="acceptCookies()">Aceptar</button>
@@ -6,10 +5,20 @@
 </div>
 <script>
   function acceptCookies() {
-    // Código para aceptar cookies
+    localStorage.setItem('cookiesAccepted', 'true');
+    document.getElementById('consent-banner').style.display = 'none';
+    // Aquí puedes activar etiquetas de GTM si es necesario
+    window.dataLayer.push({'event': 'cookiesAccepted'});
   }
 
   function customizeCookies() {
-    // Código para personalizar cookies
+    // Mostrar opciones de personalización de cookies
+    alert('Aquí puedes personalizar tus preferencias de cookies.');
+  }
+
+  // Verificar si ya se ha dado el consentimiento
+  if (localStorage.getItem('cookiesAccepted') === 'true') {
+    document.getElementById('consent-banner').style.display = 'none';
   }
 </script>
+
