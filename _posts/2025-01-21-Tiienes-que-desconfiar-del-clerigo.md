@@ -3,10 +3,12 @@ layout: post
 title: Tienes que desconfiar de los clérigos
 subtitle: Como dijo Miguel de Cervantes
 tags: [Miguel de Cervantes Saavedra, Cervantes, desconfiar, caballos, clerigos, iglesia, curas]
-categories: [citas]
+categories: citas
+cover-img: /imagenes/miguel-de-cervantes.jpeg
+thumbnail-img: /imagenes/miguel-de-cervantes.jpeg
+share-img: /imagenes/miguel-de-cervantes.jpeg
 author: David P.
 ---
-<meta property="og:image" content="/imagenes/miguel-de-cervantes.jpeg"/>
 
 ![Miguel de Cervantes Saavedra](/imagenes/miguel-de-cervantes.jpeg "Miguel de Cervantes Saavedra")
 
