@@ -1124,8 +1124,8 @@ pre {
   }
 }
 #consent-banner {
-  position: fixed;
-  top: 0;
+  position: fixed; /* Esto hace que el banner sea flotante */
+  bottom: 0; /* Ajusta según donde quieras que aparezca: 'top' o 'bottom' */
   width: 100%;
   background-color: #f8f9fa;
   padding: 10px;
