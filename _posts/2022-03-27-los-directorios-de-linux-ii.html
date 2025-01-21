@@ -1,0 +1,19 @@
+---
+layout: post
+title: Los directorios de Linux II
+date: '2022-03-27T21:37:00.001+02:00'
+author: David P.
+tags:
+- ubuntu
+- directorio
+- linux
+- "~/.local/bin/"
+- script
+- bash
+- raspberry
+modified_time: '2022-03-27T21:37:14.410+02:00'
+blogger_id: tag:blogger.com,1999:blog-3624480011084378437.post-5448946258711080092
+blogger_orig_url: https://www.enfaseterminal.com/2022/03/los-directorios-de-linux-ii.html
+---
+
+<p>Continuando con el post <a href="https://www.enfaseterminal.com/2019/12/los-directorio-en-linux.html">Los directorios de Linux</a>. Otro directorio de utilidad en Ubuntu y derivados, si queremos que nuestros script, sean ejecutados desde cualquier directorio, es:</p><blockquote><p><span style="color: #ffa400; font-size: medium;">~/.local/bin/</span></p></blockquote><p>Aquellos ejecutables o archivos bash que se encuentren en este directorio, podrán ser invocados desde cualquier directorio en que el que te encuentres en ese momento en el terminal.</p><p>Si acaso no estuviera habilitado, por ejemplo en una Raspberry, utilizaremos el siguiente script para habilitar esta función:</p><blockquote><p><span style="color: #ffa400; font-size: medium;">&nbsp;export PATH="$HOME/.local/bin:$PATH"</span></p></blockquote>

@@ -1,0 +1,59 @@
+---
+layout: post
+title: Webmin, salvavidas para los que no somos puritanos de la linea de comandos
+date: '2019-01-31T22:13:00.002+01:00'
+author: David P.
+tags:
+- dpkg
+- localhost
+- webmin
+- linux
+- wegt
+- perl
+- linux mint
+- root
+- raspberry
+modified_time: '2019-01-31T22:17:13.436+01:00'
+thumbnail: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEghgnM5fEvN_4Kc_sVQe526WFML09BwZ0kjGY1WR_JIM_mFU0S-ThggtnJ6uAkXMJyyE9xhjXj58rczA9BxLBxQMoINIc4D_WLJcVqH01R9aKYYA4qVBxcKfL_CJklBERmH_Yc-3oGCPc4/s72-c/Captura+de+pantalla+de+2019-01-31+21-48-30.png
+blogger_id: tag:blogger.com,1999:blog-3624480011084378437.post-8224635651500479747
+blogger_orig_url: https://www.enfaseterminal.com/2019/01/webmin-salvavidas-para-los-que-no-somos.html
+---
+
+No me considero puritano de la línea de comandos, incluso es desesperante 😣😱.<br />
+Si que es cierto que para la gestión de nuestro equipo, servidor local o remoto es una herramienta imprescindible; y nos permite un consumo mínimo de recursos.<br />
+Pero la carne es debil. <a href="http://www.webmin.com/" target="_blank">Webmin</a> es una herramienta para la gestión sistemas Unix, como GNU/Linux y OpenSolaris basado en web; si podremos utilizar el ratón 😈. Está escrito en Perl, se encuentra en español y como he dicho es vía web, con lo cual es multiplataforma.<br />
+<br />
+<div class="separator" style="clear: both; text-align: center;">
+<a href="https://doxfer.webmin.com/Webmin/Main_Page" target="_blank"><img alt="Wiki Webmin" border="0" data-original-height="580" data-original-width="800" height="232" src="https://doxfer.webmin.com/mediawiki/images/d/de/Webmin-dashboard-1900.png" title="Wiki Webmin" width="320" /></a></div>
+<br />
+<br />
+En la siguiente página se encuentra los distintos formatos de empaquetado para poder instalarlo en nuestro equipo<br />
+<blockquote class="tr_bq">
+<a href="http://www.webmin.com/download.html" target="_blank">http://www.webmin.com/download.html</a></blockquote>
+<blockquote>
+<span style="color: yellow;">wegt&nbsp;&nbsp;https://prdownloads.sourceforge.net/webadmin/webmin_1.900_all.deb</span></blockquote>
+<blockquote class="tr_bq">
+<span style="color: yellow;">sudo dpkg -i webmin_1.900_all.deb</span></blockquote>
+<div style="text-align: -webkit-center;">
+<div style="text-align: justify;">
+En mi caso la instalación en una <a href="https://www.raspberrypi.org/" target="_blank">Raspberry</a> con el sistema operativo&nbsp;<a href="https://www.raspberrypi.org/downloads/raspbian/">Raspbian</a> no&nbsp;hubo ningún problema. Pero en <a href="https://linuxmint.com/" target="_blank">Linux Mint 19.1 Cinnamon</a> no resulto tan fácil y tuve que <a href="http://raspbian/">resolver dependencias con un paquete que faltaba</a>.</div>
+</div>
+<br />
+Una vez instalado, accederemos desde nuestro navegador a la dirección ip que queremos administrar a través de protocolo seguro <a href="https://es.wikipedia.org/wiki/Protocolo_seguro_de_transferencia_de_hipertexto" target="_blank">https</a> y el puerto <a href="https://es.wikipedia.org/wiki/Anexo:N%C3%BAmeros_de_puertos_de_red" target="_blank">10.000</a>:<br />
+<br />
+<blockquote class="tr_bq">
+<a href="https://localhost:10000/" target="_blank">https://localhost:10000/</a></blockquote>
+<div class="separator" style="clear: both; text-align: center;">
+<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEghgnM5fEvN_4Kc_sVQe526WFML09BwZ0kjGY1WR_JIM_mFU0S-ThggtnJ6uAkXMJyyE9xhjXj58rczA9BxLBxQMoINIc4D_WLJcVqH01R9aKYYA4qVBxcKfL_CJklBERmH_Yc-3oGCPc4/s1600/Captura+de+pantalla+de+2019-01-31+21-48-30.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" data-original-height="644" data-original-width="707" height="291" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEghgnM5fEvN_4Kc_sVQe526WFML09BwZ0kjGY1WR_JIM_mFU0S-ThggtnJ6uAkXMJyyE9xhjXj58rczA9BxLBxQMoINIc4D_WLJcVqH01R9aKYYA4qVBxcKfL_CJklBERmH_Yc-3oGCPc4/s320/Captura+de+pantalla+de+2019-01-31+21-48-30.png" width="320" /></a></div>
+<div style="text-align: center;">
+<br /></div>
+<div style="text-align: justify;">
+Puede ser que tu navegador te recuerde que la conexión no es privada, continuamos de todos modos.</div>
+<div style="text-align: justify;">
+<br /></div>
+<div class="separator" style="clear: both; text-align: center;">
+<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgsCo2ZtGMaHKwWT0Up4xH8vHGkuoXC2l_jyJscBVSl-aOaLXvw_pof93HmX6Old4GHUj73N_0nFsWUMeZA1hs6TNmoMRgtw8vnVCGbmsc2A84cR08h1kYtj9sbVMh9pGJUwDKJv_SZxi0/s1600/Captura+de+pantalla+de+2019-01-31+22-00-47.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" data-original-height="375" data-original-width="358" height="320" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgsCo2ZtGMaHKwWT0Up4xH8vHGkuoXC2l_jyJscBVSl-aOaLXvw_pof93HmX6Old4GHUj73N_0nFsWUMeZA1hs6TNmoMRgtw8vnVCGbmsc2A84cR08h1kYtj9sbVMh9pGJUwDKJv_SZxi0/s320/Captura+de+pantalla+de+2019-01-31+22-00-47.png" width="305" /></a></div>
+<div style="text-align: center;">
+<br /></div>
+<div style="text-align: justify;">
+Y solo nos quedará iniciar sesión como root o como el usuario que tengamos como administrador</div>

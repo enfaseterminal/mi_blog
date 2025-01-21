@@ -1,0 +1,107 @@
+---
+layout: post
+title: Instalar Packet Tracer de Cisco
+date: '2019-01-13T23:11:00.000+01:00'
+author: David P.
+tags:
+- dpkg
+- red
+- linux
+- Packet Tracer
+- wget
+- deb
+- cisco
+modified_time: '2019-01-19T21:22:31.652+01:00'
+thumbnail: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg5U-9zpcawUayyxt7apEHAgRFY93hszlahEm0wZVD11pXDpAJVAktL9MxjWcmxpB7R9Lt9bZ-w6c5CCQkI8gF6YzmOWJgtcmrX-lN7fpYArS3G1mN5OtgFJisnQk5_ytJ5H5h16CK1deo/s72-c/Captura+de+pantalla+de+2019-01-13+23-09-18.png
+blogger_id: tag:blogger.com,1999:blog-3624480011084378437.post-2812645442772642998
+blogger_orig_url: https://www.enfaseterminal.com/2019/01/instalar-packet-tracer-de-cisco.html
+---
+
+Packet Tracer es un simulador de redes con el que crear, practicar, interactuar y programar.<br />
+<div>
+Es una herramienta de <a href="https://www.cisco.com/c/es_es/index.html" target="_blank">Cisco</a>&nbsp;para su <a href="https://www.netacad.com/es/courses/packet-tracer" target="_blank">Networking Academy</a>.</div>
+<div>
+La aplicación es multi-plataforma y en este caso explicaré como instalarlo bajo plataforma <a href="https://enfaseterminal.blogspot.com/search/label/linux" target="_blank">Linux</a> resulta siempre 😔 más complicado.</div>
+<div>
+<br /></div>
+<div>
+La <a href="https://www.netacad.com/en/one-step-self-enroll?p_p_id=onestepenrollmentportlet_WAR_studentenrollmentportlet&amp;p_p_lifecycle=0&amp;_onestepenrollmentportlet_WAR_studentenrollmentportlet_courseId=774266&amp;_onestepenrollmentportlet_WAR_studentenrollmentportlet_rootAccountId=34396&amp;_onestepenrollmentportlet_WAR_studentenrollmentportlet_emailAddress=&amp;_onestepenrollmentportlet_WAR_studentenrollmentportlet_language=es_ES" target="_blank">inscripción</a> en gratuita, pero obligatoria para descargar la aplicación y su posterior utilización.</div>
+<div>
+<br /></div>
+<div>
+Descargar <a href="https://www.netacad.com/group/offerings/packet-tracer/" target="_blank">Cisco Packet Tracer</a>.</div>
+<div>
+<br /></div>
+<div>
+Descomprimimos descargado:</div>
+<blockquote class="tr_bq">
+<span style="color: yellow;">tar -xzvf Packet Tracer 7.2 for Linux 64 bit.tar.gz -C /cisco</span></blockquote>
+Accedemos a la carpeta cisco y&nbsp; ejecutamos el instalador:<br />
+<blockquote class="tr_bq">
+<span style="color: yellow;">./install</span></blockquote>
+<div class="separator" style="clear: both; text-align: center;">
+</div>
+<div class="separator" style="clear: both; text-align: center;">
+</div>
+<blockquote>
+Welcome to Cisco Packet Tracer 7.2 Installation<br />
+Read the following End User License Agreement "EULA" carefully. You must accept the terms of this EULA to install and use Cisco Packet Tracer.<br />
+Press the Enter key to read the EULA.<br />
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Cisco Packet Tracer<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Software License Agreement<br />
+IMPORTANT: PLEASE READ THIS CISCO PACKET TRACER SOFTWARE LICENSE AGREEMENT (THE<br />
+"AGREEMENT") CAREFULLY.&nbsp; DOWNLOADING, INSTALLING OR USING THE CISCO PACKET TRACE<br />
+R SOFTWARE CONSTITUTES ACCEPTANCE OF THIS AGREEMENT.&nbsp; IF YOU DO NOT AGREE TO ALL<br />
+&nbsp;OF THE TERMS OF THIS AGREEMENT, THEN CISCO SYSTEMS, INC. ("CISCO") IS UNWILLING<br />
+&nbsp;TO LICENSE THE SOFTWARE TO YOU AND YOU ARE NOT AUTHORIZED TO DOWNLOAD, INSTALL<br />
+OR USE THE SOFTWARE.<br />
+I.<span style="white-space: pre;"> </span>DISTRIBUTION RIGHTS.&nbsp; The terms in this Section I (Distribution Rights)&nbsp;</blockquote>
+<div>
+Deberemos aceptar los terminos de uso de la aplicación ⇪</div>
+<br />
+Por defecto colocará nuestra instalación en el directorio...<br />
+Nos solicitará privilegios de administración si confiamos en realizar la instalación en la ubicación predeterminada.<br />
+<blockquote class="tr_bq">
+You have accepted the terms to the EULA. Congratulations. Packet Tracer will now be installed.<br />
+Enter location to install Cisco Packet Tracer or press enter for default [/opt/pt]:<br />
+[sudo] contraseña para &lt;usuario&gt;:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br />
+Installing into /opt/pt<br />
+Not able to create and copy files to /opt/pt<br />
+Should we try to gain root access with sudo? [Yn] y<br />
+Installing into /opt/pt<br />
+Copied all files successfully to /opt/pt</blockquote>
+<div>
+Creará un enlace&nbsp; simbólico para facilitar el arranque de la aplicación</div>
+<div>
+<blockquote class="tr_bq">
+Should we create a symbolic link "<span style="color: yellow;">packettracer</span>" in /usr/local/bin for easy Cisco Packet Tracer startup? [Yn] y</blockquote>
+</div>
+<div>
+Paso final:</div>
+<div>
+<blockquote class="tr_bq">
+Type "<span style="color: yellow;">packettracer</span>" in a terminal to start Cisco Packet Tracer<br />
+Writing PT7HOME environment variable to /etc/profile<br />
+Writing QT_DEVICE_PIXEL_RATIO environment variable to /etc/profile<br />
+Cisco Packet Tracer 7.2 installed successfully<br />
+Please restart you computer for the Packet Tracer settings to take effect</blockquote>
+</div>
+<div>
+<br /></div>
+<div>
+Para poder utilizar la aplicación Packet Tracer tenemos que satisfacer sus pendencias instalando la librería <a href="https://packages.ubuntu.com/trusty/libpng12-0" target="_blank">libpng 12</a></div>
+<blockquote class="tr_bq">
+<span style="color: yellow;">wget http://security.ubuntu.com/ubuntu/pool/main/libp/libpng/libpng12-0_1.2.50-1ubuntu2.14.04.3_amd64.deb</span></blockquote>
+<blockquote class="tr_bq">
+<span style="color: yellow;">wget http://security.ubuntu.com/ubuntu/pool/main/libp/libpng/libpng12-0_1.2.50-1ubuntu2.14.04.3_i386.deb&nbsp;</span></blockquote>
+<br />
+Realizamos la instalación de acuerdo con la arquitectura de nuestro dispositivo 32 ó 64 bits<br />
+<blockquote class="tr_bq">
+<span style="color: yellow;">dpkg -i libpng12-0_1.2.50-1ubuntu2.14.04.3_amd64.deb</span></blockquote>
+Una vez reiniciemos nuestro equipo lanzaremos la aplicación:<br />
+<blockquote class="tr_bq">
+<span style="color: yellow;">packettracer</span><span style="background-color: yellow;"><br /></span><br />
+<div class="separator" style="clear: both; text-align: center;">
+<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg5U-9zpcawUayyxt7apEHAgRFY93hszlahEm0wZVD11pXDpAJVAktL9MxjWcmxpB7R9Lt9bZ-w6c5CCQkI8gF6YzmOWJgtcmrX-lN7fpYArS3G1mN5OtgFJisnQk5_ytJ5H5h16CK1deo/s1600/Captura+de+pantalla+de+2019-01-13+23-09-18.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" data-original-height="950" data-original-width="1280" height="237" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg5U-9zpcawUayyxt7apEHAgRFY93hszlahEm0wZVD11pXDpAJVAktL9MxjWcmxpB7R9Lt9bZ-w6c5CCQkI8gF6YzmOWJgtcmrX-lN7fpYArS3G1mN5OtgFJisnQk5_ytJ5H5h16CK1deo/s320/Captura+de+pantalla+de+2019-01-13+23-09-18.png" width="320" /></a></div>
+</blockquote>

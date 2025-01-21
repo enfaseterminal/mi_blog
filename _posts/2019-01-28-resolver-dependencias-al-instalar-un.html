@@ -1,0 +1,34 @@
+---
+layout: post
+title: Resolver dependencias al instalar un paquete
+date: '2019-01-28T21:57:00.001+01:00'
+author: David P.
+tags:
+- dpkg
+- entrada actualizada
+- apt-get
+- sudo apt-get --fix-broken install
+- webmin
+- linux
+- sudo
+- dependencias
+modified_time: '2021-08-06T20:53:58.385+02:00'
+blogger_id: tag:blogger.com,1999:blog-3624480011084378437.post-1106631176596109608
+blogger_orig_url: https://www.enfaseterminal.com/2019/01/resolver-dependencias-al-instalar-un.html
+---
+
+La instalación de paquetes en linux, en algunos casos, suele ser frustrante; sobre todo si el programa que queremos instalar tiene la necesidad de tener instalados previamente en nuestro equipo otros paquetes para que funcione.<br />
+Instalaciones incompletas nos bloquea el instalador para nuevos paquetes.<br />
+En mi caso instalado el paquete<br />
+<blockquote class="tr_bq">
+<span style="color: yellow;">sudo dpkg -i webmin_1.900_all.deb</span></blockquote>
+Quedo incompleta su instalación, ya que dependía de la instalación de paquetes que no se encontraban en el sistema:<br />
+<blockquote class="tr_bq">
+Leyendo lista de paquetes... Hecho<br />Creando árbol de dependencias&nbsp; &nbsp; &nbsp; <br />Leyendo la información de estado... Hecho<br />Tal vez quiera ejecutar «apt --fix-broken install» para corregirlo.<br />Los siguientes paquetes tienen dependencias incumplidas:<br />&nbsp;webmin : Depende: <span style="color: yellow;">libauthen-pam-perl</span> pero no está instalado<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Depende:&nbsp;<span style="color: yellow;">apt-show-versions</span>&nbsp;pero no está instalado<br />E: Dependencias incumplidas. Intente «apt --fix-broken install» sin paquetes (o especifique una solución).</blockquote>
+Ejecutando el comando <span style="color: yellow;">apt-get</span><br />
+<blockquote class="tr_bq">
+<span style="color: yellow;">sudo apt-get --fix-broken install</span></blockquote>
+<blockquote class="tr_bq">
+&nbsp;Leyendo lista de paquetes... Hecho<br />Creando árbol de dependencias&nbsp; &nbsp; &nbsp; <br />Leyendo la información de estado... Hecho<br />Corrigiendo dependencias... Listo<br />Se instalarán los siguientes paquetes adicionales:<br />&nbsp;&nbsp;<span style="color: yellow;">apt-show-versions libauthen-pam-perl</span><br />Se instalarán los siguientes paquetes NUEVOS:<br />&nbsp; apt-show-versions libauthen-pam-perl<br />0 actualizados, 2 nuevos se instalarán, 0 para eliminar y 0 no actualizados.<br />1 no instalados del todo o eliminados.<br />Se necesita descargar 0 B/52,8 kB de archivos.<br />Se utilizarán 172 kB de espacio de disco adicional después de esta operación.<br />¿Desea continuar? [S/n] s<br />Seleccionando el paquete libauthen-pam-perl previamente no seleccionado.<br />(Leyendo la base de datos ... 367984 ficheros o directorios instalados actualmente.)<br />Preparando para desempaquetar .../libauthen-pam-perl_0.16-3build5_amd64.deb ...<br />Desempaquetando libauthen-pam-perl (0.16-3build5) ...<br />Seleccionando el paquete apt-show-versions previamente no seleccionado.<br />Preparando para desempaquetar .../apt-show-versions_0.22.7ubuntu1_all.deb ...<br />Desempaquetando apt-show-versions (0.22.7ubuntu1) ...<br />Configurando libauthen-pam-perl (0.16-3build5) ...<br />Configurando apt-show-versions (0.22.7ubuntu1) ...<br />** initializing cache. This may take a while **<br />Configurando webmin (1.900) ...<br />Webmin install complete. You can now login to https://localhost:10000/<br />as root with your root password, or as any user who can use sudo<br />to run commands as root.</blockquote>
+<div>
+Fueron satisfechas las dependencias y terminando correctamente la instalación, en este caso, de <a href="http://www.webmin.com/" target="_blank">Wemin</a></div><div><br /></div><span><a name='more'></a></span><div><br /></div><div><br /></div><h3 style="text-align: left;">Entrada actualizada:</h3><div><span><blockquote style="text-align: justify;">Si aun así&nbsp;no es posible resolver las dependencias del paquete y añadido una nueva entrada con algunos pasos más a seguir para poder restaurar el sistema.</blockquote><blockquote><p>&nbsp;<a href="https://www.enfaseterminal.com/2021/08/como-resolver-dependencias-rotas.html">Como resolver dependencias rotas</a></p></blockquote><blockquote style="text-align: justify;"><span style="text-align: left;">&nbsp;</span></blockquote></span><br /></div>

@@ -1,0 +1,25 @@
+---
+layout: post
+title: Obtener mi ip publica con curl
+date: '2019-01-18T21:29:00.000+01:00'
+author: David P.
+tags:
+- DNS
+- curl
+- ddns
+- ip
+- liux
+modified_time: '2020-03-24T01:13:25.920+01:00'
+blogger_id: tag:blogger.com,1999:blog-3624480011084378437.post-639330981392370812
+blogger_orig_url: https://www.enfaseterminal.com/2019/01/obtener-mi-ip-publica-con-curl.html
+---
+
+En mi caso necesita obtener mi dirección ip que estaba utilizando en internet para configurar un&nbsp;ddns<br />
+<blockquote class="tr_bq">
+<a href="https://es.wikipedia.org/wiki/DNS_din%C3%A1mico" target="_blank">Wikipedia&nbsp;</a></blockquote>
+<blockquote class="tr_bq">
+El DNS dinámico (DDNS) es un servicio que permite la actualización en tiempo real de la información sobre <a href="https://es.wikipedia.org/wiki/Nombre_de_dominio">nombres de dominio</a> situada en un <a href="https://es.wikipedia.org/wiki/Servidor_de_nombres_ra%C3%ADz">servidor de nombres</a>. El uso más común que se le da es permitir la asignación de un nombre de dominio de Internet a un dispositivo con dirección <a href="https://es.wikipedia.org/wiki/Direcci%C3%B3n_IP">IP</a> variable (dinámica). Esto permite conectarse con la máquina en cuestión sin necesidad de tener conocimiento de que dirección IP posee en ese momento.<br />
+El DNS dinámico hace posible utilizar un software de servidor en un dispositivo con dirección IP dinámica (como la suelen facilitar muchos <a href="https://es.wikipedia.org/wiki/ISP_(Internet)">ISP</a>) para, por ejemplo, alojar un sitio web en la PC de nuestra casa, sin necesidad de contratar un <a href="https://es.wikipedia.org/wiki/Hosting">hosting</a> de terceros; pero hay que tener en cuenta que las <a href="https://es.wikipedia.org/wiki/Personal_computer">PC</a> caseras posiblemente no estén tan bien dotadas como los servidores de un <a href="https://es.wikipedia.org/wiki/Datacenter">Datacenter</a>, ni tengan toda la infraestructura que poseen estos lugares.&nbsp;</blockquote>
+Buscando encontré que utilizando el comando curl, era posible saber mi dirección pública y añadirlo a un script, que actualizaría mi ip en mi servidor&nbsp;DDNS:<br />
+<br />
+curl ifconfig.me

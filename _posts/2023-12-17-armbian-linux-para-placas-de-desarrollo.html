@@ -1,0 +1,41 @@
+---
+layout: post
+title: Armbian Linux para placas de desarrollo ARM
+date: '2023-12-17T21:49:00.001+01:00'
+author: David P.
+tags:
+- NanoPi
+- lot
+- Rock
+- arm
+- ubuntu
+- Broadcom
+- NVIDIA
+- orange
+- Armbian
+- linux
+- escritorio
+- GitHub
+- debian
+- raspberry
+- PCB
+modified_time: '2023-12-17T21:49:23.287+01:00'
+thumbnail: https://blogger.googleusercontent.com/img/a/AVvXsEg6FpRQ2JcqKXtDyrjpULzhfX_0iSLoXdPtnp0Isom6_eqmr3N-2kk2f0k7wK9jwrGz5x6A1pveNGxVnB2-u2A-5dhGKqCQGjDAWHQsMeZyDtiRaBaBivbaOMyU7re4QBy9fDw3eNV_jPCceAUp5DFocZX__63Ci0rk3LNE-r7FU-KKxenkYDSwShYlCVA=s72-w320-c-h180
+blogger_id: tag:blogger.com,1999:blog-3624480011084378437.post-8061429734771007471
+blogger_orig_url: https://www.enfaseterminal.com/2023/12/armbian-linux-para-placas-de-desarrollo.html
+---
+
+<p style="text-align: justify;"><a href="https://www.armbian.com/" target="_blank">Armbian</a> es un sistema operativo ligero Linux basado en Debian y Ubuntu diseñado específicamente para placas de desarrollo ARM. Lo que implica que es un sistema operativo ligero para ordenadores de bajo recursos.</p><p><br /></p><p></p><div class="separator" style="clear: both; text-align: center;"><a href="https://blogger.googleusercontent.com/img/a/AVvXsEg6FpRQ2JcqKXtDyrjpULzhfX_0iSLoXdPtnp0Isom6_eqmr3N-2kk2f0k7wK9jwrGz5x6A1pveNGxVnB2-u2A-5dhGKqCQGjDAWHQsMeZyDtiRaBaBivbaOMyU7re4QBy9fDw3eNV_jPCceAUp5DFocZX__63Ci0rk3LNE-r7FU-KKxenkYDSwShYlCVA" style="margin-left: 1em; margin-right: 1em;"><img alt="Captura de pantalla de escritorio de sistema operativo Armbian" data-original-height="266" data-original-width="474" height="180" src="https://blogger.googleusercontent.com/img/a/AVvXsEg6FpRQ2JcqKXtDyrjpULzhfX_0iSLoXdPtnp0Isom6_eqmr3N-2kk2f0k7wK9jwrGz5x6A1pveNGxVnB2-u2A-5dhGKqCQGjDAWHQsMeZyDtiRaBaBivbaOMyU7re4QBy9fDw3eNV_jPCceAUp5DFocZX__63Ci0rk3LNE-r7FU-KKxenkYDSwShYlCVA=w320-h180" title="Captura de pantalla de escritorio de sistema operativo Armbian" width="320" /></a></div><br /><br /><p></p><p style="text-align: justify;">Las placas <a href="https://www.arm.com/" target="_blank">ARM</a> (Ordenador con un Conjunto Reducido de Instrucciones) o de placa única es una computadora&nbsp;en la que todo el hardware, incluidas las unidades de memoria y procesamiento, se sueldan en una sola placa de circuito impreso (PCB). Requieren un desarrollo menor y reducir los costes de producción. Este tipo de desarrollo permite una democratizan de las nuevas tecnologías, pequeños proyectos de computación, servidores caseros, sistemas loT, sistemas multimedia, centros de juegos, retor, etc....</p>
+<ul>
+    <li><strong>ARM1:</strong> El primer procesador ARM, sin implementación específica.</li>
+    <li><strong>ARM2:</strong> Introdujo la instrucción de multiplicación (MUL) y el coprocesador FPA10 para punto flotante.</li>
+    <li><strong>ARM3:</strong> El primero con caché de memoria integrada.</li>
+    <li><strong>ARM7TDMI:</strong> Introdujo la arquitectura Thumb y eliminó la dirección de 26 bits.</li>
+    <li><strong>ARM926EJ-S:</strong> Incluyó Thumb, Jazelle DBX y mejoras en DSP.</li>
+    <li><strong>ARM1026EJ-S:</strong> También incorporó Thumb, Jazelle DBX y mejoras en DSP, además de soporte para punto flotante (VFP).</li>
+    <li><strong>Raspberry Pi 4:</strong> Con un procesador Broadcom BCM2711 basado en ARM Cortex-A72.</li>
+    <li><strong>NVIDIA Jetson Nano:</strong> Equipado con un procesador ARM Cortex-A57.</li>
+    <li><strong>Rock Pi 4:</strong> Utiliza un procesador Rockchip RK3399 basado en ARM Cortex-A72.</li>
+    <li><strong>Orange Pi 4:</strong> Con un procesador Rockchip RK3399 basado en ARM Cortex-A72.</li>
+    <li><strong>NanoPi M4V2:</strong> Utiliza un procesador Rockchip RK3399 basado en ARM Cortex-A72.</li>
+</ul><div><br /></div><div><div class="separator" style="clear: both; text-align: center;"><a href="https://blogger.googleusercontent.com/img/a/AVvXsEjZzO9OqpWNbtkTiyf2DJ19oyLTSAXWmyu57opa-ydpYRCZIjj5dxAGgPfi1Xi4ctrYNuVn09Cme3bxLGiUrOybYGQJzYX3nuGIj9yTx28TPTHAwmw7XMzW4SSDSBElBgXUWU85ng-SFhMDhNU_CIFKd3YekcJlQHiihWcls0kO1fKpXP5oJdkkUBY6gos" style="margin-left: 1em; margin-right: 1em;"><img alt="Placa Rock Pi4" data-original-height="738" data-original-width="918" height="257" src="https://blogger.googleusercontent.com/img/a/AVvXsEjZzO9OqpWNbtkTiyf2DJ19oyLTSAXWmyu57opa-ydpYRCZIjj5dxAGgPfi1Xi4ctrYNuVn09Cme3bxLGiUrOybYGQJzYX3nuGIj9yTx28TPTHAwmw7XMzW4SSDSBElBgXUWU85ng-SFhMDhNU_CIFKd3YekcJlQHiihWcls0kO1fKpXP5oJdkkUBY6gos=w320-h257" title="Placa Rock Pi4" width="320" /></a></div><br /><a href="https://www.armbian.com/" target="_blank">Armbian</a>&nbsp;ofrece una solución versátil y eficiente para proyectos de hardware y software en estas plataformas. A continuación, te presento una lista de algunas placas que son compatibles con Armbian:</div><p></p><ul style="text-align: left;"><li>Banana Pi</li><li>Banana Pi M2</li><li>Banana Pi M2+</li><li>Banana Pi Pro</li><li>Beelink X2</li><li>Clearfog base</li><li>Clearfog pro</li><li>Cubieboard</li><li>Cubieboard2</li><li>Cubietruck</li><li>Outernet Dreamcatcher</li><li>Cubox-i</li><li>Lemaker Guitar</li><li>Libre Computer Project AML-S905X-CC (Le Potato)</li><li>Libre Computer Project ALL-H3-CC (Tritium)</li><li>Lamobo R1</li><li>Olimex Lime</li><li>Olimex Lime 2</li><li>Olimex Lime A10</li><li>Olimex Lime A33</li><li>Olimex Micro</li><li>Orange Pi 2</li><li>Orange Pi 3</li><li>Orange Pi Lite</li><li>Orange Pi One</li><li>Orange Pi PC</li><li>Orange Pi PC+</li><li>Orange Pi PC2</li><li>Orange Pi R1</li><li>Orange Pi Win</li><li>Orange Pi Zero</li><li>Orange Pi Zero 2+ H3</li><li>Orange Pi Zero 2+ H5</li><li>Orange Pi Zero+</li><li>Orange Pi+</li><li>Orange Pi+ 2</li><li>Orange Pi+ 2e (Plus2e)</li><li>Orange Pi 2G-IoT</li><li>MQmaker Miqi</li><li>Friendlyarm NanoPC T4</li><li>Friendlyarm Nanopi Air</li><li>Friendlyarm Nanopi M1</li><li>Friendlyarm Nanopi M1+</li><li>Friendlyarm Nanopi Neo</li><li>Friendlyarm Nanopi Neo2</li><li>Odroid C1</li><li>Odroid C2</li><li>Odroid C4</li><li>Odroid HC4</li><li>Odroid XU4</li><li>Odroid N2/N2+</li><li>Xunlong Orangepi 2</li><li>Xunlong Orangepi lite</li><li>Xunlong Orangepi one</li><li>Xunlong Orangepi pc</li><li>Xunlong Orangepi pc2</li><li>Xunlong Orangepi pc+</li><li>Xunlong Orangepi +</li><li>Xunlong Orangepi +2e</li><li>Xunlong Orangepi prime</li><li>Xunlong Orangepi win</li><li>Xunlong Orangepi zero</li><li>Xunlong Orangepi zero +2 h3</li><li>Xunlong Orangepi zero +2 h5</li><li>LinkSprite Pcduino 2</li><li>LinkSprite Pcduino 3</li><li>LinkSprite Pcduino 3 nano</li><li>Pine64 (a.k.a. Pine A64)</li><li>Pine64so</li><li>Pinebook64</li><li>Rock Pi 4</li><li>RockPro64</li><li>Roseapple Pi</li><li>Asus Tinkerboard</li><li>Udoo</li><li>Udoo Neo</li><li>Helios4</li><li>Helios64</li></ul><div>A la hora de escribir esta publicación sobre Armbian se encuentra en la versión&nbsp;<a href="https://www.armbian.com/newsflash/armbian-23-11-topi/" target="_blank">Armbian 23.11 Topi</a>.</div><div><ul style="text-align: left;"><li>Para descargar la versión de <a href="https://www.armbian.com/download/?tx_category=desktop" target="_blank">escritorio</a>&nbsp;</li><li>Código fuente del proyecto alojado en&nbsp;<a href="https://github.com/armbian/build" target="_blank">GitHub</a></li><li>Para sistemas <a href="https://www.armbian.com/download/?device_support=Standard%20support" target="_blank">loT</a></li><li><a href="https://docs.armbian.com/User-Guide_Getting-Started/" target="_blank">Guía de instalación</a></li><li><a href="https://docs.armbian.com/" target="_blank">Documentación</a></li></ul></div><p></p>

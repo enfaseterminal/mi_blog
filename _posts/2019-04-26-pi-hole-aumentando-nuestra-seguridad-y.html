@@ -1,0 +1,186 @@
+---
+layout: post
+title: Pi-Hole Aumentando nuestra seguridad y privacidad
+date: '2019-04-26T20:39:00.000+02:00'
+author: David P.
+tags:
+- DNS sinkholing
+- quad9 ipv4
+- curl
+- servidor
+- ddns
+- google dns
+- cache
+- lighttpd
+- ipv6
+- whitelist
+- blacklist
+- ssh
+- opendns
+- privacidad
+- DNS
+- ping
+- seguridad
+- pi-hole
+- publicidad
+- raspberry
+modified_time: '2023-02-28T19:02:12.966+01:00'
+thumbnail: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh-W8Bz3YmfOEPKozjel0FLCbuxSsn9EpIhDKLl5-wKT4oLxy-CInIzrJymfBRWHQUwob4ACMdUeOwx4u8HYz4y4J12t_sX1jtMLQqyBYC_ctCAMX51wmorL7mru0ky5xQVjRre3XYc0s8/s72-c/Captura+de+pantalla+de+2019-04-09+20-42-26.png
+blogger_id: tag:blogger.com,1999:blog-3624480011084378437.post-338765343286727625
+blogger_orig_url: https://www.enfaseterminal.com/2019/04/pi-hole-aumentando-nuestra-seguridad-y.html
+---
+
+Un servidor <span style="color: yellow;">DNS</span> es aquel que nos da información de la dirección ip (números raros, pero fundamentales para la comunicación a través de internet) donde se encuentra el dominio que hemos escrito en nuestro navegador.<br />
+<div>
+<br />
+<div class="separator" style="clear: both; text-align: center;">
+<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh-W8Bz3YmfOEPKozjel0FLCbuxSsn9EpIhDKLl5-wKT4oLxy-CInIzrJymfBRWHQUwob4ACMdUeOwx4u8HYz4y4J12t_sX1jtMLQqyBYC_ctCAMX51wmorL7mru0ky5xQVjRre3XYc0s8/s1600/Captura+de+pantalla+de+2019-04-09+20-42-26.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img alt="ping google.es" border="0" data-original-height="439" data-original-width="654" height="214" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh-W8Bz3YmfOEPKozjel0FLCbuxSsn9EpIhDKLl5-wKT4oLxy-CInIzrJymfBRWHQUwob4ACMdUeOwx4u8HYz4y4J12t_sX1jtMLQqyBYC_ctCAMX51wmorL7mru0ky5xQVjRre3XYc0s8/s320/Captura+de+pantalla+de+2019-04-09+20-42-26.png" title="ping google.es" width="320" /></a></div>
+<div>
+<br /></div>
+</div>
+<div>
+En el caso que queramos acceder a www.google.es, nuestro navegador solicitará a un servidor DNS que dirección tiene este dominio y donde se encuentra</div>
+<blockquote class="tr_bq">
+<span style="color: yellow;">Dominio&nbsp;<a href="http://www.google.es/">www.google.es</a>&nbsp;Dirección IP&nbsp;<a href="http://172.217.168.163/">172.217.168.163</a></span></blockquote>
+<br />
+<a href="https://pi-hole.net/">&nbsp;Pi-Hole</a> es:&nbsp;Bloqueo de anuncios en toda la red Pi-hole®<br />
+<br />
+<div class="separator" style="clear: both; text-align: center;">
+<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjQVE3kM2K5zZZPXefaOwrkZq10abyQxNhNthNVqTJfois5PW5hwx6bnR5kKZzacy_LoECiUtob3NIPBQexW57ogwaeNSpnbY4RmVcieSfX49BD32yVbjxcEPvV3Q_JBUQwS4CzM8jPMRI/s1600/Captura+de+pantalla+de+2019-04-09+20-52-43.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img alt="Página web Pi-Hole" border="0" data-original-height="837" data-original-width="1600" height="167" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjQVE3kM2K5zZZPXefaOwrkZq10abyQxNhNthNVqTJfois5PW5hwx6bnR5kKZzacy_LoECiUtob3NIPBQexW57ogwaeNSpnbY4RmVcieSfX49BD32yVbjxcEPvV3Q_JBUQwS4CzM8jPMRI/s320/Captura+de+pantalla+de+2019-04-09+20-52-43.png" title="Página web Pi-Hole" width="320" /></a></div>
+<br />
+La idea es que nuestros dispositivos realicen las peticiones DNS a Pi-Hole y este filtre las direcciones que resulten dañinas y/o contienen publicidad. Y realice la petición de las direcciones a un servidor principal siempre y cuando no se encuentre registrado en su caché acelerando el tiempo de carga de la solicitud.<br />
+En definitiva este servidor DNS caché "casero" nos filtrará el contenido publicitario, muchas veces molesto, y acelerará la carga de las páginas que vemos habitualmente en nuestro navegador.<br />
+<br />
+En este caso instalaremos Pi-Hole en una <a href="https://www.enfaseterminal.com/search/label/raspberry"><span style="color: yellow;">Raspberry</span></a> para todos los dispositivos que tenemos en casa se conecten a nuestro filtro de publicidad.<br />
+<br />
+Teniendo en cuenta que nuestra Raspberry tenga una dirección estática accederemos a su terminal a través del protocolo <a href="https://www.enfaseterminal.com/search/label/ssh"><span style="color: yellow;">ssh</span></a> y ejecutaremos el comando<br />
+<blockquote class="tr_bq">
+<span style="color: yellow;">curl -sSL https://install.pi-hole.net | bash</span></blockquote>
+Lanzará la instalación<br />
+<br />
+<div style="text-align: center;">
+<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiVwpDDA7meqkO5Yt5WMeirveeu4QeHJghFQ8e7DLnXoGcZFliRnnKO73cfU749UbryfECIfVOW5iltzIS2XFFqWBcASnx_dpTZsgvZZX992npFEfGlYQHPNqwXF2HJP_yUJ4TzAMgi9GQ/s1600/Captura+de+pantalla+de+2019-04-09+22-27-20.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img alt="Instalando Pi-Hole" border="0" data-original-height="384" data-original-width="474" height="259" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiVwpDDA7meqkO5Yt5WMeirveeu4QeHJghFQ8e7DLnXoGcZFliRnnKO73cfU749UbryfECIfVOW5iltzIS2XFFqWBcASnx_dpTZsgvZZX992npFEfGlYQHPNqwXF2HJP_yUJ4TzAMgi9GQ/s320/Captura+de+pantalla+de+2019-04-09+22-27-20.png" title="Instalando Pi-Hole" width="320" /></a></div>
+<div style="text-align: center;">
+<br /></div>
+<div style="text-align: justify;">
+<br /></div>
+<div style="text-align: center;">
+<br /></div>
+<div class="separator" style="clear: both; text-align: center;">
+<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiUKHWBDT1UJt2n0QSMjFGUyLH5lB9hdh9rnb4sCPgSutBMbZ8Jd8FPXUo8Q-2yx3SHWYszwuHzaj1ToF7jCUAf5IMJW9J2hO6-2D7teOlSGo0g04XDbjceS3AcJHGgymx2n75npglGQTg/s1600/Captura+de+pantalla+de+2019-04-09+22-18-09.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img alt="Advertencia instalación" border="0" data-original-height="359" data-original-width="638" height="180" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiUKHWBDT1UJt2n0QSMjFGUyLH5lB9hdh9rnb4sCPgSutBMbZ8Jd8FPXUo8Q-2yx3SHWYszwuHzaj1ToF7jCUAf5IMJW9J2hO6-2D7teOlSGo0g04XDbjceS3AcJHGgymx2n75npglGQTg/s320/Captura+de+pantalla+de+2019-04-09+22-18-09.png" title="Advertencia instalación" width="320" /></a></div>
+<br />
+<br />
+<ul>
+<li>Nos advierte que nuestro servidor ha de tener una dirección estática.</li>
+</ul>
+<br />
+<br />
+<div class="separator" style="clear: both; text-align: center;">
+<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgOXxBPwRxghIXnfRLI6aNN_x4vPMjjCytowVO9WovcU5DNjcj1CYG7aAT65FYvvzl-YgfG1cN3rBvL4piAOPViiIFD88HPPFrWHOKj-yv1jGKn1g8P-8vuZFWhq7rQ4iYMrEIzJFD9cFI/s1600/Captura+de+pantalla+de+2019-04-09+22-18-39.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img alt="Dirección estática servidor Pi-Hole" border="0" data-original-height="477" data-original-width="709" height="215" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgOXxBPwRxghIXnfRLI6aNN_x4vPMjjCytowVO9WovcU5DNjcj1CYG7aAT65FYvvzl-YgfG1cN3rBvL4piAOPViiIFD88HPPFrWHOKj-yv1jGKn1g8P-8vuZFWhq7rQ4iYMrEIzJFD9cFI/s320/Captura+de+pantalla+de+2019-04-09+22-18-39.png" title="Dirección estática servidor Pi-Hole" width="320" /></a></div>
+<br />
+<br />
+<ul>
+<li>Nuestro servidor ha de solicitar la informador a un DNS primario, en este apartado elegiremos uno de la lista.Yo os recomendaría Quad9. Servidor DNS creado por IBM, que nos ofrece una alta velocidad de resolución de peticiones, no guardará registro y bloqueará direcciones peligrosas</li>
+</ul>
+<br />
+<br />
+<div class="separator" style="clear: both; text-align: center;">
+<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgyBpzjpcOtZekCb6CGfcgWS31Cps2KytNv5T2zuJl5y1u6Jv1sv1RwrH0laeFc2eDxyJtYeRWvgr41Li850YV9inWi_ysNZxXYGdO9aDAdhFOAR6vuyyBbCvNFFi2-0SdjSjhiF92JiuE/s1600/Captura+de+pantalla+de+2019-04-09+22-19-12.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img alt="Servidores DNS" border="0" data-original-height="333" data-original-width="580" height="183" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgyBpzjpcOtZekCb6CGfcgWS31Cps2KytNv5T2zuJl5y1u6Jv1sv1RwrH0laeFc2eDxyJtYeRWvgr41Li850YV9inWi_ysNZxXYGdO9aDAdhFOAR6vuyyBbCvNFFi2-0SdjSjhiF92JiuE/s320/Captura+de+pantalla+de+2019-04-09+22-19-12.png" title="Servidores DNS" width="320" /></a></div>
+<div class="separator" style="clear: both; text-align: center;">
+<br /></div>
+<div class="separator" style="clear: both; text-align: justify;">
+</div>
+<ul>
+Qué servidores de listas negras quieres agregar. O añadir una nueva:
+<li><a href="https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts" target="_blank"><span style="color: yellow;">https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts</span></a></li>
+<li><a href="https://mirror1.malwaredomains.com/files/justdomains" target="_blank"><span style="color: yellow;">https://mirror1.malwaredomains.com/files/justdomains</span></a></li>
+<li><a href="http://sysctl.org/cameleon/hosts" target="_blank"><span style="color: yellow;">http://sysctl.org/cameleon/hosts</span></a></li>
+<li><span style="color: yellow;"><a href="https://zeustracker.abuse.ch/blocklist.php?download=domainblocklist">https://zeustracker.abuse.ch/blocklist.php?download=domainblocklist</a></span></li>
+<li><span style="color: yellow;"><a href="https://s3.amazonaws.com/lists.disconnect.me/simple_tracking.txt" target="_blank">https://s3.amazonaws.com/lists.disconnect.me/simple_tracking.txt</a></span></li>
+<li><a href="https://s3.amazonaws.com/lists.disconnect.me/simple_ad.txt" target="_blank"><span style="color: yellow;">https://s3.amazonaws.com/lists.disconnect.me/simple_ad.txt</span></a></li>
+<li><span style="color: yellow;"><a href="https://hosts-file.net/ad_servers.txt" target="_blank">https://hosts-file.net/ad_servers.txt</a></span></li>
+</ul>
+<div>
+En&nbsp;<a href="https://firebog.net/" target="_blank">https://firebog.net/</a>&nbsp;podremos encontrar más catalogos de <i>blacklist</i>. Si nos bloquean el acceso de una pagina y consideramos que no es maliciosa, siempre podremos incluirla en la <i>whitelist.</i></div>
+<div>
+<br />
+<div>
+<div>
+<br />
+<div class="separator" style="clear: both; text-align: center;">
+<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi9_G5ZNbHswARRvGBhdgw2RBKwv0TpeDQgRs6CPFvOyZuZlEtes3rDxXaV1g65xC96IXT2JttTyQbXWXh7I4tqwOS4i5qLfvQcM3nYpJ8kG_rMMq_iu6b7q4QS9l58uAR2cHrhDtzPtK4/s1600/Captura+de+pantalla+de+2019-04-09+22-19-43.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img alt="Servidores listas negras de páginas publicidad" border="0" data-original-height="344" data-original-width="598" height="184" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi9_G5ZNbHswARRvGBhdgw2RBKwv0TpeDQgRs6CPFvOyZuZlEtes3rDxXaV1g65xC96IXT2JttTyQbXWXh7I4tqwOS4i5qLfvQcM3nYpJ8kG_rMMq_iu6b7q4QS9l58uAR2cHrhDtzPtK4/s320/Captura+de+pantalla+de+2019-04-09+22-19-43.png" title="Servidores listas negras de páginas publicidad" width="320" /></a></div>
+<div class="separator" style="clear: both; text-align: center;">
+<br /></div>
+<div class="separator" style="clear: both; text-align: justify;">
+</div>
+<ul>
+<li>Que versión de IP, ipv4 ipv6, queremos que sean filtradas. Lo más normal es dejar marcadas las dos, nos filtrará las direcciones ip antiguas y las que puedan incorporarse en un futuro.</li>
+</ul>
+<br />
+<br />
+<div class="separator" style="clear: both; text-align: center;">
+<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgGF1tv0d0x9ZwLN9bViYVLLnLLfs2wV3KtzJVRh6csrfgr-QUjSjre-O-GtCh3sL_jCUwniQsYunwF51KS0Pem12e1XHmLGpq2o5fudyTAa-XBiP2Wrsy1PzEXwIOQtklLgaXDPGxSCis/s1600/Captura+de+pantalla+de+2019-04-09+22-20-10.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img alt="Filtrar ipv4 ipv6" border="0" data-original-height="342" data-original-width="594" height="184" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgGF1tv0d0x9ZwLN9bViYVLLnLLfs2wV3KtzJVRh6csrfgr-QUjSjre-O-GtCh3sL_jCUwniQsYunwF51KS0Pem12e1XHmLGpq2o5fudyTAa-XBiP2Wrsy1PzEXwIOQtklLgaXDPGxSCis/s320/Captura+de+pantalla+de+2019-04-09+22-20-10.png" title="Filtrar ipv4 ipv6" width="320" /></a></div>
+<div class="separator" style="clear: both; text-align: center;">
+<br /></div>
+<div class="separator" style="clear: both; text-align: justify;">
+</div>
+<ul>
+<li>¿Deseamos instalar el interface de administración web? Es recomendable para una administración más visual y nos permite ver estadísticas de páginas permitidas y bloqueadas por cada dispositivo que se conecte a nuestro servidor DNS.</li>
+</ul>
+<br />
+<div class="separator" style="clear: both; text-align: center;">
+</div>
+<br />
+<div class="separator" style="clear: both; text-align: center;">
+<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjcVaC10j9TqgK51Q6cD4toS4otGbMihFjRLwbTfTZ4tpvlUmv-N2InQRQBgx6lwwMw2ULMfsUJTDfYukJnIWzg0NZFE6zmO_jtIJbmO7eV9U8_DKIK8vOeIECus-ZpIsrN2ExrfKpNZtw/s1600/Captura+de+pantalla+de+2019-04-09+22-21-32.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img alt="¿Deseamos instalar el interface de administración web?" border="0" data-original-height="362" data-original-width="609" height="190" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjcVaC10j9TqgK51Q6cD4toS4otGbMihFjRLwbTfTZ4tpvlUmv-N2InQRQBgx6lwwMw2ULMfsUJTDfYukJnIWzg0NZFE6zmO_jtIJbmO7eV9U8_DKIK8vOeIECus-ZpIsrN2ExrfKpNZtw/s320/Captura+de+pantalla+de+2019-04-09+22-21-32.png" title="¿Deseamos instalar el interface de administración web?" width="320" /></a></div>
+<div class="separator" style="clear: both; text-align: center;">
+<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg-MrKewYueT4bE4YAnSW5n6rXFBOLvKFaq3hILovtf7_0JzYmJOnS1-e6LuQaSBvhg66uIre537ejYue1n6Hqju4AQeL0JkBtjTcFvTC8wtFaonobtICDvLhtUlxwdNDRLvvLJzpBz1wA/s1600/Captura+de+pantalla+de+2019-04-09+22-24-39.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img alt="¿Instalar lighttpd necesario para el interface web?" border="0" data-original-height="362" data-original-width="611" height="189" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg-MrKewYueT4bE4YAnSW5n6rXFBOLvKFaq3hILovtf7_0JzYmJOnS1-e6LuQaSBvhg66uIre537ejYue1n6Hqju4AQeL0JkBtjTcFvTC8wtFaonobtICDvLhtUlxwdNDRLvvLJzpBz1wA/s320/Captura+de+pantalla+de+2019-04-09+22-24-39.png" title="¿Instalar lighttpd necesario para el interface web?" width="320" /></a></div>
+<br />
+<br />
+<ul>
+<li>¿Crear un archivo log con todos los eventos y errores que ocurran?</li>
+</ul>
+<br />
+<br />
+<div class="separator" style="clear: both; text-align: center;">
+<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh4-Adoj2SpPu8oCMmhrQ5wlkQrVEti-ilaJD9L6i_UAsotMNl1mKmg0yDL0CU4umkM6hzQ1wKMBu6FNyfJZ8M3U7ftI7_kVWHifzkhN97kU0Lenqt-j_hCLiMJH28TdFFc8oTsjd7kZMM/s1600/Captura+de+pantalla+de+2019-04-09+22-24-59.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" data-original-height="349" data-original-width="600" height="186" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh4-Adoj2SpPu8oCMmhrQ5wlkQrVEti-ilaJD9L6i_UAsotMNl1mKmg0yDL0CU4umkM6hzQ1wKMBu6FNyfJZ8M3U7ftI7_kVWHifzkhN97kU0Lenqt-j_hCLiMJH28TdFFc8oTsjd7kZMM/s320/Captura+de+pantalla+de+2019-04-09+22-24-59.png" width="320" /></a></div>
+<br />
+<br />
+<ul>
+<li>Definir el tipo de privacidad. Puede que no estés interesado en saber o que otras personas sepan qué páginas visitas y las navegaciones queden registradas.</li>
+</ul>
+<br />
+<br />
+<div class="separator" style="clear: both; text-align: center;">
+<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhJCTFA3wcgDxyQ4Frns3gKf5PNAiqU9j_p6AxQjse2nQEVRHeAB6DmtXi1lDgu4SpVXV90EsUrySjZcNhwCVS85ZcLPFTi1p2H3fRHXkDId3zkKWX0B1m3gSwW3nX1Li3r-BSJyritOi8/s1600/Captura+de+pantalla+de+2019-04-09+22-25-22.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img alt="Definir privacidad" border="0" data-original-height="349" data-original-width="612" height="182" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhJCTFA3wcgDxyQ4Frns3gKf5PNAiqU9j_p6AxQjse2nQEVRHeAB6DmtXi1lDgu4SpVXV90EsUrySjZcNhwCVS85ZcLPFTi1p2H3fRHXkDId3zkKWX0B1m3gSwW3nX1Li3r-BSJyritOi8/s320/Captura+de+pantalla+de+2019-04-09+22-25-22.png" title="Definir privacidad" width="320" /></a></div>
+<br />
+<br />
+<ul>
+<li>Información final sobre la dirección DNS, donde se van a guardar el registro de eventos y, en qué dirección se encuentra la administración web del servidor que hemos creado: <a href="http://pi.hole/admin" target="_blank">http://pi.hole/admin</a>&nbsp;y su contraseña inicial que podremos cambiar más adelante.</li>
+</ul>
+<br />
+<br />
+<div class="separator" style="clear: both; text-align: center;">
+<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjezO2Xt7mlIQmE8534qgnbT0YIvMVB9ylh06a9lyHvfC6NEezAndPHsd8dH_59lHoM6xtbstxqf4gaHdD1QqTDYnr1CEU5OMKFO2odFORtKxH9V4c-aoJUa9_5Qm9z5791oIrIaubqpA0/s1600/Captura+de+pantalla+de+2019-04-09+22-26-35.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" data-original-height="374" data-original-width="644" height="185" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjezO2Xt7mlIQmE8534qgnbT0YIvMVB9ylh06a9lyHvfC6NEezAndPHsd8dH_59lHoM6xtbstxqf4gaHdD1QqTDYnr1CEU5OMKFO2odFORtKxH9V4c-aoJUa9_5Qm9z5791oIrIaubqpA0/s320/Captura+de+pantalla+de+2019-04-09+22-26-35.png" width="320" /></a></div>
+<br />
+<div class="separator" style="clear: both; text-align: justify;">
+Ya tendremos nuestro servidor DNS caché instalado. Solo nos quedaría cambiar las direcciones <span style="color: yellow;">DNS </span>de los dispositivos que queramos proteger y/o filtrar a nuestro recién instalado servidor Pi-Hole</div>
+<div class="separator" style="clear: both; text-align: justify;">
+</div>
+<ul>
+<li><a href="https://www.enfaseterminal.com/2019/01/como-cambiar-servidor-dns-en-linux.html">Como cambiar servidor DNS en linux</a></li>
+</ul>
+<br />
+<br />
+Nuestros equipos quedarán protegidos y mucha de la publicidad que se muestra en páginas web y videos a partir de ahora no se mostrará. En mi caso 9,4% de las peticiones web que se realizan mientras navego han sido bloqueadas, menos publicidad más privacidad.<br />
+<div style="text-align: center;">
+<br /></div>
+<div class="separator" style="clear: both; text-align: center;">
+<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhtQX0PTof3PRV7TxkzxMZjY5PGTJLPioRy91VVxccrHGuiVD775QaRpmoyUaw9r24nhIaKHCv_OQhpToTBBucHjGtRxVpF3arV1lTGM01ab2AHWoJF2EYF2nsJbB4A0Z-gQaVoK1_d-rs/s1600/Captura+de+pantalla+de+2019-04-26+20-01-19.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" data-original-height="879" data-original-width="1257" height="223" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhtQX0PTof3PRV7TxkzxMZjY5PGTJLPioRy91VVxccrHGuiVD775QaRpmoyUaw9r24nhIaKHCv_OQhpToTBBucHjGtRxVpF3arV1lTGM01ab2AHWoJF2EYF2nsJbB4A0Z-gQaVoK1_d-rs/s320/Captura+de+pantalla+de+2019-04-26+20-01-19.png" width="320" /></a></div>
+<div style="text-align: center;">
+<br /></div>
+<h1 class="heading8" style="background-color: white; border: 0px; box-sizing: border-box; color: white; font-family: &quot;Source Sans Pro&quot;, Helvetica, Arial, sans-serif; font-size: 3.3em; line-height: 68.31px; margin: 0px 0px 25px; padding: 0px; text-align: right; vertical-align: baseline;">
+<span style="box-sizing: border-box; vertical-align: inherit;"><span style="box-sizing: border-box; vertical-align: inherit;">Bloqueo de anuncios en toda la red&nbsp;</span><span style="box-sizing: border-box; vertical-align: inherit;">Pi-hole®&nbsp;</span></span></h1>
+</div>
+</div>
+</div>

@@ -1,0 +1,23 @@
+---
+layout: post
+title: Como resolver dependencias rotas
+date: '2021-08-06T20:45:00.001+02:00'
+author: David P.
+tags:
+- dpkg
+- paquete
+- "–fix-missing"
+- sudo apt-get --fix-broken install
+- sudo
+- sudo apt-get clean && sudo apt-get autoclean
+- deb
+- debian
+- dependencias
+- sudo dpkg --configure -a
+modified_time: '2021-08-06T20:54:42.118+02:00'
+thumbnail: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjalrOJ2zMAgcxhYNElJ8-JXp8KWy2T8n_h7vnVKrq7vWIVGXPNZ0bVxm1DQYmEMjmpNoh8VmQ832hyRFAArqAlXYnt6oxMedHOOTCeQ8Djxsxi7HwWKyssjSSEZBo7empifj0_59AUYas/s72-w400-c-h134/Captura+de+pantalla+de+2021-08-06+20-42-41.png
+blogger_id: tag:blogger.com,1999:blog-3624480011084378437.post-3897349369923715715
+blogger_orig_url: https://www.enfaseterminal.com/2021/08/como-resolver-dependencias-rotas.html
+---
+
+<p style="text-align: justify;">Como resolver dependencias rotas de una instalación basada en Debian.</p><p style="text-align: justify;">En una entrada anterior intentaba solucionar la instalación fallida de un paquete:</p><blockquote><p><a href="https://www.enfaseterminal.com/search/label/sudo%20apt-get%20--fix-broken%20install" target="_blank">Resolver dependencias al instalar un paquete</a></p></blockquote><p style="text-align: justify;">Pero al desinstalar o purgar una aplicación, puede que por error se borró alguna librería de la que dependa otro programa o servicio. Una de las formas que nos recomienda el propio sistema es la ejecución del script:</p><p style="text-align: justify;"><br /></p><blockquote><p>sudo apt --fix-broken install</p></blockquote><p><br /></p><p></p><div class="separator" style="clear: both; text-align: center;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjalrOJ2zMAgcxhYNElJ8-JXp8KWy2T8n_h7vnVKrq7vWIVGXPNZ0bVxm1DQYmEMjmpNoh8VmQ832hyRFAArqAlXYnt6oxMedHOOTCeQ8Djxsxi7HwWKyssjSSEZBo7empifj0_59AUYas/s920/Captura+de+pantalla+de+2021-08-06+20-42-41.png" style="margin-left: 1em; margin-right: 1em;"><img alt="Dependencias rotas" border="0" data-original-height="307" data-original-width="920" height="134" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjalrOJ2zMAgcxhYNElJ8-JXp8KWy2T8n_h7vnVKrq7vWIVGXPNZ0bVxm1DQYmEMjmpNoh8VmQ832hyRFAArqAlXYnt6oxMedHOOTCeQ8Djxsxi7HwWKyssjSSEZBo7empifj0_59AUYas/w400-h134/Captura+de+pantalla+de+2021-08-06+20-42-41.png" title="Dependencias rotas" width="400" /></a></div><br />&nbsp;<p></p><p><br /></p><p>Si no ha habido éxito, como fue mi caso ejecutaremos los siguientes comandos</p><p>Lo primero que haremos es intentar configurar paquetes que han sido desempaquetados, pero no configurados. Para ello ejecutaremos el siguiente comando en la terminal:</p><p><br /></p><blockquote><p>sudo dpkg --configure -a</p></blockquote><p><br /></p><p>Seguidamente limpiaremos la cache local de paquetes .deb&nbsp;</p><p><br /></p><blockquote><p>sudo apt-get clean &amp;&amp; sudo apt-get autoclean</p></blockquote><p><br /></p><p>Regeneramos la caché de los repositorios con el parámetro <i>–fix-missing</i>. De este modo intentaremos detectar y reparar problemas de dependencias en nuestro sistema operativo.</p><p><br /></p><blockquote><p>sudo apt-get update --fix-missing</p></blockquote><p><br /></p><p>Corregiremos las dependencias rotas. Para ello ejecutaremos el siguiente comando en la terminal:&nbsp;</p><p><br /></p><blockquote><p>sudo apt-get install -f</p></blockquote><p>&nbsp;</p><p>En este punto mi problema se solucionó, restaurando el sistema y pudiendo ejecutar</p><p><br /></p><blockquote><p>sudo apt-get dist-upgrade</p></blockquote><p><br /></p><p>Para poder actualizar el sistema.&nbsp;</p>

@@ -1,0 +1,73 @@
+---
+layout: post
+title: Eliminar publicidad mientras navegas en linux
+date: '2019-08-15T13:55:00.000+02:00'
+author: David P.
+tags:
+- DNS sinkholing
+- GNU/Linux
+- DNS
+- linux
+- sudo
+- pi-hole
+- ip
+- "/etc/hosts"
+- nano
+- publicidad
+modified_time: '2023-02-28T19:02:02.713+01:00'
+blogger_id: tag:blogger.com,1999:blog-3624480011084378437.post-5364181558002012504
+blogger_orig_url: https://www.enfaseterminal.com/2019/08/eliminar-publicidad-mientras-navegas-en.html
+---
+
+<div style="text-align: center;">
+<div style="text-align: justify;">
+Aunque hay extensiones para bloquear la publicidad mientras navegas por internet, buscaba algo màs simple que no fuera dependiente del navegador que&nbsp;esté utilizando en ese momento.</div>
+</div>
+<div style="text-align: justify;">
+Encontré un método muy simple, editando el archivo:<br />
+<br /></div>
+/etc/hosts<br />
+<div style="text-align: justify;">
+<br />
+En este archivo podemos guardar la relación de nombres de dominio y sus direcciones ip's. Cuando naveguemos por internet, nuestro ordenador accede primero a este archivo para localizar el dominio al que queremos acceder. Si no lo encuentra continuará la búsqueda en los servidores DNS que le indiquemos.</div>
+<div style="text-align: justify;">
+<br /></div>
+<div style="text-align: justify;">
+Si no disponemos de un servidor DNS en nuestra nuestra red local, nos será útil a la hora de acceder a nuestros servidores a través de nombres y no de direcciones ip.</div>
+<div style="text-align: justify;">
+<br /></div>
+<div style="text-align: justify;">
+Pero si añadimos dominios conocidos que son servidores de publicidad y/o rastreadores y le indicamos una dirección falsa, nuestro navegador no nos mostrará ninguna publicidad y no enviará datos de nuestra navegación.</div>
+<div style="text-align: justify;">
+<br /></div>
+<div style="text-align: justify;">
+El funcionamiento es similar a Pi-Hole . Pero sin necesidad de instalar un servidor DNS en nuestra red.</div>
+<br />
+El método es muy sencillo. Editamos el archivo&nbsp;/etc/hosts<br />
+<br />
+sudo nano /etc/hosts<br />
+<br />
+Nos saldrá algo parecido a:<br />
+<br />127.0.0.1       localhost<br />127.0.1.1       enfaseterminal<br /># The following lines are desirable for IPv6 capable hosts<br />::1     ip6-localhost ip6-loopback<br />fe00::0 ip6-localnet<br />ff00::0 ip6-mcastprefix<br />ff02::1 ip6-allnodes<br />ff02::2 ip6-allrouters<div>
+<br />Añadiremos en al final del archivo:<br />
+<br />
+<blockquote class="tr_bq">
+<a href="https://mega.nz/#!maRhEapC!-J7HXuVD0FiJXLpLMm5CtZKdnJUuHoiqSlCdj1kuzGU" target="_blank"><span style="color: yellow;">https://mega.nz/#!maRhEapC!-J7HXuVD0FiJXLpLMm5CtZKdnJUuHoiqSlCdj1kuzGU</span></a></blockquote>
+<blockquote class="tr_bq">
+<div style="text-align: center;">
+<script language="JavaScript">
+//Ajusta el tamaño de un iframe al de su contenido interior para evitar scroll
+function autofitIframe(id){
+if (!window.opera && document.all && document.getElementById){
+id.style.height=id.contentWindow.document.body.scrollHeight;
+} else if(document.getElementById) {
+id.style.height=id.contentDocument.body.scrollHeight+"px";
+}
+}
+</script>
+<iframe frameborder="1" height="300" id="miFrame" src="https://docs.google.com/document/d/e/2PACX-1vRYZige76XKwYlykUENg-iLfX4_NRQAADtzGsYjRObLThG6peD-SGzzxjZBCrmGUS9xbVQjJFsTUA6k/pub?embedded=true" transparency="transparency" width="100%"></iframe></div>
+</blockquote>
+&nbsp;Esta lista negra a sido confecciona a partir del archivo:<br />
+<blockquote class="tr_bq">
+<a href="https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts" target="_blank"><span style="color: yellow;">https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts</span></a></blockquote>
+<br /></div>

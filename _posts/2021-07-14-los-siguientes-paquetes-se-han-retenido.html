@@ -1,0 +1,21 @@
+---
+layout: post
+title: Los siguientes paquetes se han retenido
+date: '2021-07-14T21:36:00.000+02:00'
+author: David P.
+tags:
+- apt-get
+- GNU/Linux
+- mantenimiento
+- retenidos
+- paquetes
+- linux
+- sudo
+- upgrade
+- dependencias
+modified_time: '2021-07-14T21:36:55.104+02:00'
+blogger_id: tag:blogger.com,1999:blog-3624480011084378437.post-3283005554054043255
+blogger_orig_url: https://www.enfaseterminal.com/2021/07/los-siguientes-paquetes-se-han-retenido.html
+---
+
+<p>Realizando tareas de mantenimiento del sistema, este me respondió con el mensaje:</p><p><br /></p><blockquote><p>sudo apt-get full-upgrade&nbsp;</p><p>Leyendo lista de paquetes... Hecho</p><p>Creando árbol de dependencias&nbsp; &nbsp; &nbsp; &nbsp;</p><p>Leyendo la información de estado... Hecho</p><p>Calculando la actualización... Hecho</p><p><b>Los siguientes paquetes se han retenido:</b></p><p><b>&nbsp; rawtherapee</b></p></blockquote><p>&nbsp;</p><p>A partir de aquí ya no me permite actualizar el sistema</p><p>Una de las soluciones que encontré fue, curiosamente, actualizar el paquete que se encontraba retenido, utilizando el comando:</p><blockquote><p><b>sudo apt-get upgrade <i>&lt;nombre paquete retenido&gt;</i></b></p></blockquote><p><br /></p><blockquote><p><b>sudo apt-get upgrade rawtherapee</b></p><p>Leyendo lista de paquetes... Hecho</p><p>Creando árbol de dependencias&nbsp; &nbsp; &nbsp; &nbsp;</p><p>Leyendo la información de estado... Hecho</p><p>Calculando la actualización... Hecho</p><p>Los siguientes paquetes se ELIMINARÁN:</p><p>&nbsp; rawtherapee-data</p><p>Los siguientes paquetes se han retenido:</p><p>&nbsp; gparted</p><p>Se actualizarán los siguientes paquetes:</p><p>&nbsp; rawtherapee</p><p>1 actualizados, 0 nuevos se instalarán, 1 para eliminar y 1 no actualizados.</p><p>Se necesita descargar 17,3 MB de archivos.</p><p>Se utilizarán 28,9 MB de espacio de disco adicional después de esta operación.</p><p>¿Desea continuar? [S/n] s</p><p>Des:1 http://ppa.launchpad.net/dhor/myway/ubuntu bionic/main amd64 rawtherapee amd64 5.8-1dhor~bionic [17,3 MB]</p><p>Descargados 17,3 MB en 1s (21,4 MB/s)&nbsp;&nbsp;</p><p>dpkg: rawtherapee-data: problemas de dependencias, pero se desinstalará de todas formas</p><p>&nbsp;tal y como se solicitó:</p><p>&nbsp;rawtherapee depende de rawtherapee-data (= 5.3-1).</p><p>(Leyendo la base de datos ... 551670 ficheros o directorios instalados actualmente.)</p><p>Desinstalando rawtherapee-data (5.3-1) ...</p><p>(Leyendo la base de datos ... 550717 ficheros o directorios instalados actualmente.)</p><p>Preparando para desempaquetar .../rawtherapee_5.8-1dhor~bionic_amd64.deb ...</p><p>Desempaquetando rawtherapee (5.8-1dhor~bionic) sobre (5.3-1) ...</p><p>Configurando rawtherapee (5.8-1dhor~bionic) ...</p><p>Procesando disparadores para gnome-menus (3.13.3-11ubuntu1.1) ...</p><p>Procesando disparadores para hicolor-icon-theme (0.17-2) ...</p><p>Procesando disparadores para mime-support (3.60ubuntu1) ...</p><p>Procesando disparadores para desktop-file-utils (0.23+linuxmint8) ...</p><p>Procesando disparadores para man-db (2.8.3-2ubuntu0.1) ...</p><div><br /></div></blockquote><p>&nbsp;</p>

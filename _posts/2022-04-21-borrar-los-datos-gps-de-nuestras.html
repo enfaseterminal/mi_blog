@@ -1,0 +1,22 @@
+---
+layout: post
+title: Borrar los datos GPS de nuestras fotografías
+date: '2022-04-21T22:15:00.001+02:00'
+author: David P.
+tags:
+- redes sociales
+- privacidad
+- terminal
+- imagemagick
+- seguridad
+- mogrify
+- internet
+- exif
+- GPS
+- fotografia
+modified_time: '2022-04-21T22:18:13.030+02:00'
+blogger_id: tag:blogger.com,1999:blog-3624480011084378437.post-2219776904021894587
+blogger_orig_url: https://www.enfaseterminal.com/2022/04/borrar-los-datos-gps-de-nuestras.html
+---
+
+<p style="text-align: justify;">Compartimos multitud de fotografías en redes sociales, por correo electrónico, o las publicamos en nuestro blog o página web personal. Y la vez compartimos la ubicación, o datos GPS de donde se han tomado esa fotografía. Si esa foto ha sido tomada en nuestra casa, estamos compartiendo donde se encuentra. <a href="https://www.enfaseterminal.com/2021/04/el-derecho-al-olvido.html">Y la información que subimos en internet nunca se borra</a>.</p><p style="text-align: justify;">Al compartir las fotografías, compartimos una información visual y datos sobre cuándo y cómo fue tomada, en forma de etiquetas llamada Exif que puede contener:</p><p></p><ul style="text-align: left;"><li>Resolución</li><li>Tipo de archivo</li><li>Velocidad del obturador/tiempo de exposición/ISO</li><li>Rotación de imagen</li><li>Fecha/hora</li><li>Balance de blanco</li><li>Miniatura</li><li>Distancia focal</li><li>Flash</li><li>Objetivo</li><li>Tipo de archivo</li><li>Tipo de cámara</li><li>Software utilizado</li><li>Tiempo de grabación y, si es necesario, etiquetado GPS</li></ul><p></p><p>Para borrar todos estos datos que no queremos compartir en público, utilizaremos el conjunto de herramientas&nbsp;<a href="https://www.enfaseterminal.com/2022/04/imagemagick-manipulacion-y-conversion.html">ImageMagick</a>&nbsp;para la manipulación de imágenes desde la linea de comandos.</p><p>En concreto utilizaremos el comando&nbsp;<span style="color: #ffa400;">mogrify</span> y para ello deberemos tener instalado previamente las aplicaciones contenidas en&nbsp;<a href="https://www.enfaseterminal.com/2022/04/imagemagick-manipulacion-y-conversion.html" style="outline-width: 0px !important; user-select: auto !important;">ImageMagick</a>.</p><p></p><blockquote style="border: none; margin: 0 0 0 40px; padding: 0px;"><p><b><span style="color: #ffa400; font-size: medium;">mogrify -strip <i>mi_archivo_fotografico.jpg</i></span></b></p><div><br /></div></blockquote><p></p><p></p><blockquote style="border: none; margin: 0 0 0 40px; padding: 0px;"><p style="text-align: left;"><br /></p></blockquote><p></p>

@@ -1,0 +1,47 @@
+---
+layout: post
+title: Saber el tiempo que hace en terminal
+date: '2019-02-10T23:51:00.000+01:00'
+author: David P.
+tags:
+- curl
+- linux
+- app
+- meteorología
+- tiempo
+modified_time: '2019-02-10T23:51:48.285+01:00'
+thumbnail: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg2HVJZht6DkSrIxWmw5hnCNmmTYCB942_T3YDGOOqP4PjXLlBZxSledQdPnY7ZrvqzDDS1V541Don9r3szQdjNpep9PHHrJ_Y6P0VDmWgWs2M_NFwvrVpVUdUe5KuNXWSrWvefkqY1Zhg/s72-c/tiempo.png
+blogger_id: tag:blogger.com,1999:blog-3624480011084378437.post-4093300059298495432
+blogger_orig_url: https://www.enfaseterminal.com/2019/02/saber-el-tiempo-que-hace-en-terminal.html
+---
+
+Buscando en la red me encontré con esta publicación <a href="https://blog.desdelinux.net/las-mejores-apps-para-consultar-el-tiempo-en-linux/" target="_blank">Las mejores apps para consultar el tiempo en Linux</a><br />
+Entre ellas destaca <a href="https://github.com/chubin/wttr.in" target="_blank">Wttr.in</a>. Con un formato simple nos muestra el tiempo, bien desde nuestra ubicación, aunque no es muy precisa, o bien indicando una dirección.<br />
+Podemos consultar que tiempo va ha hacer mañana desde nuestro navegador:<br />
+<blockquote class="tr_bq">
+<a href="http://wttr.in/valladolid"><span style="color: yellow;">http://wttr.in/valladolid</span></a></blockquote>
+<div class="separator" style="clear: both; text-align: center;">
+<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg2HVJZht6DkSrIxWmw5hnCNmmTYCB942_T3YDGOOqP4PjXLlBZxSledQdPnY7ZrvqzDDS1V541Don9r3szQdjNpep9PHHrJ_Y6P0VDmWgWs2M_NFwvrVpVUdUe5KuNXWSrWvefkqY1Zhg/s1600/tiempo.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" data-original-height="580" data-original-width="939" height="197" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg2HVJZht6DkSrIxWmw5hnCNmmTYCB942_T3YDGOOqP4PjXLlBZxSledQdPnY7ZrvqzDDS1V541Don9r3szQdjNpep9PHHrJ_Y6P0VDmWgWs2M_NFwvrVpVUdUe5KuNXWSrWvefkqY1Zhg/s320/tiempo.png" width="320" /></a></div>
+<div style="text-align: center;">
+<br /></div>
+&nbsp;Podemos realizar peticiones de forma más minimalista si solo queremos saber que temperatura hay:<br />
+<blockquote class="tr_bq">
+<span style="color: yellow;"><br /><a href="http://wttr.in/mountainview?format=3"><span style="color: yellow;">http://wttr.in/mountainview?format=3</span></a></span></blockquote>
+<br />
+<blockquote class="tr_bq">
+<span style="color: yellow;"><br /><div class="separator" style="clear: both; text-align: center;">
+<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhHmKNB_9gXAzOfm37jITbY5-qQpVPRPA8i0Fxvt6mk1A7BdI1aZHfNaZ_qfuRJyiQkVo6KkdMKL3_-OaxXE213UbFvmO2EH5ozfK7tQiFQrjCBz5_qPDw6YGNP6tYFy76uGLIAW57OP38/s1600/Captura+de+pantalla+de+2019-02-10+23-44-32.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" data-original-height="102" data-original-width="254" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhHmKNB_9gXAzOfm37jITbY5-qQpVPRPA8i0Fxvt6mk1A7BdI1aZHfNaZ_qfuRJyiQkVo6KkdMKL3_-OaxXE213UbFvmO2EH5ozfK7tQiFQrjCBz5_qPDw6YGNP6tYFy76uGLIAW57OP38/s1600/Captura+de+pantalla+de+2019-02-10+23-44-32.png" /></a></div>
+<div style="text-align: center;">
+<br /></div>
+</span></blockquote>
+O bien realizar consultas desde nuestro terminal y utilizando el comando <a href="https://www.enfaseterminal.com/search?q=curl">curl</a>.<br />
+Accederemos a la dirección de esta curiosa estación meteorológica, obteniendo información detallada del tiempo en la ubicación que hemos solicitado, en este caso de Valladolid<br />
+<blockquote class="tr_bq">
+<span style="color: yellow;">curl wttr.in/valladolid</span></blockquote>
+<div class="separator" style="clear: both; text-align: center;">
+<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgdwFC3Zs61jzm9NFWInSfFgYT2eItEPrSmQqIX37_6zogqqb9PR80aM7J3TpyGii8GxmQwrd-3im9m2L6BGw1pNNjFNk72fq1gKwDhme1KDeBU_guHnFvs0j1IhOhvunGCDXUhmYEgxjc/s1600/Captura+de+pantalla+de+2019-02-10+23-23-11.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" data-original-height="630" data-original-width="1070" height="188" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgdwFC3Zs61jzm9NFWInSfFgYT2eItEPrSmQqIX37_6zogqqb9PR80aM7J3TpyGii8GxmQwrd-3im9m2L6BGw1pNNjFNk72fq1gKwDhme1KDeBU_guHnFvs0j1IhOhvunGCDXUhmYEgxjc/s320/Captura+de+pantalla+de+2019-02-10+23-23-11.png" width="320" /></a></div>
+<div style="text-align: center;">
+<br /></div>
+<div>
+<br /></div>
+<br />

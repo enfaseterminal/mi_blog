@@ -1,0 +1,20 @@
+---
+layout: post
+title: Como asignar un puerto a una VLAN
+date: '2019-01-23T13:33:00.001+01:00'
+author: David P.
+tags:
+- Packet Tracer
+- vlan
+- cisco
+modified_time: '2019-01-24T12:10:03.575+01:00'
+blogger_id: tag:blogger.com,1999:blog-3624480011084378437.post-6379460863970409468
+blogger_orig_url: https://www.enfaseterminal.com/2019/01/como-asignar-un-puerto-una-vlan.html
+---
+
+Una vez que hemos <a href="https://www.enfaseterminal.com/2019/01/como-crear-redes-virtuales-vlan.html">creado nuestras VLAN</a>, distribuiremos los puertos de nuestro switch o router, las distintas redes virtuales.<br />
+Utilizaremos los siguientes comandos en el shell del equipo:<br />
+<blockquote class="tr_bq" style="text-align: left;">
+<span style="color: yellow;">Switch&gt;enable<br />Switch#configure terminal<br />Switch(config)#interface fastEthernet 0/1<br />Switch(config-if)#switchport access vlan 1</span></blockquote>
+<div style="text-align: right;">
+<span style="font-size: x-small;">Utilizando simulador <a href="https://www.enfaseterminal.com/search/label/Packet%20Tracer">Packet Tracer</a> de Cisco</span></div>

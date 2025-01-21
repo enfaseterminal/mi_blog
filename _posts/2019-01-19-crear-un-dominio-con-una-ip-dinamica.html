@@ -1,0 +1,51 @@
+---
+layout: post
+title: Crear un dominio con una ip dinámica con Google Domains en Linux
+date: '2019-01-19T21:18:00.000+01:00'
+author: David P.
+tags:
+- curl
+- google domains
+- linux
+- ddns
+- google
+- ip
+- chmod
+- raspberry
+modified_time: '2019-01-22T19:37:08.745+01:00'
+thumbnail: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgePiXfNKGMVE3TebR-frsU63tgad_z4csKoqmCnNPc0ighDFJoIqDZCunlN5dof78DJOPXgEpjK5yCmtXDysXhOKMd4Ln-XXLvL3ipw9xygwemIVROUH40iKeg5sTDQpYRGoPCMh8hUXM/s72-c/Captura+de+pantalla+de+2019-01-19+21-27-49.png
+blogger_id: tag:blogger.com,1999:blog-3624480011084378437.post-3298066696538619031
+blogger_orig_url: https://www.enfaseterminal.com/2019/01/crear-un-dominio-con-una-ip-dinamica.html
+---
+
+Si tienes alojado un dominio en <a href="https://domains.google/#/">Google Domains</a> te permite enlazar dicho dominio o subdomino a una dirección ip dinámica. <br />
+<br />
+Por ejemplo puedes alojar un servidor web oficina en tu casa. El gran inconveniente es que los proveedores de servicios de internet suelen crearte direcciones de acceso a internet que cambian con el tiempo, a no ser que quieras pagar por la opción de obtener una ip estática.<br />
+<br />
+Entre las opciones que te permiten enlazar con una ip dinámica, o <a href="https://support.google.com/domains/answer/6147083?hl=es-419">DNS dinamico</a>, y con la que conseguí un resultado exitoso es utilizando su API.<br />
+<br />
+<blockquote class="tr_bq">
+La API requiere HTTPS. A continuación, encontrará un ejemplo de solicitud:<br />
+https://username:password@domains.google.com/nic/update?hostname=subdomain.yourdomain.com&amp;myip=1.2.3.4</blockquote>
+En mi caso escribí un script que cargue en la&nbsp;Raspberry Pi, para enlazar un servidor web.<br />
+<blockquote class="tr_bq">
+<span style="color: yellow;">nano ddns.sh</span></blockquote>
+Le enviaremos a nuestro servidor DDNS a través de la dirección que nos proporcionan utilizando el comando <a href="https://www.enfaseterminal.com/search/label/curl">curl</a>. Los datos de acceso son aquellos que nos proporciona Google Domains. <a href="https://www.enfaseterminal.com/2019/01/obtener-mi-ip-publica-con-curl.html">Y la dirección ip dinámica publica</a> nos la obtendrá el comando&nbsp; <span style="color: yellow;">curl -s ifconfig.me</span><br />
+<blockquote class="tr_bq">
+#! /bin/bash<br />
+ip="https://username:password@domains.google.com/nic/update?hostname=subdomain.yourdomain.com&amp;myip=$(<span style="color: yellow;">curl -s ifconfig.me</span>)"<br />
+<span style="color: yellow;">curl</span> "$ip"</blockquote>
+Le daremos a nuestro archivo la capacidad de ser ejecutado<br />
+<blockquote class="tr_bq">
+<span style="color: yellow;">chmod +x ddns.sh&nbsp;&nbsp;</span></blockquote>
+Lanzaremos nuestro script<br />
+<blockquote class="tr_bq">
+<span style="color: yellow;">./ddns.sh&nbsp;</span></blockquote>
+Comprobando su correcto funcionamiento<br />
+<div class="separator" style="clear: both; text-align: center;">
+<a href="https://support.google.com/domains/answer/6147083?hl=es-419" target="_blank"><img border="0" data-original-height="581" data-original-width="647" height="287" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgePiXfNKGMVE3TebR-frsU63tgad_z4csKoqmCnNPc0ighDFJoIqDZCunlN5dof78DJOPXgEpjK5yCmtXDysXhOKMd4Ln-XXLvL3ipw9xygwemIVROUH40iKeg5sTDQpYRGoPCMh8hUXM/s320/Captura+de+pantalla+de+2019-01-19+21-27-49.png" width="320" /></a></div>
+<br />
+<table class="nice-table no-stripes" style="background-color: white; border-collapse: collapse; border-spacing: 0px; border: 0px; color: #3c4043; display: block; font-family: Roboto, &quot;Helvetica Neue&quot;, Helvetica, sans-serif; font-size: 14px; margin: 0px; max-width: 100%; outline: 0px; overflow: auto; padding: 0px;"><tbody>
+</tbody></table>
+<br />
+&nbsp;Si todo es correcto <a href="https://www.enfaseterminal.com/2019/01/inicializar-nuestro-script-al-inicio.html">cargaremos nuestro script al inicio de nuestro equipo</a> y nuestro domino enlazará con nuestro hosting web casero

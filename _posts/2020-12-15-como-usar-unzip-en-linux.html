@@ -1,0 +1,17 @@
+---
+layout: post
+title: Como usar unzip en Linux
+date: '2020-12-15T22:15:00.003+01:00'
+author: David P.
+tags:
+- man
+- compresor
+- descomprimir
+- unzip
+- zip
+modified_time: '2020-12-15T22:24:36.453+01:00'
+blogger_id: tag:blogger.com,1999:blog-3624480011084378437.post-2067030869683752275
+blogger_orig_url: https://www.enfaseterminal.com/2020/12/como-usar-unzip-en-linux.html
+---
+
+<p>El formato de compresión de archivos y carpetas ZIP es muy popular. Para completar el post&nbsp;<a href="https://www.enfaseterminal.com/2020/12/como-usar-zip-en-linux.html" target="_blank">Como usar zip en linux</a>&nbsp;describiremos la manera de extraer el contenido del archivo comprimido desde la línea de comando, desde el terminal.</p><p></p><ul style="text-align: left;"><li>Descomprimir un archivo zip en el directorio en el que nos encotramos</li></ul><ul style="text-align: left;"><ul><li><b>unzip</b> demo.zip</li></ul></ul><div><br /></div><div><ul style="text-align: left;"><li>Descomprimimos el zip en un directorio distinto del que estamos trabajando utilizando la opción <b>-d</b></li></ul><ul style="text-align: left;"><ul><li><b>unzip</b> demo.zip <b>-d</b> Documentos/demo/</li></ul></ul></div><div><div><br /></div></div><div><ul style="text-align: left;"><li>Extraer archivos sin informes en pantalla, usaremos la opción <b>-q</b></li></ul><ul style="text-align: left;"><ul><li>unzip <b>-q </b>demo.zip</li></ul></ul><div><br /></div></div><div><div><ul style="text-align: left;"><li>Descomprimir zip protegido por password</li></ul></div><div><ul style="text-align: left;"><ul><li>unzip <b>-P</b> [<i>password</i>] [<i>archivo</i>]</li></ul></ul><div><div><br /></div><div><ul style="text-align: left;"><li>Listar el contenido de un zip</li></ul><ul style="text-align: left;"><ul><li>unzip <b>-l</b> demo.zip</li></ul></ul><div><br /></div></div></div></div></div><div><ul style="text-align: left;"><li>Excluir archivo de la extracción</li></ul><ul style="text-align: left;"><ul><li>unzip demo.zip <b>-x</b> excluido.txt</li></ul></ul><div><div><br /></div><div><ul style="text-align: left;"><li>Información detallada de un archivo zip. Nos listará el contenido incluyendo información del tamaño, porcentaje de compresión....</li></ul></div><div><ul style="text-align: left;"><ul><li>unzip <b>-v </b>demo.zip</li></ul></ul></div></div></div><div><br /></div><div><ul style="text-align: left;"><li>Identificar errores en los archivos comprimidos</li></ul><ul style="text-align: left;"><ul><li>unzip <b>-t</b> demo.zip</li></ul></ul><div><br /></div></div><div><div><ul style="text-align: left;"><li>Manual de unzip</li></ul></div><div><ul style="text-align: left;"><ul><li><b>man</b> unzip</li><li>unzip <b>--help</b></li></ul></ul></div></div><p></p>

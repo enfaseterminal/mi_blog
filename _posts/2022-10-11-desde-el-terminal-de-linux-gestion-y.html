@@ -1,0 +1,22 @@
+---
+layout: post
+title: Desde el terminal de Linux, gestión y creación de usuarios
+date: '2022-10-11T20:57:00.001+02:00'
+author: David P.
+tags:
+- usermod
+- terminal
+- useradd
+- linux
+- sudo
+- adduser
+- usuario
+- comandos
+- linux terminal
+- passwd
+modified_time: '2023-06-11T22:17:31.478+02:00'
+blogger_id: tag:blogger.com,1999:blog-3624480011084378437.post-1671518669130501180
+blogger_orig_url: https://www.enfaseterminal.com/2022/10/desde-el-terminal-de-linux-gestion-y.html
+---
+
+La utilización del terminal es una herramienta muy potente, y con muy bajo coste computacional. Seguidamente enumeramos algunos ejemplos de <b>creación de usuarios</b>&nbsp;➕, en Linux, sus comandos y opciones:<div><br /></div><div><ul style="text-align: left;"><li>Crear un usuario del sistema, <b>incluyendo</b> su directorio personal.</li><ul><li><span style="color: #ffa400;">sudo <b>useradd -m</b> <i>nombre_usuario</i></span></li></ul></ul><ul style="text-align: left;"><li>Crear un usuario del sistema, <b>sin incluir</b> su directorio personal.</li><ul><li><span style="color: #ffa400;">sudo <b>useradd</b>&nbsp;<i>nombre_usuario</i></span></li></ul></ul><ul style="text-align: left;"><li>Crear un usuario del sistema, <b>incluyendo</b> su directorio personal.</li><ul><li><span style="color: #ffa400;">sudo <b>adduser</b>&nbsp;</span><i style="color: #ffa400;">nombre_usuario</i></li></ul></ul><ul style="text-align: left;"><li>Crear un usuario del sistema con un <b>directorio personalizado</b>, dentro de la carpeta <b>home</b></li><ul><li><span style="color: #ffa400;">sudo useradd <b>-d</b> /home/<i>nombre_carpeta</i> <i>nombre_usuario</i></span></li></ul></ul><ul style="text-align: left;"><li>Crear un usuario con un <b>directorio personal en una ruta específica.</b></li><ul><li><span style="color: #ffa400;">sudo useradd <b>-m</b>&nbsp;<b>-d</b>&nbsp;/<i>carpeta</i>/<i>nombre_carpeta</i>&nbsp;<i>nombre_usuario</i></span></li></ul></ul><div><br /></div><div>Borrar usuarios del sistema📤:</div></div><div><br /></div><div><ul style="text-align: left;"><li>&nbsp;Borrar un usuario del sistema, <b>incluyendo</b> su directorio personal .</li><ul><li><span style="color: #ffa400;">sudo <b>userdel -r</b>&nbsp;&nbsp;<i>nombre_usuario</i></span></li></ul></ul><ul style="text-align: left;"><li>Borrar un usuario del sistema, <b>sin incluir</b> su directorio personal.</li><ul><li><span style="color: #ffa400;">sudo <b>userdel</b>&nbsp;<i>nombre_usuario</i></span></li></ul></ul><ul style="text-align: left;"><li>Borrar un usuario del sistema, <b>sin incluir</b> su directorio personal.</li><ul><li><span style="color: #ffa400;">sudo <b>deluser</b>&nbsp;<i>nombre_usuario</i></span></li></ul></ul><ul style="text-align: left;"><li>Borrar un usuario del sistema de un grupo.</li><ul><li><span style="color: #ffa400;">sudo deluser&nbsp;<i>nombre_usuario</i>&nbsp;<i>nombre_grupo</i></span></li></ul></ul><div><span style="color: #ffa400;"><i><br /></i></span></div>Establecer una contraseña a un usuario del sistema</div><ul style="text-align: left;"><li><span style="color: #ffa400;">sudo passwd&nbsp;</span><i style="color: #ffa400;">nombre_usuario</i></li></ul>Dar permisos de superusuario,<b> sudo</b>, a un usuario&nbsp;🔐<div><ul style="text-align: left;"><li><span style="color: #ffa400;">sudo usermod -a -G sudo <i>nombre_usuario</i></span></li></ul>Cambiar el nombre de un usuario</div><div><ul style="text-align: left;"><li><span style="color: #ffa400;">sudo usermod --login <i>nuevo_nombre nombre_usuario</i></span></li></ul><a href="https://www.enfaseterminal.com/2022/04/listar-usuarios-en-linux.html">Listar usuarios en Linux</a></div>

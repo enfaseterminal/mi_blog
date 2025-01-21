@@ -1,0 +1,25 @@
+---
+layout: post
+title: Sistema de archivos con mayor compatibilidad entre Windows, Linux y Mac
+date: '2023-12-24T20:18:00.001+01:00'
+author: David P.
+tags:
+- exFAT-utils
+- sudo
+- disco duro
+- mac
+- formatear
+- GNU/Linux
+- df
+- windows
+- linux
+- linux mint
+- mkfs
+- usb
+modified_time: '2023-12-24T20:18:30.457+01:00'
+thumbnail: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjW7Hv-bD_Can5xwq_lcwXLy_Wz4qh3TXoj3amsgJeO09JSNW4g5W52KD2jrGVKqDoGFB7uexRcbbLDb512UrReOYTrfceWqi7kFTf2X74Nlt5Ft6yuX6UEcoudh84e7dYAngnKgbaRnJQQbWkSw5Iqnyo7MDtqLNXA7Ja_1RKTKCdvupp05aN0B600vyA/s72-c/formatear.png
+blogger_id: tag:blogger.com,1999:blog-3624480011084378437.post-1575303946138952493
+blogger_orig_url: https://www.enfaseterminal.com/2023/12/sistema-de-archivos-con-mayor.html
+---
+
+<p style="text-align: justify;">Cuando en el hogar, o en la oficina, utilizas distintos sistemas operativos Windows, Linux o Mac. Es muy importante dar un formateado con un sistema de archivos, compatible para nuestros discos duros y/o memorias externas.</p><p style="text-align: justify;">Recientemente he recuperado un disco duro de 80Gb y quería utilizarlo de soporte para copias de seguridad. Conectándolo a un sistema Linux, este caso Linux Mint, el montaje de la unidad y su lectura eran correctos, pero a la hora de conectarlo a un sistema Windows 11, este no lo reconocía.</p><p style="text-align: justify;">El sistemas mas compatible entre los distintos sistemas operativos es <b>FAT32</b>. Pero tiene la limitación que solo se pueden formatear con este sistema unidades de no mas de&nbsp;<b>4 GB</b>.</p><p style="text-align: justify;"><b>NTFS</b>&nbsp;(Nueva Tecnología de sistema de archivos)es un sistema nativo de Windows, no es compatible en sistemas MAC y algunas distribuciones Linux.</p><p style="text-align: justify;"><b>ext2</b>, <b>ext3</b> y <b>ext4</b> son formatos que suelen utilizar de forma local las distribuciones Linux, y nos puede acarrear algún problema de lectura en sistemas Windows.</p><p style="text-align: justify;"><b><a href="https://learn.microsoft.com/en-us/windows/win32/fileio/exfat-specification" target="_blank">exFAT</a></b>:</p><p></p><ul style="text-align: left;"><li style="text-align: justify;">Ventajas: Permite archivos grandes y es compatible con Windows, macOS y Linux.</li><li style="text-align: justify;">Limitaciones: No es tan ampliamente compatible como <b>FAT32</b>.</li><li style="text-align: justify;">Uso común: Buen formato para unidades externas compartidas entre diferentes sistemas operativos.</li></ul><div class="separator" style="clear: both; text-align: center;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjW7Hv-bD_Can5xwq_lcwXLy_Wz4qh3TXoj3amsgJeO09JSNW4g5W52KD2jrGVKqDoGFB7uexRcbbLDb512UrReOYTrfceWqi7kFTf2X74Nlt5Ft6yuX6UEcoudh84e7dYAngnKgbaRnJQQbWkSw5Iqnyo7MDtqLNXA7Ja_1RKTKCdvupp05aN0B600vyA/s558/formatear.png" style="margin-left: 1em; margin-right: 1em;"><img border="0" data-original-height="237" data-original-width="558" height="136" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjW7Hv-bD_Can5xwq_lcwXLy_Wz4qh3TXoj3amsgJeO09JSNW4g5W52KD2jrGVKqDoGFB7uexRcbbLDb512UrReOYTrfceWqi7kFTf2X74Nlt5Ft6yuX6UEcoudh84e7dYAngnKgbaRnJQQbWkSw5Iqnyo7MDtqLNXA7Ja_1RKTKCdvupp05aN0B600vyA/s320/formatear.png" width="320" /></a></div><p><br /></p><div style="text-align: justify;">Para poder realizar este formateo de una unidad externa USB al formato<b> exFAT</b> es necesario tener instalado la utilidad&nbsp;<b><span style="color: #ffa400;">exFAT-utils</span></b></div><blockquote><div style="text-align: justify;"><b><span style="color: #ffa400;">sudo apt-get install exfat-utils</span></b></div></blockquote><p style="text-align: justify;">Para saber donde se encuentra tu unidad USB alojada, puedes averiguarlo con el comando&nbsp;&nbsp;</p><p></p><blockquote style="text-align: justify;"><span style="background-color: rgba(0, 0, 0, 0.03); font-family: monospace; font-size: 14px; white-space-collapse: preserve;"><b><span style="color: #ffa400;">df -h</span></b></span></blockquote><blockquote><p style="text-align: justify;">&nbsp;df&nbsp; Informa&nbsp; de&nbsp; la&nbsp; utilización del espacio de disco en sistemas de ficheros.</p></blockquote><blockquote><p style="text-align: justify;">&nbsp;-h Opción que muestra la capacidad de las carpetas solicitadas</p></blockquote><p></p><p style="text-align: justify;">Una vez que nos hemos asegurado que la unidad se encuentra montada en nuestro sistema, procederemos a realizar el formateado de la misma</p><blockquote><p style="text-align: justify;"><b><span style="color: #ffa400;">sudo mkfs.exfat &lt;ruta disco usb&gt;</span></b></p></blockquote>

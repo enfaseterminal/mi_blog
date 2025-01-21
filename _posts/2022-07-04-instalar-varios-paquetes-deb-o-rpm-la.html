@@ -1,0 +1,25 @@
+---
+layout: post
+title: Instalar varios paquetes DEB o RPM a la vez
+date: '2022-07-04T21:54:00.001+02:00'
+author: David P.
+tags:
+- libre office
+- ubuntu
+- paquetes
+- consola
+- rpm
+- instalar
+- fedora
+- terminal
+- mandriva
+- deb
+- debian
+- opensuse
+modified_time: '2022-07-04T21:54:41.868+02:00'
+thumbnail: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQorZ3ccofAJUMaLw3Xj0Kqdn5wtJfKMye2s7EBpNcqGD22pPMt3tecvfUJZQycpd0oj9Wfmz8l8gB8EiCMa3U7A_qJYrokM1S2djWxrKJCTIrE4Igw4CcmiZd3D--0PJrjsQqf-PvxgBrCQrvuiC9038AH6g4C6CyhuTfmzyyj-LEE05eyJll_PZZ/s72-w400-c-h143/libreoffice.png
+blogger_id: tag:blogger.com,1999:blog-3624480011084378437.post-3215170315472998245
+blogger_orig_url: https://www.enfaseterminal.com/2022/07/instalar-varios-paquetes-deb-o-rpm-la.html
+---
+
+<p style="text-align: justify;">Se puede dar el caso, como ocurre si quieres instalar o actualizar <a href="https://www.enfaseterminal.com/search/label/libre%20office" target="_blank">LibreOffice</a>, que te encuentres que no viene en un solo paquete, sino 42 elementos a instalar; y todo esto sin contar con las traducciones al castellano.</p><p style="text-align: justify;"><br /></p><div class="separator" style="clear: both; text-align: justify;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQorZ3ccofAJUMaLw3Xj0Kqdn5wtJfKMye2s7EBpNcqGD22pPMt3tecvfUJZQycpd0oj9Wfmz8l8gB8EiCMa3U7A_qJYrokM1S2djWxrKJCTIrE4Igw4CcmiZd3D--0PJrjsQqf-PvxgBrCQrvuiC9038AH6g4C6CyhuTfmzyyj-LEE05eyJll_PZZ/s1687/libreoffice.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img alt="Paquetes Libreoffice" border="0" data-original-height="602" data-original-width="1687" height="143" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQorZ3ccofAJUMaLw3Xj0Kqdn5wtJfKMye2s7EBpNcqGD22pPMt3tecvfUJZQycpd0oj9Wfmz8l8gB8EiCMa3U7A_qJYrokM1S2djWxrKJCTIrE4Igw4CcmiZd3D--0PJrjsQqf-PvxgBrCQrvuiC9038AH6g4C6CyhuTfmzyyj-LEE05eyJll_PZZ/w400-h143/libreoffice.png" title="Paquetes Libreoffice" width="400" /></a></div><div style="text-align: justify;"><br /></div><p style="text-align: justify;">En primer lugar nos situaremos en la carpeta donde se encuentran alojados los paquetes a instalar. Bien directamente desde la consola de comandos, o desde el explorador de archivos, pulsando el botón derecho y <span style="color: #ffa400;"><b>Abrir en un Terminal</b></span></p><p style="text-align: justify;"><span style="color: #ffa400;"><b><br /></b></span></p><p></p><div class="separator" style="clear: both; color: #ffa400; text-align: justify;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjvw8vNAxGF8mwVQZYTycM_VnA01PJpCaSkZTKhjKlYZia6SoAzizY_7V26Rum8PpPMAmMW0uqjzbRgMi8EI5Zb8yZAn3lTvvuCNMeUF-1EX-IIfSww0-V3xYZJpUv59rCHHlhGvZMKpuigF1bvSY5LxM68SJX4JKndT1ui0fxkv4vrEL5AZIriMTH-/s1190/abrir%20terminal.gif" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img alt="Abrir en un Terminal" border="0" data-original-height="407" data-original-width="1190" height="136" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjvw8vNAxGF8mwVQZYTycM_VnA01PJpCaSkZTKhjKlYZia6SoAzizY_7V26Rum8PpPMAmMW0uqjzbRgMi8EI5Zb8yZAn3lTvvuCNMeUF-1EX-IIfSww0-V3xYZJpUv59rCHHlhGvZMKpuigF1bvSY5LxM68SJX4JKndT1ui0fxkv4vrEL5AZIriMTH-/w400-h136/abrir%20terminal.gif" title="Abrir en un Terminal" width="400" /></a></div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">Dependiendo del sistema operativo y que tipo de paquetes maneje utilizaremos el comando que corresponda</div><div style="text-align: justify;"><span style="color: #ffa400; font-weight: 700;"><br /></span></div><p></p><ul style="text-align: left;"><li style="text-align: justify;"><b>Para sistemas o basados en Debian:</b><b style="color: #ffa400;"> <span style="font-size: medium;">sudo dpkg -i *.deb</span></b></li><li></li><li style="text-align: justify;"><b><b>Para sistemas o basados en&nbsp;</b>Fedora:<span style="color: #ffa400;"> <span style="font-size: medium;">su -c 'dnf install *.rpm'</span></span></b></li><li style="text-align: justify;"><b><b><b>Para sistemas o basados en</b></b>&nbsp;Mandriva:</b><b style="color: #ffa400;"> <span style="font-size: medium;">sudo urpmi *.rpm</span></b></li><li style="text-align: justify;"><b>Para otros sistemas que utilicen los paquete RPM (openSUSE, etc.):</b><b style="color: #ffa400;"> <span style="font-size: medium;">rpm -Uvh *.rpm</span></b></li></ul>

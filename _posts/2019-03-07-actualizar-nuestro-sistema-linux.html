@@ -1,0 +1,48 @@
+---
+layout: post
+title: Actualizar nuestro sistema Linux
+date: '2019-03-07T21:51:00.000+01:00'
+author: David P.
+tags:
+- ssh
+- apt-get
+- GNU/Linux
+- update
+- seguridad
+- linux
+- "/etc/apt/sources.list"
+- upgrade
+- actualizar
+- dist-upgrade
+- raspberry
+modified_time: '2019-03-07T21:51:25.938+01:00'
+thumbnail: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjxcRr2pgQuU8A9_0P7qMQat9Yg2hpumuwWnxcNd5xT97jiZPF4W19X9dwncCyygnUkYURTIjMA8zDcvB2bmX-WRSYamn3itycQALWk4oro6VJiHuCuJeEyjf2EEXVZ2iNCQOhBwOEDyak/s72-c/actualizar.png
+blogger_id: tag:blogger.com,1999:blog-3624480011084378437.post-8189980819271811447
+blogger_orig_url: https://www.enfaseterminal.com/2019/03/actualizar-nuestro-sistema-linux.html
+---
+
+<div class="tr_bq">
+Mantener nuestro sistema actualizado nos brinda más funcionalidad, corrección de posibles errores en versiones previas y sobre todo mayor seguridad.</div>
+En este caso vamos a actualizar una Raspberry, la cual no tiene conectado ningún periférico y tenemos administrarlo de forma remota.<br />
+Accedemos mediante <span style="color: yellow;">ssh</span><br />
+<blockquote class="tr_bq">
+<span style="color: yellow;">ssh &lt;dirección ip raspberry&gt; -l &lt;nombre usuario&gt;</span></blockquote>
+Los siguientes pasos son similares, para nuestra administración en local o en remoto<br />
+Actualizamos los repositorios que se encuentran listados en el archivo <span style="color: yellow;">/etc/apt/sources.list</span>. Realizamos la comprobación si nuestros paquetes tienen una versión mejorada.<br />
+<blockquote class="tr_bq">
+<span style="color: yellow;">sudo apt-get update</span></blockquote>
+Aun no hemos actualizado nuestro sistema. Esta tarea la realizaremos con el comando:<br />
+<blockquote class="tr_bq">
+<span style="color: yellow;">sudo apt-get&nbsp;dist-upgrade</span></blockquote>
+<table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody>
+<tr><td style="text-align: center;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjxcRr2pgQuU8A9_0P7qMQat9Yg2hpumuwWnxcNd5xT97jiZPF4W19X9dwncCyygnUkYURTIjMA8zDcvB2bmX-WRSYamn3itycQALWk4oro6VJiHuCuJeEyjf2EEXVZ2iNCQOhBwOEDyak/s1600/actualizar.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img alt="Actualizando paquetes instalados en Raspberry" border="0" data-original-height="439" data-original-width="654" height="214" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjxcRr2pgQuU8A9_0P7qMQat9Yg2hpumuwWnxcNd5xT97jiZPF4W19X9dwncCyygnUkYURTIjMA8zDcvB2bmX-WRSYamn3itycQALWk4oro6VJiHuCuJeEyjf2EEXVZ2iNCQOhBwOEDyak/s320/actualizar.png" title="Actualizando paquetes instalados en Raspberry" width="320" /></a></td></tr>
+<tr><td class="tr-caption" style="text-align: center;">Actualizando paquetes instalados en Raspberry</td></tr>
+</tbody></table>
+<div style="text-align: center;">
+<br /></div>
+Otra forma seria<br />
+<blockquote class="tr_bq">
+<span style="color: yellow;">sudo apt-get upgrade</span>&nbsp;</blockquote>
+Entre las dos opciones que tenemos,&nbsp;&nbsp;<i><span style="color: yellow;">dist-upgrade&nbsp;</span></i>nos facilitará la actualización resolviendo posibles conflictos con las dependencias.<br />
+<blockquote>
+<i><span style="color: yellow;">upgrade</span><br />           upgrade is used to install the newest versions of all packages<br />           currently installed on the system from the sources enumerated in<br />           /etc/apt/sources.list. Packages currently installed with new<br />           versions available are retrieved and upgraded; under no<br />           circumstances are currently installed packages removed, or packages<br />           not already installed retrieved and installed. New versions of<br />           currently installed packages that cannot be upgraded without<br />           changing the install status of another package will be left at<br />           their current version. An update must be performed first so that<br />           apt-get knows that new versions of packages are available.<br /><br /><br /><span style="color: yellow;">       dist-upgrade</span><br />           dist-upgrade in addition to performing the function of upgrade,<br />           also intelligently handles changing dependencies with new versions<br />           of packages; apt-get has a "smart" conflict resolution system, and<br />           it will attempt to upgrade the most important packages at the<br />           expense of less important ones if necessary. The dist-upgrade<br />           command may therefore remove some packages. The<br />           /etc/apt/sources.list file contains a list of locations from which<br />           to retrieve desired package files. See also apt_preferences(5) for<br />           a mechanism for overriding the general settings for individual<br />packages.</i></blockquote>

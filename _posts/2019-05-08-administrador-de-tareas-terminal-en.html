@@ -1,0 +1,85 @@
+---
+layout: post
+title: Administrador de tareas terminal en Linux
+date: '2019-05-08T22:33:00.000+02:00'
+author: David P.
+tags:
+- GNU/Linux
+- pid
+- top
+- terminal
+- linux
+- consola
+- kill
+- tarea
+modified_time: '2019-08-25T21:24:00.871+02:00'
+thumbnail: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj4-UzaOs2of3O5GcB8ZrKSIa2CynebKm6utNfR6dMt7pV-Nvb8LkXQiO7DI4_035wDphQXtNg3aYND-iG9tZMNg6xgAHDwGCFZF0_9c9b2QWZDP4eyqZW_W3rSpiz4pCu7g0Pf8CYLgBM/s72-c/Captura+de+pantalla+de+2019-05-08+22-14-15.png
+blogger_id: tag:blogger.com,1999:blog-3624480011084378437.post-2673934743948727883
+blogger_orig_url: https://www.enfaseterminal.com/2019/05/administrador-de-tareas-terminal-en.html
+---
+
+Para controlar el consumo, las tareas activas de nuestra instalación basada en Linux podremos utilizar el comando<br />
+<blockquote class="tr_bq">
+<span style="color: yellow;"><a href="https://www.enfaseterminal.com/search/label/top">top</a></span></blockquote>
+Un administrador de tareas que nos mostrará:<br />
+<br />
+<div class="separator" style="clear: both; text-align: center;">
+<a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj4-UzaOs2of3O5GcB8ZrKSIa2CynebKm6utNfR6dMt7pV-Nvb8LkXQiO7DI4_035wDphQXtNg3aYND-iG9tZMNg6xgAHDwGCFZF0_9c9b2QWZDP4eyqZW_W3rSpiz4pCu7g0Pf8CYLgBM/s1600/Captura+de+pantalla+de+2019-05-08+22-14-15.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img alt="Captura pantalla ejecución comando top" border="0" data-original-height="600" data-original-width="900" height="213" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj4-UzaOs2of3O5GcB8ZrKSIa2CynebKm6utNfR6dMt7pV-Nvb8LkXQiO7DI4_035wDphQXtNg3aYND-iG9tZMNg6xgAHDwGCFZF0_9c9b2QWZDP4eyqZW_W3rSpiz4pCu7g0Pf8CYLgBM/s320/Captura+de+pantalla+de+2019-05-08+22-14-15.png" title="Captura pantalla ejecución comando top" width="320" /></a></div>
+<div class="separator" style="clear: both; text-align: center;">
+</div>
+<br />
+<br />
+<blockquote class="tr_bq">
+<span style="color: yellow;">1. Tiempo de actividad y carga media del sistema</span><br />
+<ul>
+<li><span style="color: yellow;">Hora actual.</span></li>
+<li><span style="color: yellow;">Tiempo que ha estado el sistema encendido.</span></li>
+<li><span style="color: yellow;">Número de usuarios que han iniciado&nbsp;sesión</span></li>
+<li><span style="color: yellow;">Carga media en intervalos de 5, 10 y 15 minutos respectivamente.</span></li>
+</ul>
+<span style="color: yellow;">2. Tareas</span><br />
+<ul>
+<li><span style="color: yellow;">Running (Ejecutando): procesos ejecutándose actualmente o preparados para ejecutarse.</span></li>
+<li><span style="color: yellow;">Sleeping (Hibernando): procesos dormidos esperando que ocurra algo (depende del proceso) para ejecutarse.</span></li>
+<li><span style="color: yellow;">Stopped (Detenidos): ejecución de proceso detenida.</span></li>
+<li><span style="color: yellow;">Zombie: el proceso no está siendo ejecutado. Estos procesos se quedan en este estado cuando el proceso que los ha iniciado muere (padre).</span></li>
+</ul>
+<span style="color: yellow;">3. Estados de la CPU</span><br />
+<ul>
+<li><span style="color: yellow;">us (usuario): tiempo de CPU de usuario.</span></li>
+<li><span style="color: yellow;">sy (sistema): tiempo de CPU del kernel.</span></li>
+<li><span style="color: yellow;">id (inactivo): tiempo de CPU en procesos inactivos.</span></li>
+<li><span style="color: yellow;">wa (en espera): tiempo de CPU en procesos en espera.</span></li>
+<li><span style="color: yellow;">hi (interrupciones de hardware): interrupciones de hardware.</span></li>
+<li><span style="color: yellow;">si (interrupciones de software): tiempo de CPU en interrupciones de software.</span></li>
+</ul>
+<span style="color: yellow;">4. Memoria física</span><br />
+<ul>
+<li><span style="color: yellow;">Memoria total.</span></li>
+<li><span style="color: yellow;">Memoria utilizada.</span></li>
+<li><span style="color: yellow;">Memoria libre.</span></li>
+<li><span style="color: yellow;">Memoria utilizada por buffer.</span></li>
+</ul>
+<span style="color: yellow;">5. Memoria virtual</span><br />
+<ul>
+<li><span style="color: yellow;"> Memoria total.</span></li>
+<li><span style="color: yellow;">Memoria usada.</span></li>
+<li><span style="color: yellow;">Memoria libre.</span></li>
+<li><span style="color: yellow;">Memoria en caché.</span></li>
+</ul>
+<span style="color: yellow;">6. Tareas en ejecución</span><br />
+<ul>
+<li><span style="color: yellow;">PID: es el identificador de proceso. Cada proceso tiene un identificador único. Este identificador&nbsp;es necesario para poder matar un proceso con el comando <a href="https://www.enfaseterminal.com/search/label/kill" target="_blank"><span style="color: yellow;">kill</span></a></span></li>
+<li><span style="color: yellow;">USER (Usuario): usuario propietario del proceso.</span></li>
+<li><span style="color: yellow;">PR: prioridad del proceso. Si pone RT es que se está ejecutando en tiempo real.</span></li>
+<li><span style="color: yellow;">NI: asigna la prioridad. Si tiene un valor bajo (hasta -20) quiere decir que tiene más prioridad que otro con valor alto (hasta 19).</span></li>
+<li><span style="color: yellow;">VIRT: cantidad de memoria virtual utilizada por el proceso.</span></li>
+<li><span style="color: yellow;">RES: cantidad de memoria RAM física que utiliza el proceso.</span></li>
+<li><span style="color: yellow;">SHR: memoria compartida.</span></li>
+<li><span style="color: yellow;">S (ESTADO): estado del proceso.</span></li>
+<li><span style="color: yellow;">%CPU: porcentaje de CPU utilizado desde la última actualización.</span></li>
+<li><span style="color: yellow;">%MEM: porcentaje de memoria física utilizada por el proceso desde la última actualización.</span></li>
+<li><span style="color: yellow;">TIME+ (HORA+): tiempo total de CPU que ha usado el proceso desde su inicio.</span></li>
+<li><span style="color: yellow;">COMMAND: comando utilizado para iniciar el proceso.</span></li>
+</ul>
+</blockquote>
