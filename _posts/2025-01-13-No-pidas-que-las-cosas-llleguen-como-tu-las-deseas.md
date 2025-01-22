@@ -3,7 +3,7 @@ layout: post
 title: No pidas que las cosas lleguen como tú las deseas
 subtitle: Como dijo Epícteto
 tags: [Miguel de Cervantes Saavedra, Cervantes, desconfiar, caballos, clerigos, iglesia, curas]
-categories: [citas]
+categorias: Citas y frases
 author: David P.
 ---
 <meta property="og:image" content="/imagenes/miguel-de-cervantes.jpeg"/>
