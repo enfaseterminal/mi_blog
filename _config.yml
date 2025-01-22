@@ -15,6 +15,9 @@ title: Blog EnFaseTerminal
 # Your name to show in the footer
 author: David P.
 
+#Tu dominio personalizado
+url: "https://www.enfaseterminal.com"
+
 ###############################################
 # --- List of links in the navigation bar --- #
 ###############################################
