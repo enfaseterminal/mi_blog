@@ -13,9 +13,9 @@ author: David P.
 
 ![John Lennon](/imagenes/Jhon-Lenon.jpeg "John Lennon")
 
-==**L**a vida es aquello que te va sucediendo mientras estás ocupado haciendo otros planes.==
+**L**a vida es aquello que te va sucediendo mientras estás ocupado haciendo otros planes.
 
 ![Firma de John Lennon](/imagenes/Firma_de_John_Lennon.png "Firma de John Lennon")
 
-[^]: J
+**J**ohn Lennon
 
