@@ -1,0 +1,26 @@
+name: 'IndexNow'
+on:
+  push:
+    branches:
+      - main
+      - mi_blog/_posts/**
+jobs:
+  check-and-submit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Install dependencies
+        run: sudo apt-get install curl
+      - name: Submit URLs to IndexNow
+        env:
+          INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
+        run: |
+          curl -X POST "https://api.indexnow.org/indexnow" -H "Content-Type: application/json" -d '{
+            "host": "www.enfaseterminal.com",
+            "key": "${{ secrets.INDEXNOW_KEY }}",
+            "keyLocation": "https://www.enfaseterminal.com/2b00c77bf8ea4410bae5f92d5ae160eb.txt",
+            "urlList": [
+              "https://www.enfaseterminal.com/$(echo ${GITHUB_EVENT_PATH} | jq -r '.commits[].added[]' | grep "_posts")"
+            ]
+          }'
