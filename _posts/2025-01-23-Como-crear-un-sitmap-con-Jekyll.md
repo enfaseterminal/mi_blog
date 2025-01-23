@@ -12,7 +12,7 @@ author: David P.
 
 ##### En la raíz de tu proyecto Jekyll crea un archivo llamado sitemap.xml. Añade el siguiente contenido al archivo:
 
-```xml
+```
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   {% for page in site.pages %}
@@ -45,7 +45,7 @@ Que en la configuración de Jekyll deberían ser donde se encuentran alojados la
 
 Si es requerido que alguna dirección sea incluida y no es generada en la automatización, se puede incluir entre el código para se añada al sitemap generado.
 
-```xml
+```
 
 ---
 
@@ -88,11 +88,13 @@ Si es requerido que alguna dirección sea incluida y no es generada en la automa
   <priority>0.5</priority>
 </url>
 {% for page in site.pages %}
+
 ```
 
 Os dejo un ejemplo, estas url han de ser incluidas entre:
 
-```xml
+```
+
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
@@ -110,6 +112,7 @@ El formato ha de ser
   <priority>la prioridad</priority>
 </url>
 <url>
+
 ```
 
  
@@ -118,13 +121,15 @@ El formato ha de ser
 
 ##### Asegúrate de que tu archivo `_config.yml` tenga la URL de tu sitio configurada correctamente. Si no es así deberás incluir la siguiente linea:
 
-```markdown
+```
+
 url: "https://www.tusitio.com"
+
 ```
 
 ##### Para que al generar el archivo sitemap.xml quieres excluir ciertas páginas que no quieres que sean rastreadas, has de incluir `sitemap: false` en la cabecera (front matter) de esas páginas:
 
-```markdown
+```
 ---
 sitemap: false
 ---
