@@ -118,7 +118,7 @@ El formato ha de ser
 
 ##### Asegúrate de que tu archivo `_config.yml` tenga la URL de tu sitio configurada correctamente. Si no es así deberás incluir la siguiente linea:
 
-```yaml
+```markdown
 url: "https://www.tusitio.com"
 ```
 
