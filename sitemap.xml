@@ -40,7 +40,7 @@ layout: null
   <priority>0.5</priority>
 </url>
 {% for page in site.pages %}
-    {% if page.sitemap != false and page.url contains "/paginas/" %}
+    {% if page.sitemap != false and (page.url contains "/paginas/") %}
       <url>
         <loc>{{ site.url }}{{ page.url }}</loc>
         <lastmod>{{ page.date | date_to_xmlschema }}</lastmod>
@@ -50,13 +50,11 @@ layout: null
     {% endif %}
   {% endfor %}
   {% for post in site.posts %}
-    {% if post.url contains "/_posts/" %}
-      <url>
-        <loc>{{ site.url }}{{ post.url }}</loc>
-        <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.5</priority>
-      </url>
-    {% endif %}
+    <url>
+      <loc>{{ site.url }}{{ post.url }}</loc>
+      <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.5</priority>
+    </url>
   {% endfor %}
 </urlset>
