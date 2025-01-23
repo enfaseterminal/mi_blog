@@ -88,7 +88,35 @@ Si es requerido que alguna dirección sea incluida y no es generada en la automa
   <priority>0.5</priority>
 </url>
 {% for page in site.pages %}
+    {% if page.sitemap != false %}
+      <url>
+        <loc>{{ site.url }}{{ page.url }}</loc>
+        <lastmod>{{ page.date | date_to_xmlschema }}</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+      </url>
+    {% endif %}
+  {% endfor %}
+  {% for post in site.posts %}
+    <url>
+      <loc>{{ site.url }}{{ post.url }}</loc>
+      <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.5</priority>
+    </url>
+  {% endfor %}
+</urlset>
 
+```
+Os dejo un ejemplo, estas url han de ser incluidas entre:
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+.....
+y
+.....
+{% for page in site.pages %}
 ```
 
 El formato ha de ser 
@@ -102,10 +130,6 @@ El formato ha de ser
 <url>
 
 ```
-
- 
-
-[Formato XML de Sitemaps]: https://www.sitemaps.org/es/protocol.html	"Formato XML de Sitemaps"
 
 ##### Asegúrate de que tu archivo `_config.yml` tenga la URL de tu sitio configurada correctamente. Si no es así deberás incluir la siguiente linea:
 
