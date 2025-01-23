@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://www.enfaseterminal.com/feed.xml
+Sitemap: https://www.enfaseterminal.com/sitemap.xml
