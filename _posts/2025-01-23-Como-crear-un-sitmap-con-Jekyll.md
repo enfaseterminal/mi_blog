@@ -46,9 +46,6 @@ Que en la configuración de Jekyll deberían ser donde se encuentran alojados la
 Si es requerido que alguna dirección sea incluida y no es generada en la automatización, se puede incluir entre el código para se añada al sitemap generado.
 
 ```
-
----
-
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
@@ -142,9 +139,7 @@ url: "https://www.tusitio.com"
 ##### Para que al generar el archivo sitemap.xml quieres excluir ciertas páginas que no quieres que sean rastreadas, has de incluir `sitemap: false` en la cabecera (front matter) de esas páginas:
 
 ```
----
 sitemap: false
----
 
 ```
 
