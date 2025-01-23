@@ -94,18 +94,18 @@ Si es requerido que alguna dirección sea incluida y no es generada en la automa
 Os dejo un ejemplo, estas url han de ser incluidas entre:
 
 ```
-
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
+```
 y
 
+```
 {% for page in site.pages %}
 ```
 
 El formato ha de ser 
 
-```xml
+```
 <loc>Direción web que quieres incluir</loc>
   <lastmod/>
   <changefreq>Con que frecuencia se actualiza</changefreq>
