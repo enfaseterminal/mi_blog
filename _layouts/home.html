@@ -51,10 +51,12 @@ layout: page
       {% endif %}
       <p class="post-meta">
         {% assign month_number = post.date | date: "%-m" %}
-        <div>La variable month_number es: {{ month_number }}</div>
-        {% assign month_name = site.data.translations[site.locale].months[month_number] %}
-        <div>La variable month_name es: {{ month_name }}</div>
-        Publicado el: {{ post.date | date: "%-d de " }}{{ month_name }}{{ post.date | date: " de %Y" }}
+<div>La variable month_number es: {{ month_number }}</div>
+{% assign month_name = site.data.translations[site.locale].months[month_number] %}
+<div>La variable month_name es: {{ month_name }}</div>
+<div>Data translations: {{ site.data.translations | inspect }}</div>
+Publicado el: {{ post.date | date: "%-d de " }}{{ month_name }}{{ post.date | date: " de %Y" }}
+
       </p>
 
       {% if thumbnail != "" %}
