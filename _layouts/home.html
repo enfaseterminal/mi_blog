@@ -47,11 +47,11 @@ layout: page
       </a>
 
       {% if post.author %}
-        <span>By <strong>{{ post.author | strip_html }}</strong></span>
+        <span>Creado por: <strong>{{ post.author | strip_html }}</strong></span>
       {% endif %}
       <p class="post-meta">
-        {% assign date_format = site.date_format | default: "%B %-d, %Y" %}
-        Posted on {{ post.date | date: date_format }}
+        {% assign date_format = site.date_format | default: "%-d de %B de %Y" %}
+        Publicado el: {{ post.date | date: "%-d de " }}{{ site.data.translations[site.locale].months[post.date | date: "%-m"] }}{{ post.date | date: " de %Y" }}
       </p>
 
       {% if thumbnail != "" %}
