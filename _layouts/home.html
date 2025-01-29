@@ -52,7 +52,8 @@ layout: page
       <p class="post-meta">
         {% assign date_format = site.date_format | default: "%-d de %B de %Y" %}
         {% assign month_number = post.date | date: "%-m" %}
-        Publicado el: {{ post.date | date: "%-d de " }}{{ site.data.translations[site.locale].months[month_number] }}{{ post.date | date: " de %Y" }}
+        {% assign month_name = site.data.translations[site.locale].months[month_number] %}
+        Publicado el: {{ post.date | date: "%-d de " }}{{ month_name }}{{ post.date | date: " de %Y" }}
       </p>
 
       {% if thumbnail != "" %}
