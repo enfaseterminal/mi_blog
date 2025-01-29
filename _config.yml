@@ -73,11 +73,30 @@ rss-description: Subscribirse al canal
 ###########################
 
 # Select which social network share links to show in posts
+# assets/css/bootstrap-social.css
+# https://github.com/lipis/bootstrap-social
 share-links-active:
   twitter: true
   facebook: true
+  instagram: true
+  pinterest: true
+  reddit: true
   linkedin: true
   vk: true
+  adn: false
+  bitbucket: false
+  dropbox: false
+  flickr: true
+  foursquare: false
+  github: false
+  google: false
+  microsoft: false
+  odnoklassniki: false
+  openid: false
+  soundcloud: false
+  tumblr: true
+  vimeo: false
+  yahoo: false
 
 # How to display the link to your website in the footer
 # Remove this if you don't want a link in the footer
