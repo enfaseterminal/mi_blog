@@ -258,6 +258,8 @@ date_format: "%-d de %B de %Y"
 #################################################################################
 
 # Output options (more information on Jekyll's site)
+
+locate: "es"
 timezone: "Europe/Madrid"
 markdown: kramdown
 highlighter: rouge
