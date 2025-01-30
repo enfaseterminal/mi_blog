@@ -1,6 +1,6 @@
 ---
 layout: post
-title: La vida es aquello que te va sucediendo
+title: El talento gana juegos
 subtitle: Como dijo Michael Jordan, El talento gana juegos, pero el trabajo en equipo y la inteligencia ganan campeonatos
 tags: [Michael Jordan,Michael Jeffrey Jordan, Jordan, Jordan, talento, juegos, ganar,trabajo,inteligencia,equipo]
 categorias: Citas y frases
