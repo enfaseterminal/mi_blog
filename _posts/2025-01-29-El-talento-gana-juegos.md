@@ -1,3 +1,4 @@
+---
 layout: post
 title: La vida es aquello que te va sucediendo
 subtitle: Como dijo Michael Jordan, El talento gana juegos, pero el trabajo en equipo y la inteligencia ganan campeonatos
