@@ -52,12 +52,14 @@ layout: page
       <p class="post-meta">
 {% assign date_format = site.date_format | default: "%-d de %B de %Y" %}
 {% assign month_number = post.date | date: "%-m" | plus: 0 %}
-{% assign month_name = site.data.translations[site.locale].months[month_number] %}
+{% assign locale = site.locale | default: "es" %}
+{% assign month_name = site.data.translations[locale].months[month_number] %}
 <div>La variable month_number es: {{ month_number }}</div>
 <div>La variable month_name es: {{ month_name }}</div>
-<div>Locale: {{ site.locale }}</div>
-<div>Data translations: {{ site.data.translations }}</div>
+<div>Locale: {{ locale }}</div>
+<div>Data translations: {{ site.data.translations | inspect }}</div>
 Publicado el: {{ post.date | date: "%-d de " }}{{ month_name }}{{ post.date | date: " de %Y" }}
+
 
       </p>
 
