@@ -248,7 +248,15 @@ gtm: "G-TQBY2D6CS4, GT-NFJX5GL"
 ################
 
 # Ruby Date Format to show dates of posts
+
 date_format: "%-d de %B de %Y"
+locate: "es"
+timezone: "Europe/Madrid"
+defaults:
+  - scope:
+      path: ""
+    values:
+      locale: "es"
 
 # Facebook App ID
 #fb_app_id: ""
@@ -259,8 +267,6 @@ date_format: "%-d de %B de %Y"
 
 # Output options (more information on Jekyll's site)
 
-locate: "es"
-timezone: "Europe/Madrid"
 markdown: kramdown
 highlighter: rouge
 # permalink: /:year-:month-:day-:title/
