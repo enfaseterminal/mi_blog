@@ -18,7 +18,4 @@ author: David P.
 
 **F**acundo **C**abral
 
-<<<<<<< HEAD
-Firma de Facundo Cabral" style="width:150px;"/>
-=======
 <img src="/imagenes/Firma_de_Facundo_Cabral.png" alt="Firma de Facundo Cabral" style="width:150px;"/>
