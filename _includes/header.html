@@ -39,13 +39,13 @@
             {% if page.author %}
               Creado por: <strong>{{ page.author | strip_html }}</strong><br>
             {% endif%}
-            <span class="post-meta">
+            <p class="post-meta">
               {% assign date_format = site.date_format | default: "%-d de %B de %Y" %}
               {% assign month_number = post.date | date: "%-m" | plus: 0 %}
               {% assign locale = site.locale | default: "es" %}
               {% assign month_name = site.data.translations[locale].months[month_number] %}
               Publicado el: {{ post.date | date: "%-d de " }}{{ month_name }}{{ post.date | date: " de %Y" }}
-          </span>
+          </p>
             {% if page.last-updated %}
               <span class="post-meta">
                 <span class="d-none d-md-inline middot">&middot;</span>
