@@ -24,6 +24,8 @@
       <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
         <div class="{{ include.type }}-heading">
           <h1>{% if page.title %}{{ page.title | strip_html }}{% else %}<br/>{% endif %}</h1>
+          
+          <!-- QUITAR COMENTARIOS PARA QUE SE MUESTRE SUBTITULOS
           {% if page.subtitle %}
             {% if include.type == "page" %}
               <hr class="small">
@@ -32,12 +34,18 @@
               <h2 class="{{ include.type }}-subheading">{{ page.subtitle | strip_html }}</h2>
             {% endif %}
           {% endif %}
-          
+          -->
           {% if include.type == "post" %} 
             {% if page.author %}
-              By <strong>{{ page.author | strip_html }}</strong><br>
+              Creado por: <strong>{{ page.author | strip_html }}</strong><br>
             {% endif%}
-            <span class="post-meta">Posted on {{ page.date | date: date_format }}</span>
+            <span class="post-meta">
+              {% assign date_format = site.date_format | default: "%-d de %B de %Y" %}
+              {% assign month_number = post.date | date: "%-m" | plus: 0 %}
+              {% assign locale = site.locale | default: "es" %}
+              {% assign month_name = site.data.translations[locale].months[month_number] %}
+              Publicado el: {{ post.date | date: "%-d de " }}{{ month_name }}{{ post.date | date: " de %Y" }}
+          </span>
             {% if page.last-updated %}
               <span class="post-meta">
                 <span class="d-none d-md-inline middot">&middot;</span>

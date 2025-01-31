@@ -38,12 +38,13 @@ layout: page
 
       <a href="{{ post.url | absolute_url }}">
         <h2 class="post-title">{{ post.title | strip_html }}</h2>
-
+        <!-- DESCOMENTAR PARA QUE APAREZCAN LOS SUBTITULOS
         {% if post.subtitle %}
           <h3 class="post-subtitle">
           {{ post.subtitle | strip_html }}
           </h3>
         {% endif %}
+        -->
       </a>
 
       {% if post.author %}
