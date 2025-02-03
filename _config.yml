@@ -314,8 +314,12 @@ plugins:
   - jekyll-seo-tag
   - jekyll-paginate
   - jekyll-archives
-  - jekyll-lunr-js-search
   - jekyll-archives
+  - jekyll-search
+
+  search:
+    json: "/assets/json/search.json" # Ruta al archivo JSON que será generado
+
 
   
 # Beautiful Jekyll / Dean Attali
