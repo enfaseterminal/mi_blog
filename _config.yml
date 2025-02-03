@@ -308,9 +308,14 @@ exclude:
   - docs/
 
 plugins:
-  - jekyll-paginate
+  - jekyll-seo-tag
+  plugins:
+  - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-paginate
+  - jekyll-archives
+  - jekyll-lunr-search
   
 # Beautiful Jekyll / Dean Attali
 # 2fc73a3a967e97599c9763d05e564189
