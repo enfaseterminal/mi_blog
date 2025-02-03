@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-  fetch('/assets/json/search.json')
+  fetch('https://www.enfaseterminal.com/assets/json/search.json')
     .then(response => response.json())
     .then(data => {
       const idx = lunr(function () {
@@ -25,5 +25,6 @@ document.addEventListener('DOMContentLoaded', function() {
       })
     })
 })
+
 
 
