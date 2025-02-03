@@ -13,6 +13,6 @@ gem "jekyll-multiple-languages-plugin"
 gem 'jekyll-seo-tag'
 
 # Agrega jekyll-lunr-search Para crear un buscador interno del blog
-gem "jekyll-lunr-search"
+gem "jekyll-lunr-js-search"
 
 gemspec
