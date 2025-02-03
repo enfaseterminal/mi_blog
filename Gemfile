@@ -15,4 +15,14 @@ gem 'jekyll-seo-tag'
 # Agrega jekyll-lunr-search Para crear un buscador interno del blog
 gem "jekyll-lunr-js-search"
 
+
+gem 'jekyll-feed'
+
+gem 'csv'      
+
+gem 'base64'   
+
+gem 'bigdecimal'  
+
+
 gemspec
