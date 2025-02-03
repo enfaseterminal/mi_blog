@@ -314,11 +314,10 @@ plugins:
   - jekyll-seo-tag
   - jekyll-paginate
   - jekyll-archives
-  - jekyll-archives
   - jekyll-search
 
-  search:
-    json: "/assets/json/search.json" # Ruta al archivo JSON que será generado
+search:
+  json: "/assets/json/search.json" # Ruta al archivo JSON que será generado
 
 
   
