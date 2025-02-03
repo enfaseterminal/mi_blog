@@ -13,8 +13,7 @@ gem "jekyll-multiple-languages-plugin"
 gem 'jekyll-seo-tag'
 
 # Agrega jekyll-lunr-search Para crear un buscador interno del blog
-gem "jekyll-lunr-js-search"
-
+gem 'jekyll-lunr-js-search', github: 'algonquindesign/jekyll-lunr-js-search', branch: 'mi_blog'
 
 gem 'jekyll-feed'
 
