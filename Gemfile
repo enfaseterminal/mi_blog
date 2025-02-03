@@ -22,6 +22,4 @@ gem 'bigdecimal'
 
 gem 'jekyll-archives'
 
-gem 'jekyll-algolia'
-
 gemspec
