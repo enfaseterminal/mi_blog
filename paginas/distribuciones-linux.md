@@ -1,3 +1,4 @@
+---
 layout: post
 title: "Distribuciones Linux 🐧"
 subtitle: "Algunas de las distribuciones Linux que puedes probar e instalar como alternativa a todo poderoso sistema operativo Windows."
@@ -7,7 +8,7 @@ cover-img: /imagenes/distribuciones-linux.jpg
 thumbnail-img: /imagenes/distribuciones-linux.jpg
 share-img: /imagenes/distribuciones-linux.jpg
 author: David P.
-
+---
 
 
 ### Distribuciones Linux 🐧

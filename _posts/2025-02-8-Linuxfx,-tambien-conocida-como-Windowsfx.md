@@ -14,7 +14,7 @@ author: David P.
 
 [Linuxfx](https://linuxfx.org/) ó Windowsfx es una de las [distribuciones Linux](/paginas/distribuciones-linux.html) que he visto más elegante y que con un estética muy similar a la de Windows 10 y 11, que permitirá aquellos que cambien del sistema operativo de las ventanas a un sistema basado en Linux una transición suave y poco traumática. Han cuidado mucho los menús de instalación y la distribución del escritorio y el acceso a las aplicaciones.
 
-<img src="/imagenes/instlalar.png" alt="Menu de instalción" style="width:300px;"/>
+<img src="/imagenes/instalar.png" alt="Menu de instalción" style="width:300px;"/>
 
 <img src="/imagenes/instalacion.png" alt="Realizando la instalación" style="width:300px;"/>
 
@@ -61,4 +61,4 @@ La ISO  de instalacion que ocupa 4,6Gb puede ser utilizado como Live CD, es deci
 
 
 
-<img src="/imagenes/instalacion-progrmas.png" alt="Centro de control instalación aplicaicones" style="width:300px;"/>
+<img src="/imagenes/instalacion-programas.png" alt="Centro de control instalación aplicaicones" style="width:300px;"/>
