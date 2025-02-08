@@ -28,10 +28,10 @@ url: "https://www.enfaseterminal.com"
 
 navbar-links:
   Páginas:
-    - Distribuciones Linux: "https://www.enfaseterminal.com/p/distribuciones-linux.html"
-    - Repositorios Linux: "https://www.enfaseterminal.com/p/repositorios-linux.html"
-    - Comandos Windows: "https://www.enfaseterminal.com/p/co.html"
-    - Comandos Linux: "https://www.enfaseterminal.com/p/comandos-linux-c-chmod-los-permisos-de.html"
+    - Distribuciones Linux: "https://www.enfaseterminal.com/paginas/distribuciones-linux.html"
+    - Repositorios Linux: "https://www.enfaseterminal.com/paginas/repositorios-linux.html"
+    - Comandos Windows: "https://www.enfaseterminal.com/paginas/co.html"
+    - Comandos Linux: "https://www.enfaseterminal.com/paginas/comandos-linux.html"
     - Etiquetas: "tags.html"
     - Acerca de mi: "aboutme"
 
