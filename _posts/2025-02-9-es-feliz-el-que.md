@@ -10,7 +10,7 @@ share-img: /imagenes/es_feliz_el_que.png
 author: David P.
 ---
 
-<img src="/imagenes/Rosalía_Castro.jpg" alt="Rosalia de Castro" style="width:300px;"/>
+<img src="/imagenes/Rosalía_Castro.jpg" alt="Rosalia de Castro" style="width:150px;"/>
 
 #### **E**s feliz el que soñando, muere. 
 
