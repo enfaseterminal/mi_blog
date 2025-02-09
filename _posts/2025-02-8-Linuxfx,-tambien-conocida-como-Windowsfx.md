@@ -62,3 +62,11 @@ La ISO  de instalacion que ocupa 4,6Gb puede ser utilizado como Live CD, es deci
 
 
 <img src="/imagenes/instalacion-programas.png" alt="Centro de control instalación aplicaicones" style="width:300px;"/>
+
+# ⚠️Importante⚠️
+
+Linuxfx, Windowsfx y  Wubuntu no es totalmente gratuito. Cuenta con los PowerToys, y para poder disfrutarlos en su totalidad hay que comprar una licencia. Uno puede pensar que no comprándola y quedándose en la opción básica ya estaría todo resuelto, pero a veces muestra publicidad, y llega a abrirse el navegador Edge con la página para comprar la licencia abierta.
+
+[Why I no longer recommend this Windows-like Linux distro](https://www.zdnet.com/article/why-i-no-longer-recommend-this-windows-like-linux-distro/)
+
+La comunidad linux no esta conforme con este tipo de practicas, puesto que va en contra el espíritu del software libre. La versión "gratuita" debería de estar libre de cualquier tipo de coacción a registrar un producto u obtener ingresos por publicidad cuando dicha distribución ha sido obtenida libremente.

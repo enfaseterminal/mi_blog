@@ -1,9 +1,9 @@
 <head>
 
-  
+ <!-- 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js"></script>
   <script src="{{ '/assets/js/search.js' | relative_url }}"></script>
-
+-->
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -45,9 +45,15 @@
   <title>{{ title }}</title>
 
 <!-- Etiquetas Canónicas: Asegúrate de que todas tus páginas tengan etiquetas canónicas. -->     
-    <link rel="canonical" href="{{ site.url }}{{ page.url | escape }}" />
-
-
+  <link rel="canonical" href="{{ site.url }}{{ page.url | escape }}" />
+  {% if site.url and site.url_canonico %}
+    <script>
+      if (window.location.hostname !== '{{ site.url_canonico }}') {
+        window.location.href = '{{ site.url }}' + window.location.pathname;
+      }
+    </script>
+  {% endif %}
+  
   {% capture author %}
     {%- if page.author -%}
       {{  page.author | strip_html }}

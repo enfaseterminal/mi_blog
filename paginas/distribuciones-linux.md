@@ -97,7 +97,15 @@ author: David P.
 
 - [Linuxfx](https://www.enfaseterminal.com/2025/02/Linuxfx,-tambien-conocida-como-Windowsfx.html)
 
-> >Linuxfx, también conocido como Windowsfx, es una distribución de Linux diseñada para ofrecer una experiencia similar a la de Microsoft Windows, está orientado tanto a usuarios finales que buscan una transición suave desde Windows, como a empresas que buscan una alternativa más segura y rentable. [⏩](https://www.enfaseterminal.com/2025/02/Linuxfx,-tambien-conocida-como-Windowsfx.html)
+> >Linuxfx, también conocido como Windowsfx, es una distribución de Linux diseñada para ofrecer una experiencia similar a la de Microsoft Windows, está orientado tanto a usuarios finales que buscan una transición suave desde Windows, como a empresas que buscan una alternativa más segura y rentable. 
+> >
+> ># ⚠️Importante⚠️
+> >
+> >Linuxfx, Windowsfx y  Wubuntu no es totalmente gratuito. Cuenta con los PowerToys, y para poder disfrutarlos en su totalidad hay que comprar una licencia. Uno puede pensar que no comprándola y quedándose en la opción básica ya estaría todo resuelto, pero a veces muestra publicidad, y llega a abrirse el navegador Edge con la página para comprar la licencia abierta.
+> >
+> >[Why I no longer recommend this Windows-like Linux distro](https://www.zdnet.com/article/why-i-no-longer-recommend-this-windows-like-linux-distro/)
+> >
+> >La comunidad linux no esta conforme con este tipo de practicas, puesto que va en contra el espíritu del software libre. La versión "gratuita" debería de estar libre de cualquier tipo de coacción a registrar un producto u obtener ingresos por publicidad cuando dicha distribución ha sido obtenida libremente.[⏩](https://www.enfaseterminal.com/2025/02/Linuxfx,-tambien-conocida-como-Windowsfx.html)
 
 - [Linux Mint](https://www.enfaseterminal.com/2024/08/distribucion-linux-mint.html)
 

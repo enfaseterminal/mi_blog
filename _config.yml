@@ -7,7 +7,7 @@
 
 baseurl: "" # Dejar vacío si tu sitio está en la raíz del dominio
 url: "https://www.enfaseterminal.com" # Tu dominio personalizado
-url_canonico: "https://www.enfaseterminal.com/" # Tu dominio personalizado
+url_canonico: "www.enfaseterminal.com" # Tu dominio personalizado prederminado
 
 ############################
 # --- Required options --- #
