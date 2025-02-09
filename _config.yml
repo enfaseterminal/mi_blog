@@ -7,7 +7,7 @@
 
 baseurl: "" # Dejar vacío si tu sitio está en la raíz del dominio
 url: "https://www.enfaseterminal.com" # Tu dominio personalizado
-
+url_canonico: "https://www.enfaseterminal.com/" # Tu dominio personalizado
 
 ############################
 # --- Required options --- #
@@ -177,6 +177,9 @@ gtag: "G-TQBY2D6CS4"
 
 # Fill in your Cloudflare Analytics beacon token to track your website using Cloudflare Analytics
 #cloudflare_analytics: ""
+
+# Google AdSense progrma de publicidad de Google ID
+gadsense: "ca-pub-4118238634514264"
 
 # Google Tag Manager ID
 gtm: "G-TQBY2D6CS4, GT-NFJX5GL"

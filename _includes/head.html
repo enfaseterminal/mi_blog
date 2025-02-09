@@ -1,6 +1,5 @@
 <head>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4118238634514264"
-     crossorigin="anonymous"></script>
+
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js"></script>
   <script src="{{ '/assets/js/search.js' | relative_url }}"></script>
@@ -8,7 +7,10 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link href='https://www.enfaseterminal.com/assets/img/favicon.ico' rel='icon' type='image/x-icon'/>
+    <link href='/assets/img/favicon.ico' rel='icon' type='image/x-icon'/>
+
+<!-- Redirección 301: Utiliza la configuración de GitHub Pages para redirigir el tráfico. Sin embargo, GitHub Pages tiene limitaciones en cuanto a configuraciones avanzadas del servidor como .htaccess. Para manejar redirecciones, puedes usar una página HTML en el directorio raíz. Crea un archivo index.html con el siguiente contenid -->    
+    <meta http-equiv="refresh" content="0; url='{{ site.url_canonico }}'" />
 
   {% capture pagetitle %}
     {%- if page.share-title -%}
@@ -41,6 +43,10 @@
 
   <title>{{ title }}</title>
 
+<!-- Etiquetas Canónicas: Asegúrate de que todas tus páginas tengan etiquetas canónicas. -->     
+    <link rel="canonical" href="{{ site.url }}{{ page.url | escape }}" />
+
+
   {% capture author %}
     {%- if page.author -%}
       {{  page.author | strip_html }}
@@ -69,6 +75,7 @@
   {% include gtag.html %}
   {% include gtm_head.html %}
   {% include google_analytics.html %}
+  {% include google_adsense.html %}
   {% include cloudflare_analytics.html %}
   {% include mathjax.html %}
 
