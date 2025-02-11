@@ -6,7 +6,7 @@ cover-img: /imagenes/sitemaps.jpg
 thumbnail-img: /imagenes/sitemaps.jpg
 share-img: /imagenes/sitemaps.jpg
 tags: [CMS, MD, Jekyll, sitemap, SEO, Markdown, XML,YAML]
-categorias: Sistema de Gestión de Contenidos
+categories: [Sistema de Gestión de Contenidos,Jekyll,Github Pages]
 author: David P.
 ---
 {% raw %}

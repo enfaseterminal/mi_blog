@@ -43,9 +43,21 @@ layout: base
         {{ content }}
       </div>
 
+      <!-- Mostrar categorías -->
+      {% if page.categories.size > 0 %}
+        <div class="blog-categories">
+          <span>Categorías:</span>
+          {% for category in page.categories %}
+            <a href="{{ '/categorias' | relative_url }}#{{- category | slugify -}}">{{- category -}}</a>
+          {% endfor %}
+        </div>
+      {% endif %}
+
+      <!-- Mostrar etiquetas -->
+
       {% if page.tags.size > 0 %}
         <div class="blog-tags">
-          <span>Tags:</span>
+          <span>Etiquetas:</span>
           {% for tag in page.tags %}
             <a href="{{ '/tags' | relative_url }}#{{- tag -}}">{{- tag -}}</a>
           {% endfor %}

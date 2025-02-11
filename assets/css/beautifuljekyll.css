@@ -595,6 +595,30 @@ footer .footer-custom-content {
     font-size: 2.25rem;
   }
 }
+/* --- Categorias --- */
+.blog-categories, .blog-tags {
+  margin: 20px 0;
+  font-size: 0.9em;
+}
+
+.blog-categories span, .blog-tags span {
+  font-weight: bold;
+}
+
+.blog-categories a, .blog-tags a {
+  display: inline-block;
+  margin: 0 5px;
+  padding: 5px 10px;
+  background-color: #f0f0f0;
+  border-radius: 3px;
+  text-decoration: none;
+  color: #333;
+}
+
+.blog-categories a:hover, .blog-tags a:hover {
+  background-color: #ddd;
+}
+
 
 /* --- Tags --- */
 

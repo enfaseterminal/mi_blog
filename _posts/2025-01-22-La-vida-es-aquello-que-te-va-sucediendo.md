@@ -3,7 +3,7 @@ layout: post
 title: La vida es aquello que te va sucediendo
 subtitle: Como dijo John Lennon, La vida es aquello que te va sucediendo mientas ...
 tags: [John Lennon, John Winston Lennon, Lennon, John Winston Ono Lennon, The Beatles, vida, ocupado,planes,suceder]
-categorias: Citas y frases
+categories: [Citas y frases]
 cover-img: /imagenes/Jhon-Lenon.jpeg
 thumbnail-img: /imagenes/Jhon-Lenon.jpeg
 share-img: /imagenes/Jhon-Lenon.jpeg

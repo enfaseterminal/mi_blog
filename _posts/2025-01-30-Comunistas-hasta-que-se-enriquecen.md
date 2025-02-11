@@ -3,7 +3,7 @@ layout: post
 title: Comunistas hasta que se enriquecen
 subtitle: Como dijo Facundo Cabral, Comunistas hasta que se enriquecen.  Feministas hasta que se casan.  Ateos hasta que el avión empieza a caer.
 tags: [Facundo Cabral,comunista,feminista,Rodolfo Enrique Cabral Camiñas,ateos,religion,matrimonio,dinero,riqueza]
-categorias: Citas y frases
+categories: [Citas y frases]
 cover-img: /imagenes/Facundo_Cabral.jpg
 thumbnail-img: /imagenes/Facundo_Cabral.jpg
 share-img: /imagenes/Facundo_Cabral.jpg

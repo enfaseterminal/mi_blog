@@ -3,7 +3,7 @@ layout: post
 title: "Es feliz el que soñando, muere"
 subtitle: "Es feliz el que soñando, muere. Desgraciado el que muera sin soñar. Rosalía De Castro"
 tags: [María Rosalía Rita de Castro,Rosalia de Castro,feliz,soñar,muerte,desgraciado,soñando]
-categorias: Citas y frases
+categories: [Citas y frases]
 cover-img: /imagenes/es_feliz_el_que.png
 thumbnail-img: /imagenes/es_feliz_el_que.png
 share-img: /imagenes/es_feliz_el_que.png

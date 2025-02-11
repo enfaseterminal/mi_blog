@@ -317,6 +317,17 @@ plugins:
   - jekyll-seo-tag
   - jekyll-paginate
   - jekyll-archives
+
+jekyll-archives:
+  enabled:
+    - categories
+    - tags  # Si ya lo tienes, déjalo habilitado
+  layouts:
+    category: archive  # Usará el layout "archive.html"
+    tag: archive       # Layout para etiquetas (si ya lo tienes)
+  permalinks:
+    category: '/categorias/:name/'  # Personaliza la URL de las páginas de categorías
+    tag: '/etiquetas/:name/'        # URL para etiquetas (si ya lo tienes)
   
   
 # Beautiful Jekyll / Dean Attali

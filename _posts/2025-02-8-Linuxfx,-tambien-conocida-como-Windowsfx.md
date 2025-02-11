@@ -3,7 +3,7 @@ layout: post
 title: "Linuxfx, también conocida como Windowsfx"
 subtitle: "Linuxfx, también conocido como Windowsfx, es una distribución de Linux diseñada para ofrecer una experiencia similar a la de Microsoft Windows, está orientado tanto a usuarios finales que buscan una transición suave desde Windows, como a empresas que buscan una alternativa más segura y rentable."
 tags: [Linuxfx,Windowsfx,linux,windows,distribucion linux,kde,ubuntu,debian,windows 11,wine,exe,msi,64bits,android,GIMP,LibreOffice]
-categorias: Distribuciones Linux
+categories: [Distribuciones Linux]
 cover-img: /imagenes/logotipo.png
 thumbnail-img: /imagenes/logotipo.png
 share-img: /imagenes/logotipo.png
