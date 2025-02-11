@@ -27,13 +27,15 @@ url: "https://www.enfaseterminal.com"
 ###############################################
 
 navbar-links:
-  Páginas:
+  Más sobre Linux:
     - Distribuciones Linux: "https://www.enfaseterminal.com/paginas/distribuciones-linux.html"
     - Repositorios Linux: "https://www.enfaseterminal.com/paginas/repositorios-linux.html"
+  Comandos:   
     - Comandos Windows: "https://www.enfaseterminal.com/paginas/co.html"
     - Comandos Linux: "https://www.enfaseterminal.com/paginas/comandos-linux.html"
-    - Etiquetas: "tags.html"
-    - Acerca de mi: "aboutme"
+  Categorias post: "categorias.html"
+  Etiquetas post: "tags.html"
+  Acerca de mi: "aboutme"
 
 ################
 # --- Logo --- #
