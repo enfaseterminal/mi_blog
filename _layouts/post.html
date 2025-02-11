@@ -44,10 +44,10 @@ layout: base
       </div>
 
       <!-- Mostrar categorías -->
-      {% if site.categories > 0 %}
+      {% if page.categories > 0 %}
         <div class="blog-categories">
           <span>Categorías:</span>
-          {% for category in site.categories %}
+          {% for category in page.categories %}
             <a href="{{ '/categorias' | relative_url }}#{{- category | slugify -}}">{{- category -}}</a>
           {% endfor %}
         </div>
