@@ -86,15 +86,19 @@ layout: page
       </div>
       {% endunless %}
 
-      <!-- Mostrar categorías -->
-     {% if site.feed_show_categories != false and post.categories.size > 0 %} 
-        <div class="blog-categories">
-          <span>Categorías:</span>
-          {% for category in page.categories %}
-            <a href="{{ '/categorias' | absolute_url }}#{{- category | slugify -}}">{{- category -}}</a>
+    <!-- Mostrar categorías -->
+    {% if site.feed_show_categories != false and post.categories.size > 0 %}
+      <div class="blog-categories">
+        <span>Categorías:</span>
+        <ul class="d-inline list-inline" role="list">
+          {% for category in post.categories %}
+            <li class="list-inline-item">
+              <a href="{{ '/categorias' | relative_url }}#{{- category | slugify -}}">{{- category -}}</a>
+            </li>
           {% endfor %}
-        </div>
-      {% endif %}
+        </ul>
+      </div>
+    {% endif %}
 
   <!-- Mostrar etiquetas -->
       {% if site.feed_show_tags != false and post.tags.size > 0 %}
