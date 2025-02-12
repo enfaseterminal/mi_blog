@@ -117,8 +117,10 @@ excerpt_length: 50
 # Whether or not to show an excerpt for every blog post in the feed page
 feed_show_excerpt: true
 
-# Whether or not to show a list of tags below each post preview in the feed page
+# Mostrar o no una lista de etiquetas debajo de cada vista previa de publicación en la página de feed
 feed_show_tags: true
+# Mostrar o no una lista de categorias debajo de cada vista previa de publicación en la página de feed
+feed_show_categories: true
 
 # Add a search button to the navbar
 post_search: true

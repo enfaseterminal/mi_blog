@@ -44,7 +44,7 @@ layout: base
       </div>
 
       <!-- Mostrar categorías -->
-      {% if page.categories > 0 %}
+      {% if page.categories.size > 0 %}
         <div class="blog-categories">
           <span>Categorías:</span>
           {% for category in page.categories %}

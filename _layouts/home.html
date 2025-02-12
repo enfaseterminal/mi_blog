@@ -87,11 +87,11 @@ layout: page
       {% endunless %}
 
       <!-- Mostrar categorías -->
-      {% if page.categories.size > 0 %}
+     {% if site.feed_show_categories != false and post.categories.size > 0 %} 
         <div class="blog-categories">
           <span>Categorías:</span>
           {% for category in page.categories %}
-            <a href="{{ '/categorias' | relative_url }}#{{- category | slugify -}}">{{- category -}}</a>
+            <a href="{{ '/categorias' | absolute_url }}#{{- category | slugify -}}">{{- category -}}</a>
           {% endfor %}
         </div>
       {% endif %}
