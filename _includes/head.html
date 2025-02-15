@@ -196,12 +196,4 @@
       {% include {{ file }} %}
     {% endfor %}
   {% endif %}
-
-<!-- Esto permitirá que los usuarios cambien entre los modos claro y oscuro. -->
-<script>
-  const savedScheme = localStorage.getItem('colorscheme');
-  const systemScheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-  const initialScheme = savedScheme || systemScheme;
-  document.documentElement.setAttribute('data-theme', initialScheme);
-</script>
 </head>
