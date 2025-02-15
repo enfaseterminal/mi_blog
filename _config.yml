@@ -154,6 +154,9 @@ footer-text-col: "#777777"
 footer-link-col: "#404040"
 footer-hover-col: "#0085A1"
 
+# Esto permitirá que los usuarios cambien entre los modos claro y oscuro.
+colorscheme: toggle
+
 # Alternatively, the navbar, footer, and page background can be set to an image
 # instead of colour
 
