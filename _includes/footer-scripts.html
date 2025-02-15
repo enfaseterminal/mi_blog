@@ -38,6 +38,7 @@
 {% endif %}
 
 <!-- Script para mostrar y manejar el boton oscurecer tema -->
+<script>
 {
   // Verificar el tema guardado en localStorage o el tema del sistema
   const savedScheme = localStorage.getItem('colorscheme');
@@ -59,3 +60,4 @@
   // Agregar el botón al final de la página
   document.body.appendChild(toggleButton);
 }
+</script>
