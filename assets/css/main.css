@@ -1,6 +1,4 @@
 /* Estilos para el tema claro (por defecto) */
-/* Estilos para el interruptor */
-/* Estilos para el tema claro (por defecto) */
 :root {
   --body-bg: #ffffff;
   --text-color: #000000;
@@ -34,4 +32,56 @@ a {
   background-color: var(--btn-bg);
   color: var(--btn-text-color);
   border-color: var(--btn-border-color);
+}
+
+/* Estilos para el interruptor moderno */
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.theme-toggle .switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.theme-toggle .switch input {
+  opacity: 0; /* Oculta el checkbox nativo */
+  width: 0;
+  height: 0;
+}
+
+.theme-toggle .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.theme-toggle .slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+.theme-toggle input:checked + .slider {
+  background-color: var(--btn-bg); /* Usa la variable del tema oscuro */
+}
+
+.theme-toggle input:checked + .slider:before {
+  transform: translateX(26px);
 }
