@@ -1,0 +1,57 @@
+<!-- Script para mostrar y manejar el boton oscurecer tema -->
+<script>
+{
+  console.log("Script de cambio de tema ejecutado"); // Mensaje de depuración
+
+  // Verificar el tema guardado en localStorage o el tema del sistema
+  const savedScheme = localStorage.getItem('colorscheme');
+  const systemScheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  const initialScheme = savedScheme || systemScheme;
+  document.documentElement.setAttribute('data-theme', initialScheme);
+
+  // Crear el interruptor para cambiar el tema
+  const toggleContainer = document.createElement('li');
+  toggleContainer.classList.add('nav-item', 'theme-toggle');
+
+  const toggleLabel = document.createElement('span');
+  toggleLabel.innerText = 'Modo oscuro';
+  toggleLabel.classList.add('nav-link');
+  toggleContainer.appendChild(toggleLabel);
+
+  const toggleSwitch = document.createElement('div');
+  toggleSwitch.classList.add('switch');
+
+  const toggleInput = document.createElement('input');
+  toggleInput.type = 'checkbox';
+  toggleInput.checked = initialScheme === 'dark';
+  toggleSwitch.appendChild(toggleInput);
+
+  const toggleSlider = document.createElement('span');
+  toggleSlider.classList.add('slider');
+  toggleSwitch.appendChild(toggleSlider);
+
+  toggleContainer.appendChild(toggleSwitch);
+
+  // Agregar el interruptor junto al botón de búsqueda
+  const searchButton = document.querySelector('#nav-search-link').parentElement;
+  if (searchButton) {
+    searchButton.parentNode.insertBefore(toggleContainer, searchButton.nextSibling);
+  } else {
+    const navbar = document.querySelector('.navbar-custom');
+    if (navbar) {
+      navbar.appendChild(toggleContainer);
+    }
+  }
+
+  // Manejar el cambio de tema
+  toggleInput.addEventListener('change', function() {
+    console.log("Interruptor cambiado"); // Mensaje de depuración
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    console.log("Tema actual:", currentTheme); // Mensaje de depuración
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    console.log("Nuevo tema:", newTheme); // Mensaje de depuración
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('colorscheme', newTheme);
+  });
+}
+</script>
