@@ -1,15 +1,8 @@
 /* Estilos para el tema claro (por defecto) */
-/* Estilos para el interruptor */
 .theme-toggle {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-left: 20px; /* Espacio entre el botón de búsqueda y el interruptor */
-}
-
-.theme-toggle .nav-link {
-  padding: 0.5rem 1rem; /* Ajusta el padding para que coincida con otros elementos del navbar */
-  color: var(--text-color); /* Usa la variable de color para el tema */
 }
 
 .theme-toggle .switch {
