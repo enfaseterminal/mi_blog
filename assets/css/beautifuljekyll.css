@@ -1175,26 +1175,3 @@ pre {
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-/* Estilos para el botón de cambio de tema */
-.btn-theme-toggle {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 1000;
-  background-color: var(--btn-bg);
-  color: var(--btn-text-color);
-  border: 1px solid var(--btn-border-color);
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-/* Ajustes adicionales para el tema oscuro */
-[data-theme="dark"] {
-  --body-bg: #121212;
-  --text-color: #ffffff;
-  --link-color: #bb86fc;
-  --btn-bg: #bb86fc;
-  --btn-text-color: #121212;
-  --btn-border-color: #bb86fc;
-}
