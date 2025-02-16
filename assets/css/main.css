@@ -1,4 +1,5 @@
 /* Estilos para el tema claro (por defecto) */
+/* Estilos para el interruptor */
 .theme-toggle {
   display: flex;
   align-items: center;
@@ -13,7 +14,7 @@
 }
 
 .theme-toggle .switch input {
-  opacity: 0;
+  opacity: 0; /* Oculta el checkbox nativo */
   width: 0;
   height: 0;
 }
