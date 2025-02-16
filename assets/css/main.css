@@ -1,53 +1,15 @@
 /* Estilos para el tema claro (por defecto) */
-:root {
-  --body-bg: #ffffff;
-  --text-color: #000000;
-  --link-color: #007bff;
-  --btn-bg: #007bff;
-  --btn-text-color: #ffffff;
-  --btn-border-color: #007bff;
-}
-
-/* Estilos para el tema oscuro */
-[data-theme="dark"] {
-  --body-bg: #121212;
-  --text-color: #ffffff;
-  --link-color: #bb86fc;
-  --btn-bg: #bb86fc;
-  --btn-text-color: #121212;
-  --btn-border-color: #bb86fc;
-}
-
-/* Aplicar los colores a los elementos */
-body {
-  background-color: var(--body-bg);
-  color: var(--text-color);
-}
-
-a {
-  color: var(--link-color);
-}
-
-.btn-theme-toggle {
-  background-color: var(--btn-bg);
-  color: var(--btn-text-color);
-  border-color: var(--btn-border-color);
-}
-
 /* Estilos para el interruptor */
 .theme-toggle {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 1000;
   display: flex;
   align-items: center;
   gap: 10px;
+  margin-left: 20px; /* Espacio entre el botón de búsqueda y el interruptor */
 }
 
-.theme-toggle label {
-  font-size: 14px;
-  color: var(--text-color);
+.theme-toggle .nav-link {
+  padding: 0.5rem 1rem; /* Ajusta el padding para que coincida con otros elementos del navbar */
+  color: var(--text-color); /* Usa la variable de color para el tema */
 }
 
 .theme-toggle .switch {

@@ -47,11 +47,12 @@
   document.documentElement.setAttribute('data-theme', initialScheme);
 
   // Crear el interruptor para cambiar el tema
-  const toggleContainer = document.createElement('div');
-  toggleContainer.classList.add('theme-toggle');
+  const toggleContainer = document.createElement('li');
+  toggleContainer.classList.add('nav-item', 'theme-toggle');
 
-  const toggleLabel = document.createElement('label');
+  const toggleLabel = document.createElement('span');
   toggleLabel.innerText = 'Modo oscuro';
+  toggleLabel.classList.add('nav-link');
   toggleContainer.appendChild(toggleLabel);
 
   const toggleSwitch = document.createElement('div');
@@ -68,8 +69,16 @@
 
   toggleContainer.appendChild(toggleSwitch);
 
-  // Agregar el interruptor al final de la página
-  document.body.appendChild(toggleContainer);
+  // Agregar el interruptor junto al botón de búsqueda
+  const searchButton = document.querySelector('#nav-search-link').parentElement; // Selecciona el <li> del botón de búsqueda
+  if (searchButton) {
+    searchButton.parentNode.insertBefore(toggleContainer, searchButton.nextSibling);
+  } else {
+    const navbar = document.querySelector('.navbar-custom');
+    if (navbar) {
+      navbar.appendChild(toggleContainer);
+    }
+  }
 
   // Manejar el cambio de tema
   toggleInput.addEventListener('change', function() {
