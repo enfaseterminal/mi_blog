@@ -46,18 +46,36 @@
   const initialScheme = savedScheme || systemScheme;
   document.documentElement.setAttribute('data-theme', initialScheme);
 
-  // Crear el botón para cambiar el tema
-  const toggleButton = document.createElement('button');
-  toggleButton.innerText = 'Toggle Theme';
-  toggleButton.classList.add('btn', 'btn-theme-toggle');
-  toggleButton.addEventListener('click', function() {
-    const currentTheme = document.documentElement.getAttribute('data-theme');
-    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+  // Crear el interruptor para cambiar el tema
+  const toggleContainer = document.createElement('div');
+  toggleContainer.classList.add('theme-toggle');
+
+  const toggleLabel = document.createElement('label');
+  toggleLabel.innerText = 'Modo oscuro';
+  toggleContainer.appendChild(toggleLabel);
+
+  const toggleSwitch = document.createElement('div');
+  toggleSwitch.classList.add('switch');
+
+  const toggleInput = document.createElement('input');
+  toggleInput.type = 'checkbox';
+  toggleInput.checked = initialScheme === 'dark';
+  toggleSwitch.appendChild(toggleInput);
+
+  const toggleSlider = document.createElement('span');
+  toggleSlider.classList.add('slider');
+  toggleSwitch.appendChild(toggleSlider);
+
+  toggleContainer.appendChild(toggleSwitch);
+
+  // Agregar el interruptor al final de la página
+  document.body.appendChild(toggleContainer);
+
+  // Manejar el cambio de tema
+  toggleInput.addEventListener('change', function() {
+    const newTheme = toggleInput.checked ? 'dark' : 'light';
     document.documentElement.setAttribute('data-theme', newTheme);
     localStorage.setItem('colorscheme', newTheme);
   });
-
-  // Agregar el botón al final de la página
-  document.body.appendChild(toggleButton);
 }
 </script>
