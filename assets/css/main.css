@@ -6,6 +6,10 @@
   --btn-bg: #007bff;
   --btn-text-color: #ffffff;
   --btn-border-color: #007bff;
+  --navbar-bg: #f8f9fa; /* Fondo del navbar en tema claro */
+  --navbar-text: #000000; /* Texto del navbar en tema claro */
+  --footer-bg: #f8f9fa; /* Fondo del footer en tema claro */
+  --footer-text: #000000; /* Texto del footer en tema claro */
 }
 
 /* Estilos para el tema oscuro */
@@ -16,6 +20,10 @@
   --btn-bg: #bb86fc;
   --btn-text-color: #121212;
   --btn-border-color: #bb86fc;
+  --navbar-bg: #1a1a1a; /* Fondo del navbar en tema oscuro */
+  --navbar-text: #ffffff; /* Texto del navbar en tema oscuro */
+  --footer-bg: #1a1a1a; /* Fondo del footer en tema oscuro */
+  --footer-text: #ffffff; /* Texto del footer en tema oscuro */
 }
 
 /* Aplicar los colores a los elementos */
@@ -32,6 +40,30 @@ a {
   background-color: var(--btn-bg);
   color: var(--btn-text-color);
   border-color: var(--btn-border-color);
+}
+
+/* Estilos para el navbar */
+.navbar-custom {
+  background-color: var(--navbar-bg) !important; /* Fondo del navbar */
+  color: var(--navbar-text) !important; /* Texto del navbar */
+}
+
+.navbar-custom .navbar-nav .nav-link {
+  color: var(--navbar-text) !important; /* Color de los enlaces del navbar */
+}
+
+.navbar-custom .navbar-toggler-icon {
+  filter: invert(1); /* Invierte el color del ícono del menú en tema oscuro */
+}
+
+/* Estilos para el footer */
+.beautiful-jekyll-footer {
+  background-color: var(--footer-bg) !important; /* Fondo del footer */
+  color: var(--footer-text) !important; /* Texto del footer */
+}
+
+.beautiful-jekyll-footer a {
+  color: var(--link-color) !important; /* Color de los enlaces del footer */
 }
 
 /* Estilos para el interruptor moderno */
