@@ -34,17 +34,18 @@
         <li class="nav-item">
           <a class="nav-link" id="nav-search-link" href="#" title="Search">
             <span id="nav-search-icon" class="fa fa-search"></span>
-            <span id="nav-search-text">Search</span>
+            <span id="nav-search-text">Buscar</span>
           </a>
         </li>
       {%- endif -%}
 <!-- Boton oscurecer tema -->
        <li class="nav-item theme-toggle">
-          <span class="nav-link">Modo oscuro</span>
+          <span class="nav-link">🌞</span>
           <div class="switch">
             <input type="checkbox" id="theme-toggle-checkbox">
             <label for="theme-toggle-checkbox" class="slider"></label>
           </div>
+          <span class="nav-link">🌚</span>
         </li>
     </ul>
   </div>
@@ -82,22 +83,22 @@
 
   // Verificar que el checkbox exista
   if (toggleInput) {
-    console.log("Checkbox encontrado"); // Mensaje de depuración
+
 
     // Establecer el estado inicial del checkbox
     toggleInput.checked = initialScheme === 'dark';
 
     // Manejar el cambio de tema
     toggleInput.addEventListener('change', function() {
-      console.log("Interruptor cambiado"); // Mensaje de depuración
+
       const currentTheme = document.documentElement.getAttribute('data-theme');
-      console.log("Tema actual:", currentTheme); // Mensaje de depuración
+
       const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-      console.log("Nuevo tema:", newTheme); // Mensaje de depuración
+
       document.documentElement.setAttribute('data-theme', newTheme);
       localStorage.setItem('colorscheme', newTheme);
     });
   } else {
-    console.error("No se encontró el checkbox del interruptor"); // Mensaje de error
+
   }
 }</script>
