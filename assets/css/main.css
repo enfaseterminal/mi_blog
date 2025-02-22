@@ -36,6 +36,9 @@ a {
   color: var(--link-color);
 }
 
+.post-title {
+  color: var(--link-color);
+}
 .btn-theme-toggle {
   background-color: var(--btn-bg);
   color: var(--btn-text-color);
@@ -57,6 +60,10 @@ a {
 }
 
 /* Estilos para el footer */
+.pie_de_pagina {
+  background-color: var(--footer-bg) !important; /* Fondo del footer */
+  color: var(--footer-text) !important; /* Texto del footer */
+}
 .beautiful-jekyll-footer {
   background-color: var(--footer-bg) !important; /* Fondo del footer */
   color: var(--footer-text) !important; /* Texto del footer */

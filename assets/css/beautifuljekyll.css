@@ -1059,6 +1059,12 @@ pre {
   padding: 1rem;
 }
 
+.gcse-searchbox-only {
+  width: 80%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
 #nav-search-exit {
   position: absolute;
   top: 1.5rem;
