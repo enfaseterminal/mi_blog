@@ -5,7 +5,6 @@ layout: null
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
   <loc>https://www.enfaseterminal.com/404.html</loc>
-  <lastmod/>
   <changefreq>weekly</changefreq>
   <priority>0.5</priority>
 </url>
@@ -17,25 +16,26 @@ layout: null
 </url>
 <url>
   <loc>https://www.enfaseterminal.com/feed.xml</loc>
-  <lastmod/>
   <changefreq>weekly</changefreq>
   <priority>0.5</priority>
 </url>
 <url>
   <loc>https://www.enfaseterminal.com/index.html</loc>
-  <lastmod/>
   <changefreq>weekly</changefreq>
   <priority>0.5</priority>
 </url>
 <url>
   <loc>https://www.enfaseterminal.com/sitemap.xml</loc>
-  <lastmod/>
   <changefreq>weekly</changefreq>
   <priority>0.5</priority>
 </url>
 <url>
   <loc>https://www.enfaseterminal.com/tags.html</loc>
-  <lastmod/>
+  <changefreq>weekly</changefreq>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>https://www.enfaseterminal.com/categorias.html</loc>
   <changefreq>weekly</changefreq>
   <priority>0.5</priority>
 </url>
