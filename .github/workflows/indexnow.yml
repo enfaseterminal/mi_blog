@@ -26,4 +26,7 @@ jobs:
             "urlList": [
               "'"$SITE_URL"'"
             ]
-          }'
+          }' -w "\nCódigo de respuesta: %{http_code}\n")
+
+          echo "Respuesta de IndexNow:"
+          echo "$RESPONSE"
