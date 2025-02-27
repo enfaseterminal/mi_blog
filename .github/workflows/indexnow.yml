@@ -2,9 +2,8 @@ name: Notify IndexNow
 
 on:
   push:
-    branches:
-      - mi_blog  # Usa tu rama "mi_blog"
-
+    branches: ["blog"]
+      
 jobs:
   notify-indexnow:
     runs-on: ubuntu-latest
