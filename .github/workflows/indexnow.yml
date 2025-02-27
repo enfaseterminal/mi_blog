@@ -1,26 +1,32 @@
-name: 'IndexNow'
+name: Notify IndexNow
+
 on:
   push:
     branches:
-      - main
-      - mi_blog/_posts/**
+      - mi_blog  # Usa tu rama "mi_blog"
+
 jobs:
-  check-and-submit:
+  notify-indexnow:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
-      - name: Install dependencies
-        run: sudo apt-get install curl
-      - name: Submit URLs to IndexNow
-        env:
-          INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
+        uses: actions/checkout@v3
+
+      - name: Notify IndexNow
         run: |
-          curl -X POST "https://api.indexnow.org/indexnow" -H "Content-Type: application/json" -d '{
-            "host": "www.enfaseterminal.com",
-            "key": "${{ secrets.INDEXNOW_KEY }}",
-            "keyLocation": "https://www.enfaseterminal.com/2b00c77bf8ea4410bae5f92d5ae160eb.txt",
+          # Define tu clave y la URL de tu sitio
+          KEY="135E9EB7CBBE4F1A8A718DB5461FF2FF"  # Tu clave de IndexNow
+          SITE_URL="https://www.enfaseterminal.com"  # Tu URL
+
+          # Envía la solicitud a IndexNow usando curl
+          curl -X POST "https://api.indexnow.org/indexnow" \
+          -H "Content-Type: application/json" \
+          -d '{
+            "host": "'"$SITE_URL"'",
+            "key": "'"$KEY"'",
+            "keyLocation": "'"$SITE_URL/$KEY.txt"'",
             "urlList": [
-              "https://www.enfaseterminal.com/$(echo ${GITHUB_EVENT_PATH} | jq -r '.commits[].added[]' | grep "_posts")"
+              "'"$SITE_URL"'"
             ]
           }'
